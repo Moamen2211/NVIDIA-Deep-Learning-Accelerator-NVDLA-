@@ -8,10 +8,9 @@ Our team worked on partitioning the NVDLA design and implementing the complete *
 
 ## 📊 Project Presentation & Documentation
 
-Here is a detailed overview of my project covering the complete ASIC physical design flow, memory mapping strategies, and signoff timing closure. You can view or download the presentation below:
+Here is a detailed overview of my project covering the complete ASIC physical design flow, memory mapping strategies, and signoff timing closure. You can view and download the presentation from Google Drive below:
 
-* 📥 **[Download NVDLA Physical Implementation Presentation (PDF)](./Presentation/NVDLA_Physical_Implementation.pdf)**:
-
+* 📁 **[View Project Presentation on Google Drive](https://drive.google.com/drive/folders/1ZjDa5ZUCsb4pisy_yuKjfnhNuUENTwPy)**
 ---
 
 ## 🔹 SAED14nm Technology & Memory Generation
