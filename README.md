@@ -2,7 +2,7 @@
 
 NVDLA is an **open-source, scalable AI accelerator architecture** designed for neural network inference, providing dedicated hardware acceleration for operations such as convolution, pooling, activation, and data reshaping.
 
-🔗 **Original NVDLA Hardware Repository by NVIDIA:** [nvdla/hw](https://github.com/nvdla/hw/tree/nv_small)
+ **Original NVDLA Hardware Repository by NVIDIA:** [nvdla/hw](https://github.com/nvdla/hw/tree/nv_small)
 
 Our team worked on partitioning the NVDLA design and implementing the complete **RTL-to-GDSII physical implementation flow**, facing and solving several real-world challenges related to memories, macro placement, power planning, congestion, timing, and routing.
 
