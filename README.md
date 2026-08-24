@@ -3,7 +3,15 @@
 NVDLA is an **open-source, scalable AI accelerator architecture** designed for neural network inference, providing dedicated hardware acceleration for operations such as convolution, pooling, activation, and data reshaping.
 
 Our team worked on partitioning the NVDLA design and implementing the complete **RTL-to-GDSII physical implementation flow**, facing and solving several real-world challenges related to memories, macro placement, power planning, congestion, timing, and routing.
- 
+
+---
+
+## 📊 Project Presentation & Documentation
+
+For a comprehensive slide-deck walkthrough covering the complete ASIC physical design flow, architecture decisions, memory mapping strategies, and signoff timing closure, you can view or download the presentation below:
+
+* 📥 **[Download NVDLA Physical Implementation Presentation (PDF)](./Presentation/NVDLA_Physical_Implementation.pdf)**
+
 ---
 
 ## 🔹 SAED14nm Technology & Memory Generation
@@ -115,7 +123,7 @@ The placement stage involved:
 
 * **PG connectivity and DRC checks**
 * **Boundary / Decap cell handling**
-* **High-Fanout Net Synthesis (**HFNS**)**
+* **High-Fanout Net Synthesis (HFNS)**
 * **Tie-cell insertion**
 * **Spare-cell insertion**
 * **Timing-driven placement**
