@@ -1,6 +1,6 @@
 # NVIDIA Deep Learning Accelerator (NVDLA) – Physical Implementation
 
-NVDLA is an **open-source, scalable AI accelerator architecture** designed for neural network inference, providing dedicated hardware acceleration for operations such as convolution, pooling, activation, and data reshaping.
+NVDLA is an **open-source, scalable AI accelerator architecture developed by NVIDIA** for neural network inference, providing dedicated hardware acceleration for operations such as convolution, pooling, activation, and data reshaping.
 
  **Original NVDLA Hardware Repository by NVIDIA:** [nvdla/hw](https://github.com/nvdla/hw/tree/nv_small)
 
