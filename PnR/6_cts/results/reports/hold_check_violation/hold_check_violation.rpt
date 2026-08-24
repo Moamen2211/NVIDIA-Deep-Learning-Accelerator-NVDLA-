@@ -1,0 +1,52 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -slack_lesser_than 0.00
+        -report_by design
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Sat Aug  1 22:38:39 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: u_NV_NVDLA_pdp_u_rdma_u_eg_u_ro1_fifo_ro_rd_count_p_reg_2_ (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Endpoint: u_NV_NVDLA_pdp_u_rdma_u_eg_u_ro1_fifo_ro_rd_count_p_reg_2_ (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Mode: func
+  Corner: fast_cmin
+  Scenario: func_fast_cmin
+  Path Group: nvdla_core_clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock nvdla_core_clk (rise edge)                 0.00      0.00
+  clock network delay (propagated)                 0.37      0.37
+
+  u_NV_NVDLA_pdp_u_rdma_u_eg_u_ro1_fifo_ro_rd_count_p_reg_2_/CLK (DFFARX1_RVT)
+                                                   0.00      0.37 r
+  u_NV_NVDLA_pdp_u_rdma_u_eg_u_ro1_fifo_ro_rd_count_p_reg_2_/QN (DFFARX1_RVT)
+                                                   0.05      0.42 f
+  u_NV_NVDLA_pdp_u_rdma_u_eg_u_ro1_fifo_U31/Y (AO22X1_RVT)
+                                                   0.02      0.44 f
+  u_NV_NVDLA_pdp_u_rdma_u_eg_u_ro1_fifo_ro_rd_count_p_reg_2_/D (DFFARX1_RVT)
+                                                   0.00      0.44 f
+  data arrival time                                          0.44
+
+  clock nvdla_core_clk (rise edge)                 0.00      0.00
+  clock network delay (propagated)                 0.39      0.39
+  clock reconvergence pessimism                   -0.01      0.37
+  u_NV_NVDLA_pdp_u_rdma_u_eg_u_ro1_fifo_ro_rd_count_p_reg_2_/CLK (DFFARX1_RVT)
+                                                   0.00      0.37 r
+  clock uncertainty                                0.18      0.55
+  library hold time                                0.00      0.55
+  data required time                                         0.55
+  ------------------------------------------------------------------------
+  data required time                                         0.55
+  data arrival time                                         -0.44
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.11
+
+
+1

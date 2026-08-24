@@ -1,0 +1,10 @@
+-y nvdla_syn_20260620_1748/src
++incdir+nvdla_syn_20260620_1748/src
++libext+.v
++libext+.sv
++libext+.gv
++define+DISABLE_TESTPOINTS
++define+NV_SYNTHESIS 
++define+RAM_INTERFACE 
+NV_NVDLA_partition_o.v
+-v nvdla_syn_20260620_1748/src/NV_NVDLA_XXIF_libs.v

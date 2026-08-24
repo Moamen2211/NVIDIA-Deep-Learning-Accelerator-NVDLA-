@@ -1,0 +1,107 @@
+****************************************
+Report : qor
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Sat Aug  1 22:38:39 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+
+Scenario           'func_fast_cmin'
+Timing Path Group  'nvdla_core_clk'
+----------------------------------------
+Levels of Logic:                     76
+Critical Path Length:              2.12
+Critical Path Slack:               3.59
+Critical Path Clk Period:         12.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -0.11
+Total Hold Violation:             -2.51
+No. of Hold Violations:             147
+----------------------------------------
+
+Scenario           'func_fast_cmin'
+Timing Path Group  'nvdla_falcon_clk'
+----------------------------------------
+Levels of Logic:                      9
+Critical Path Length:              0.39
+Critical Path Slack:               1.48
+Critical Path Clk Period:          4.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow_cmax'
+Timing Path Group  'nvdla_core_clk'
+----------------------------------------
+Levels of Logic:                     76
+Critical Path Length:              5.72
+Critical Path Slack:               0.00
+Critical Path Clk Period:         12.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow_cmax'
+Timing Path Group  'nvdla_falcon_clk'
+----------------------------------------
+Levels of Logic:                      9
+Critical Path Length:              1.24
+Critical Path Slack:               0.57
+Critical Path Clk Period:          4.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:            123
+Hierarchical Port Count:            123
+Leaf Cell Count:                 241043
+Buf/Inv Cell Count:              102662
+Buf Cell Count:                   74392
+Inv Cell Count:                   28270
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:        203792
+Sequential Cell Count:            37251
+Macro Count:                         25
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:           646909.07
+Noncombinational Area:        256650.88
+Buf/Inv Area:                 392014.07
+Total Buffer Area:            343402.68
+Total Inverter Area:           48611.39
+Macro/Black Box Area:         316260.49
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                        1219820.43
+Cell Area (netlist and physical only):      1241470.96
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:            247687
+Nets with Violations:               675
+Max Trans Violations:                 4
+Max Cap Violations:                 672
+----------------------------------------
+
+1

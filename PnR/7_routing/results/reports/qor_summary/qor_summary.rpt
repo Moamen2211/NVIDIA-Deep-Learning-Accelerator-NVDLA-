@@ -1,0 +1,28 @@
+****************************************
+Report : qor
+        -summary
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Mon Aug 24 04:03:56 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+func_fast_cmin     (Setup)             1.48           0.00              0
+func_slow_cmax     (Setup)             0.01           0.00              0
+Design             (Setup)             0.01           0.00              0
+
+func_fast_cmin     (Hold)              0.00           0.00              0
+func_slow_cmax     (Hold)              0.14           0.00              0
+Design             (Hold)              0.00           0.00              0
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                        1233732.02
+Cell Area (netlist and physical only):      1255382.55
+Nets with DRC Violations:        0
+1

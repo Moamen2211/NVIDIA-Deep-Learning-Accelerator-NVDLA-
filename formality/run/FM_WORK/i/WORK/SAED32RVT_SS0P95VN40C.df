@@ -1,0 +1,208 @@
+AOBUFX1_RVT#PWR
+  port VDD : unread pg_pin
+AOBUFX2_RVT#PWR
+  port VDD : unread pg_pin
+AOBUFX4_RVT#PWR
+  port VDD : unread pg_pin
+AODFFARX1_RVT#PWR
+  port VDD : unread pg_pin
+AODFFARX2_RVT#PWR
+  port VDD : unread pg_pin
+AODFFNARX1_RVT#PWR
+  port VDD : unread pg_pin
+AODFFNARX2_RVT#PWR
+  port VDD : unread pg_pin
+AOINVX1_RVT#PWR
+  port VDD : unread pg_pin
+AOINVX2_RVT#PWR
+  port VDD : unread pg_pin
+AOINVX4_RVT#PWR
+  port VDD : unread pg_pin
+CGLNPRX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLNPRX8_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLNPSX16_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLNPSX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLNPSX4_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLNPSX8_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLPPRX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLPPRX8_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLPPSX16_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLPPSX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLPPSX4_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+CGLPPSX8_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+DFFARX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFARX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFASRX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFASRX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFASX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFASX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNARX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNARX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNASRNX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNASRNX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNASRQX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNASRQX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNASRX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNASRX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNASX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNASX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFNX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFSSRX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFSSRX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+DFFX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+ISOLANDAOX1_RVT#PWR
+  port VDD : unread pg_pin
+ISOLANDAOX2_RVT#PWR
+  port VDD : unread pg_pin
+ISOLANDAOX4_RVT#PWR
+  port VDD : unread pg_pin
+ISOLANDAOX8_RVT#PWR
+  port VDD : unread pg_pin
+ISOLORAOX1_RVT#PWR
+  port VDD : unread pg_pin
+ISOLORAOX2_RVT#PWR
+  port VDD : unread pg_pin
+ISOLORAOX4_RVT#PWR
+  port VDD : unread pg_pin
+ISOLORAOX8_RVT#PWR
+  port VDD : unread pg_pin
+LARX1_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LARX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LASRNX1_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LASRNX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LASRQX1_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LASRQX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LASRX1_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LASRX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LASX1_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LASX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LATCHX1_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LATCHX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LNANDX1_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+LNANDX2_RVT#PWR
+  cell *lat.00* : no power_down_function : copied from Q/QN
+RDFFARX1_RVT#PWR
+  retention cell does not have a retention ff or latch
+RDFFARX2_RVT#PWR
+  retention cell does not have a retention ff or latch
+RDFFNARX1_RVT#PWR
+  retention cell does not have a retention ff or latch
+RDFFNARX2_RVT#PWR
+  retention cell does not have a retention ff or latch
+RDFFNX1_RVT#PWR
+  retention cell does not have a retention ff or latch
+RDFFNX2_RVT#PWR
+  retention cell does not have a retention ff or latch
+RDFFSRSSRX2_RVT#PWR
+  port NRESTORE : unread retention save / restore input
+  port SAVE : unread retention save / restore input
+  retention cell does not have a retention ff or latch
+RDFFX1_RVT#PWR
+  retention cell does not have a retention ff or latch
+RDFFX2_RVT#PWR
+  retention cell does not have a retention ff or latch
+RSDFFARX1_RVT#PWR
+  retention cell does not have a retention ff or latch
+RSDFFARX2_RVT#PWR
+  retention cell does not have a retention ff or latch
+RSDFFNARX1_RVT#PWR
+  retention cell does not have a retention ff or latch
+RSDFFNARX2_RVT#PWR
+  retention cell does not have a retention ff or latch
+RSDFFNX1_RVT#PWR
+  retention cell does not have a retention ff or latch
+RSDFFNX2_RVT#PWR
+  retention cell does not have a retention ff or latch
+RSDFFX1_RVT#PWR
+  retention cell does not have a retention ff or latch
+RSDFFX2_RVT#PWR
+  retention cell does not have a retention ff or latch
+SDFFARX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFARX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFASRSX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFASRSX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFASRX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFASRX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFASX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFASX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFNARX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFNARX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFNASRX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFNASRX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFNASX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFNASX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFNX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFNX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFSSRX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFSSRX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFX1_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN
+SDFFX2_RVT#PWR
+  cell *dff.00* : no power_down_function : copied from Q/QN

@@ -1,0 +1,25 @@
+
+****************************************
+Report : Violation analysis
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Mon Aug 24 04:33:01 2026
+****************************************
+
+START_CMD: analyze_design_violations CPU:   2254 s ( 0.63 hr) ELAPSE:   2408 s ( 0.67 hr) MEM-PEAK:  4053 Mb Mon Aug 24 04:33:01 2026
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (100000 100000) (13105120 13091440)
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 2
+Use advanced legalizer engine : 0
+Design utilization is 0.743729
+
+  Start analyzing MAX_TRANS violations.
+
+  No max_trans violation is found.
+
+END_CMD: analyze_design_violations CPU:   2283 s ( 0.63 hr) ELAPSE:   2438 s ( 0.68 hr) MEM-PEAK:  4053 Mb Mon Aug 24 04:33:30 2026

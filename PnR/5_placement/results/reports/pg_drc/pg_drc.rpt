@@ -1,0 +1,31 @@
+Design 'NV_NVDLA_partition_o_placement_f_optv1' has missing meta data file '__private_meta_data_:DRC_report_by_check_pg_drc', for attached data file 'DRC_report_by_check_pg_drc'
+Design 'NV_NVDLA_partition_o_placement_f_optv1' has missing meta data file '__private_meta_data_:NV_NVDLA_partition_o_floorplan_optv1_dppinassgn.err', for attached data file 'NV_NVDLA_partition_o_floorplan_optv1_dppinassgn.err'
+Design 'NV_NVDLA_partition_o_placement_f_optv1' has missing meta data file '__private_meta_data_:NV_NVDLA_partition_o_floorplan_optv1_floatingPG.err', for attached data file 'NV_NVDLA_partition_o_floorplan_optv1_floatingPG.err'
+Design 'NV_NVDLA_partition_o_placement_f_optv1' has missing meta data file '__private_meta_data_:NV_NVDLA_partition_o_floorplan_optv1_missingVia.err', for attached data file 'NV_NVDLA_partition_o_floorplan_optv1_missingVia.err'
+Command check_pg_drc started  at Sat Aug  1 22:30:33 2026
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design (time 7s)
+Command check_pg_drc finished at Sat Aug  1 22:37:13 2026
+CPU usage for check_pg_drc: 394.71 seconds ( 0.11 hours)
+Elapsed time for check_pg_drc: 400.06 seconds ( 0.11 hours)
+No errors found.

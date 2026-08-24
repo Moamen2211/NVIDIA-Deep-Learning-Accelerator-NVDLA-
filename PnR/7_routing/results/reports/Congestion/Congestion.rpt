@@ -1,0 +1,16 @@
+Warning: Layer MRDL does not have a preferred direction, skipped.
+****************************************
+Report : congestion
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Mon Aug 24 04:36:24 2026
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |   41238 |    17 |   28599  ( 2.29%) |       4
+H routing |   18249 |     5 |   16362  ( 2.63%) |       1
+V routing |   22989 |    17 |   12237  ( 1.96%) |       4
+
+1

@@ -1,0 +1,18 @@
+<Database>
+Name/mnt/hgfs/NVDLA/nv_small/PnR/1_ndm/sram_ndm/run/check_workspace.ems
+Creation TimeThu Jun 18 23:10:43 2026
+Modified TimeThu Jun 18 23:10:43 2026
+Design Name
+Library Name
+</Database>
+<RuleCount>
+LM-0062
+LM-0341
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+LM-006para1saed32sram_ss0p95vn40c10para2144710para3arc10
+LM-006para1saed32sram_ff1p16v125c10para2144710para3arc10
+LM-034para13510para2s10para335 with a design view (35 had ports reordered);10
+</Messages>

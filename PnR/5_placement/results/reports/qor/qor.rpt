@@ -1,0 +1,86 @@
+****************************************
+Report : qor
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Sat Aug  1 22:28:50 2026
+****************************************
+Information: The stitching and editing of coupling caps is turned OFF for design 'NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_placement_f_optv1.design'. (TIM-125)
+Warning: Technology layer 'MRDL' setting 'routing-direction' is not valid (NEX-001)
+Information: Design Average RC for design NV_NVDLA_partition_o_placement_f_optv1  (NEX-011)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.083163 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.099544 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'NV_NVDLA_partition_o'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 185064, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 15369, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+
+Scenario           'func_slow_cmax'
+Timing Path Group  'nvdla_core_clk'
+----------------------------------------
+Levels of Logic:                    108
+Critical Path Length:             11.81
+Critical Path Slack:               0.00
+Critical Path Clk Period:         12.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -0.13
+Total Hold Violation:            -22.94
+No. of Hold Violations:             511
+----------------------------------------
+
+Scenario           'func_slow_cmax'
+Timing Path Group  'nvdla_falcon_clk'
+----------------------------------------
+Levels of Logic:                      9
+Critical Path Length:              1.09
+Critical Path Slack:               0.74
+Critical Path Clk Period:          4.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:            123
+Hierarchical Port Count:            123
+Leaf Cell Count:                 179129
+Buf/Inv Cell Count:               40750
+Buf Cell Count:                   14580
+Inv Cell Count:                   26170
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:        141878
+Sequential Cell Count:            37251
+Macro Count:                         25
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:           339960.55
+Noncombinational Area:        256650.88
+Buf/Inv Area:                  84992.62
+Total Buffer Area:             41957.65
+Total Inverter Area:           43034.97
+Macro/Black Box Area:         316260.49
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                         912871.92
+Cell Area (netlist and physical only):       934522.45
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:            185773
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1

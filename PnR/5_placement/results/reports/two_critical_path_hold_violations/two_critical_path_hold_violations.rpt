@@ -1,0 +1,89 @@
+Warning: Scenario func_fast_cmin is not configured for hold analysis: skipping. (UIC-058)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 2
+        -slack_lesser_than 0.00
+        -report_by design
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Sat Aug  1 22:37:52 2026
+****************************************
+
+  Startpoint: u_NV_NVDLA_pdp_u_rdma_u_eg_pipe_skid_dma_rd_rsp_pd_reg_58_ (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Endpoint: u_NV_NVDLA_pdp_u_rdma_u_eg_u_lat_fifo_ram_r_nv_ram_rwsp_61x65_ram_Inst_61X66_1 (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Mode: func
+  Corner: slow_cmax
+  Scenario: func_slow_cmax
+  Path Group: nvdla_core_clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock nvdla_core_clk (rise edge)                 0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  u_NV_NVDLA_pdp_u_rdma_u_eg_pipe_skid_dma_rd_rsp_pd_reg_58_/CLK (DFFX1_RVT)
+                                                   0.00      0.00 r
+  u_NV_NVDLA_pdp_u_rdma_u_eg_pipe_skid_dma_rd_rsp_pd_reg_58_/Q (DFFX1_RVT)
+                                                   0.19      0.19 f
+  iso_buf_u_NV_NVDLA_pdp_u_rdma_u_eg_u_lat_fifo_ram_r_nv_ram_rwsp_61x65_ram_Inst_61X66_1_I1_26_/Y (NBUFFX2_RVT)
+                                                   0.05      0.24 f
+  u_NV_NVDLA_pdp_u_rdma_u_eg_u_lat_fifo_ram_r_nv_ram_rwsp_61x65_ram_Inst_61X66_1/I1[26] (SRAM2RW64x32)
+                                                   0.00      0.24 f
+  data arrival time                                          0.24
+
+  clock nvdla_core_clk (rise edge)                 0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  u_NV_NVDLA_pdp_u_rdma_u_eg_u_lat_fifo_ram_r_nv_ram_rwsp_61x65_ram_Inst_61X66_1/CE1 (SRAM2RW64x32)
+                                                   0.00      0.00 r
+  clock uncertainty                                0.18      0.18
+  library hold time                                0.20      0.38
+  data required time                                         0.38
+  ------------------------------------------------------------------------
+  data required time                                         0.38
+  data arrival time                                         -0.24
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.13
+
+
+
+  Startpoint: u_NV_NVDLA_cdp_u_rdma_u_eg_NV_NVDLA_PDP_RDMA_rdrsp_pipe_skid_dma_rd_rsp_pd_reg_61_ (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Endpoint: u_NV_NVDLA_cdp_u_rdma_u_eg_u_lat_fifo_ram_r_nv_ram_rwsp_61x65_ram_Inst_61X66_1 (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Mode: func
+  Corner: slow_cmax
+  Scenario: func_slow_cmax
+  Path Group: nvdla_core_clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock nvdla_core_clk (rise edge)                 0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  u_NV_NVDLA_cdp_u_rdma_u_eg_NV_NVDLA_PDP_RDMA_rdrsp_pipe_skid_dma_rd_rsp_pd_reg_61_/CLK (DFFX1_RVT)
+                                                   0.00      0.00 r
+  u_NV_NVDLA_cdp_u_rdma_u_eg_NV_NVDLA_PDP_RDMA_rdrsp_pipe_skid_dma_rd_rsp_pd_reg_61_/Q (DFFX1_RVT)
+                                                   0.19      0.19 f
+  iso_buf_u_NV_NVDLA_cdp_u_rdma_u_eg_u_lat_fifo_ram_r_nv_ram_rwsp_61x65_ram_Inst_61X66_1_I1_29_/Y (NBUFFX2_RVT)
+                                                   0.05      0.24 f
+  u_NV_NVDLA_cdp_u_rdma_u_eg_u_lat_fifo_ram_r_nv_ram_rwsp_61x65_ram_Inst_61X66_1/I1[29] (SRAM2RW64x32)
+                                                   0.00      0.24 f
+  data arrival time                                          0.24
+
+  clock nvdla_core_clk (rise edge)                 0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  u_NV_NVDLA_cdp_u_rdma_u_eg_u_lat_fifo_ram_r_nv_ram_rwsp_61x65_ram_Inst_61X66_1/CE1 (SRAM2RW64x32)
+                                                   0.00      0.00 r
+  clock uncertainty                                0.18      0.18
+  library hold time                                0.20      0.38
+  data required time                                         0.38
+  ------------------------------------------------------------------------
+  data required time                                         0.38
+  data arrival time                                         -0.24
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.13
+
+
+1

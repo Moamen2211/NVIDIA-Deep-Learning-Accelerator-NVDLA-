@@ -1,0 +1,21 @@
+Command check_pg_drc started  at Sat Aug  1 22:45:40 2026
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design
+Begin building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design (time 13s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design (time 13s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design (time 13s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design (time 13s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design (time 13s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design (time 13s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design (time 13s)
+Done building search trees for block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design (time 13s)
+Command check_pg_drc finished at Sat Aug  1 22:48:36 2026
+CPU usage for check_pg_drc: 522.60 seconds ( 0.15 hours)
+Elapsed time for check_pg_drc: 176.06 seconds ( 0.05 hours)
+No errors found.

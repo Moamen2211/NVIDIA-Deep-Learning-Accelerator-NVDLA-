@@ -1,0 +1,605 @@
+****************************************
+Report : design
+        -library
+        -netlist
+        -floorplan
+        -routing
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Mon Aug 24 04:33:30 2026
+****************************************
+--------------------------------------------------------------------------------
+                              LIBRARY INFORMATION
+--------------------------------------------------------------------------------
+
+Search path : .
+
+Units : 
+    time                : 1.00ns
+    resistance          : 1.00MOhm
+    capacitance         : 1.00fF
+    voltage             : 1.00V
+    current             : 1.00uA
+    power               : 1.00pW
+
+Tech file : /home/ICer/Downloads/SAED32/saed32nm_1p9m_mw.tf
+
+Number of active scenarios 	= 2
+Number of inactive scenarios 	= 0
+
+Total number of standard cells 	= 286
+
+Total number of dont_use lib cells 	= 5
+Total number of dont_touch lib cells 	= 5
+
+Total number of buffers 	= 11
+Total number of inverters 	= 15
+Total number of flip-flops 	= 102
+Total number of latches 	= 12
+Total number of ICGs 		= 12
+
+
+Library : saed32sram_c
+  File path : /home/ICer/EDA_projects/NVDLA/nv_small/PnR/1_ndm/sram_ndm/ndm/saed32sram_c.ndm
+  Source .db libs :
+    saed32sram_ss0p95vn40c : /home/ICer/Downloads/SAED32/SRAM/saed32sram_ss0p95vn40c.db
+    saed32sram_ff1p16v125c : /home/ICer/Downloads/SAED32/SRAM/saed32sram_ff1p16v125c.db
+
+Library : saed32nm_std_ndm_physical_only
+  File path : /home/ICer/EDA_projects/NVDLA/nv_small/PnR/1_ndm/std_ndm/ndm/saed32nm_std_ndm_physical_only.ndm
+
+Library : saed32rvt_c
+  File path : /home/ICer/EDA_projects/NVDLA/nv_small/PnR/1_ndm/std_ndm/ndm/saed32rvt_c.ndm
+  Source .db libs :
+    saed32rvt_ss0p95vn40c : /home/ICer/Downloads/SAED32/STD/saed32rvt_ss0p95vn40c.db
+    saed32rvt_ff1p16v125c : /home/ICer/Downloads/SAED32/STD/saed32rvt_ff1p16v125c.db
+
+--------------------------------------------------------------------------------
+                              NETLIST INFORMATION
+--------------------------------------------------------------------------------
+
+CELL INSTANCE INFORMATION
+-----------------------------------------------------------------------------
+Cell Instance Type          Count % of         Area  % of siteAreaPerSite
+                                  total             total
+-----------------------------------------------------------------------------
+TOTAL LEAF CELLS           249073  100  1255382.550   100 unit:4946645  
+
+  Standard cells           249048   99   939122.058    74 unit:3695236  
+  Filler cells                  0    0        0.000     0 
+  Diode cells                   0    0        0.000     0 
+  Hard macro cells             25    0   316260.492    25 unit:1251409  
+  Soft macro cells              0    0        0.000     0 
+    Black box cells             0    0        0.000     0 
+  Analog block cells            0    0        0.000     0 
+  Pad cells                     0    0        0.000     0 
+    Flip-chip pad cells         0    0        0.000     0 
+  Cover cells                   0    0        0.000     0 
+  Flip-chip driver cells        0    0        0.000     0 
+  Corner pad cells              0    0        0.000     0 
+  Pad spacer cells              0    0        0.000     0 
+  Others                        0    0        0.000     0 
+
+Special cells                 824    0     1047.073     0 unit:4120  
+  Level shifter                 0    0        0.000     0 
+  Isolation                     0    0        0.000     0 
+  Switch                        0    0        0.000     0 
+  Always on                     0    0        0.000     0 
+  Retention                     0    0        0.000     0 
+  Tie off                     824    0     1047.073     0 unit:4120  
+
+LVT                             0    0        0.000     0 
+HVT                             0    0        0.000     0 
+Normal VT                       0    0        0.000     0 
+Others                     249073  100  1255382.550   100 unit:4946645  
+
+Netlist cells              232035   93  1233732.023    98 unit:4861455  
+Physical only               17038    6    21650.527     1 unit:85190  
+
+Fixed cells                 20005    8   343943.382    27 unit:1360335  
+Moveable cells             229068   91   911439.169    72 unit:3586310  
+
+Combinational              211822   85   682471.182    54 unit:2685372  
+Sequential                  37251   14   572911.369    45 unit:2261273  
+Others                          0    0        0.000     0 
+
+Buffer                      66064   26   359456.191    28 unit:1414380  
+Inverter                    27590   11    46445.578     3 unit:182753  
+Buffer/inverter             93654   37   405901.769    32 unit:1597133  
+
+Spare cells                    40    0      104.707     0 unit:412  
+ICG cells                       0    0        0.000     0 
+Flip-flop cells             37251   14   572911.369    45 unit:2261273  
+Latch cells                     0    0        0.000     0 
+Antenna cells                   0    0        0.000     0 
+
+Mux logic                     910    0     3224.325     0 unit:12687  
+Double height                   0    0        0.000     0 
+Triple height                   0    0        0.000     0 
+More than triple height         0    0        0.000     0 
+
+Logic Hierarchies          123
+
+REFERENCE DESIGN INFORMATION
+----------------------------------------------------------------------------------------------
+Number of reference designs used:121  
+----------------------------------------------------------------------------------------------
+Name           Type          Count     Width    Height        Area   PinDens SiteName siteArea
+----------------------------------------------------------------------------------------------
+AO22X1_RVT     lib_cell      45121      1.52      1.67       2.541     2.754 unit           10
+DELLN2X2_RVT   lib_cell      20984      3.95      1.67       6.608     0.605 unit           26
+NBUFFX2_RVT    lib_cell      19030      1.22      1.67       2.033     1.967 unit            8
+DFFX1_RVT      lib_cell      17397      3.95      1.67       6.608     0.908 unit           26
+DFFARX1_RVT    lib_cell      17260      4.26      1.67       7.116     0.984 unit           28
+DCAP_RVT       lib_cell      17038      0.76      1.67       1.271     1.574 unit            5
+DELLN3X2_RVT   lib_cell      13295      5.78      1.67       9.657     0.414 unit           38
+OR2X1_RVT      lib_cell      11423      1.22      1.67       2.033     2.459 unit            8
+INVX1_RVT      lib_cell      10059      0.76      1.67       1.271     3.148 unit            5
+DELLN1X2_RVT   lib_cell       7691      3.04      1.67       5.083     0.787 unit           20
+INVX2_RVT      lib_cell       7465      0.91      1.67       1.525     2.623 unit            6
+AND2X1_RVT     lib_cell       6016      1.22      1.67       2.033     2.459 unit            8
+NAND2X0_RVT    lib_cell       5809      0.91      1.67       1.525     3.279 unit            6
+INVX4_RVT      lib_cell       4841      1.22      1.67       2.033     1.967 unit            8
+NBUFFX4_RVT    lib_cell       4576      1.52      1.67       2.541     1.574 unit           10
+AO222X1_RVT    lib_cell       4155      1.98      1.67       3.304     2.724 unit           13
+AOI22X1_RVT    lib_cell       3022      1.82      1.67       3.050     2.295 unit           12
+INVX0_RVT      lib_cell       2958      0.76      1.67       1.271     3.148 unit            5
+NAND3X0_RVT    lib_cell       2633      1.06      1.67       1.779     3.373 unit            7
+NOR4X0_RVT     lib_cell       2042      1.82      1.67       3.050     2.295 unit           12
+FADDX1_RVT     lib_cell       1939      2.89      1.67       4.829     1.450 unit           19
+AO21X1_RVT     lib_cell       1553      1.52      1.67       2.541     2.361 unit           10
+HADDX1_RVT     lib_cell       1543      1.98      1.67       3.304     1.816 unit           13
+OA22X1_RVT     lib_cell       1305      1.52      1.67       2.541     2.754 unit           10
+DFFARX2_RVT    lib_cell       1270      4.56      1.67       7.624     0.918 unit           30
+AO22X2_RVT     lib_cell       1222      1.67      1.67       2.796     2.504 unit           11
+IBUFFX4_RVT    lib_cell       1156      1.82      1.67       3.050     1.312 unit           12
+NAND4X0_RVT    lib_cell       1119      1.22      1.67       2.033     3.443 unit            8
+AO221X1_RVT    lib_cell        796      1.82      1.67       3.050     2.623 unit           12
+MUX21X1_RVT    lib_cell        761      1.98      1.67       3.304     1.816 unit           13
+OA221X1_RVT    lib_cell        731      1.82      1.67       3.050     2.623 unit           12
+AND3X1_RVT     lib_cell        694      1.37      1.67       2.287     2.623 unit            9
+AND2X4_RVT     lib_cell        680      1.67      1.67       2.796     1.789 unit           11
+AND2X2_RVT     lib_cell        651      1.37      1.67       2.287     2.186 unit            9
+DFFASX1_RVT    lib_cell        643      4.26      1.67       7.116     0.984 unit           28
+OA21X1_RVT     lib_cell        640      1.52      1.67       2.541     2.361 unit           10
+TIEL_RVT       lib_cell        530      0.76      1.67       1.271     2.361 unit            5
+OA222X1_RVT    lib_cell        504      1.98      1.67       3.304     2.724 unit           13
+DFFX2_RVT      lib_cell        491      4.26      1.67       7.116     0.843 unit           28
+NAND3X1_RVT    lib_cell        421      1.67      1.67       2.796     2.146 unit           11
+NAND2X2_RVT    lib_cell        419      1.67      1.67       2.796     1.789 unit           11
+NAND2X4_RVT    lib_cell        412      1.98      1.67       3.304     1.513 unit           13
+OR3X1_RVT      lib_cell        358      1.52      1.67       2.541     2.361 unit           10
+AND3X2_RVT     lib_cell        332      1.52      1.67       2.541     2.361 unit           10
+INVX16_RVT     lib_cell        318      3.04      1.67       5.083     0.787 unit           20
+AND4X1_RVT     lib_cell        317      1.52      1.67       2.541     2.754 unit           10
+TIEH_RVT       lib_cell        294      0.76      1.67       1.271     2.361 unit            5
+NAND3X2_RVT    lib_cell        261      1.82      1.67       3.050     1.967 unit           12
+OR2X2_RVT      lib_cell        259      1.37      1.67       2.287     2.186 unit            9
+INVX8_RVT      lib_cell        258      1.82      1.67       3.050     1.312 unit           12
+OAI22X1_RVT    lib_cell        257      1.82      1.67       3.050     2.295 unit           12
+IBUFFX16_RVT   lib_cell        252      3.95      1.67       6.608     0.605 unit           26
+OR4X1_RVT      lib_cell        222      2.13      1.67       3.558     1.967 unit           14
+NAND2X1_RVT    lib_cell        217      1.52      1.67       2.541     1.967 unit           10
+NAND4X1_RVT    lib_cell        196      1.82      1.67       3.050     2.295 unit           12
+NBUFFX8_RVT    lib_cell        196      2.28      1.67       3.812     1.049 unit           15
+NBUFFX16_RVT   lib_cell        191      3.65      1.67       6.099     0.656 unit           24
+AO222X2_RVT    lib_cell        176      2.13      1.67       3.558     2.529 unit           14
+NOR4X1_RVT     lib_cell        171      1.82      1.67       3.050     2.295 unit           12
+AND3X4_RVT     lib_cell        166      1.82      1.67       3.050     1.967 unit           12
+AOI22X2_RVT    lib_cell        151      1.98      1.67       3.304     2.119 unit           13
+IBUFFX8_RVT    lib_cell        148      2.58      1.67       4.320     0.926 unit           17
+DFFNX1_RVT     lib_cell        127      3.95      1.67       6.608     0.908 unit           26
+NOR2X1_RVT     lib_cell        124      1.52      1.67       2.541     1.967 unit           10
+IBUFFX2_RVT    lib_cell        121      1.52      1.67       2.541     1.574 unit           10
+OAI21X1_RVT    lib_cell        104      1.82      1.67       3.050     1.967 unit           12
+NBUFFX32_RVT   lib_cell        101      6.38      1.67      10.674     0.375 unit           42
+OR3X2_RVT      lib_cell         92      1.52      1.67       2.541     2.361 unit           10
+AOI222X1_RVT   lib_cell         86      2.28      1.67       3.812     2.361 unit           15
+NOR3X0_RVT     lib_cell         79      1.67      1.67       2.796     2.146 unit           11
+AND4X2_RVT     lib_cell         76      2.28      1.67       3.812     1.836 unit           15
+NOR3X2_RVT     lib_cell         75      1.82      1.67       3.050     1.967 unit           12
+AO21X2_RVT     lib_cell         74      1.67      1.67       2.796     2.146 unit           11
+MUX41X1_RVT    lib_cell         71      3.34      1.67       5.591     1.610 unit           22
+OAI222X1_RVT   lib_cell         65      2.28      1.67       3.812     2.361 unit           15
+MUX21X2_RVT    lib_cell         64      2.13      1.67       3.558     1.686 unit           14
+AND4X4_RVT     lib_cell         60      2.58      1.67       4.320     1.620 unit           17
+OR2X4_RVT      lib_cell         56      1.67      1.67       2.796     1.789 unit           11
+XOR2X1_RVT     lib_cell         54      2.58      1.67       4.320     1.157 unit           17
+OAI221X1_RVT   lib_cell         53      2.13      1.67       3.558     2.248 unit           14
+AOI21X1_RVT    lib_cell         49      1.82      1.67       3.050     1.967 unit           12
+NAND3X4_RVT    lib_cell         42      2.13      1.67       3.558     1.686 unit           14
+OR4X2_RVT      lib_cell         39      2.28      1.67       3.812     1.836 unit           15
+NOR2X2_RVT     lib_cell         38      1.67      1.67       2.796     1.789 unit           11
+NOR2X4_RVT     lib_cell         34      1.98      1.67       3.304     1.513 unit           13
+HADDX2_RVT     lib_cell         34      2.28      1.67       3.812     1.574 unit           15
+OA21X2_RVT     lib_cell         30      1.67      1.67       2.796     2.146 unit           11
+FADDX2_RVT     lib_cell         30      3.19      1.67       5.337     1.312 unit           21
+XOR2X2_RVT     lib_cell         26      2.74      1.67       4.575     1.093 unit           18
+XNOR2X1_RVT    lib_cell         21      2.58      1.67       4.320     1.157 unit           17
+OR3X4_RVT      lib_cell         20      2.43      1.67       4.066     1.476 unit           16
+OA221X2_RVT    lib_cell         19      1.98      1.67       3.304     2.421 unit           13
+NOR3X4_RVT     lib_cell         18      2.13      1.67       3.558     1.686 unit           14
+MUX41X2_RVT    lib_cell         14      3.65      1.67       6.099     1.476 unit           24
+DFFSSRX1_RVT   lib_cell         11      4.26      1.67       7.116     1.124 unit           28
+INVX32_RVT     lib_cell         10      5.47      1.67       9.149     0.437 unit           36
+AOI221X1_RVT   lib_cell         10      2.13      1.67       3.558     2.248 unit           14
+DFFASX2_RVT    lib_cell         10      4.56      1.67       7.624     0.918 unit           30
+OR4X4_RVT      lib_cell          9      2.58      1.67       4.320     1.620 unit           17
+SRAM2RW128x32  macro             8    131.41    144.54   18993.292     0.008
+SRAM2RW128x8   macro             8     65.74    132.02    8679.522     0.006
+DFFASRX1_RVT   lib_cell          8      4.56      1.67       7.624     1.049 unit           30
+OA22X2_RVT     lib_cell          7      1.67      1.67       2.796     2.504 unit           11
+NOR2X0_RVT     lib_cell          6      1.52      1.67       2.541     1.967 unit           10
+AO221X2_RVT    lib_cell          6      1.98      1.67       3.304     2.421 unit           13
+OA222X2_RVT    lib_cell          6      2.13      1.67       3.558     2.529 unit           14
+DFFNASRQX1_RVT lib_cell          6      4.41      1.67       7.370     0.950 unit           29
+NOR3X1_RVT     lib_cell          5      1.67      1.67       2.796     2.146 unit           11
+SRAM2RW64x32   macro             5    131.41     94.91   12471.481     0.012
+IBUFFX32_RVT   lib_cell          4      6.99      1.67      11.691     0.342 unit           46
+OAI21X2_RVT    lib_cell          3      1.98      1.67       3.304     1.816 unit           13
+XNOR3X1_RVT    lib_cell          3      3.65      1.67       6.099     0.984 unit           24
+XOR3X1_RVT     lib_cell          3      4.26      1.67       7.116     0.843 unit           28
+OAI22X2_RVT    lib_cell          2      1.98      1.67       3.304     2.119 unit           13
+DFFNX2_RVT     lib_cell          2      4.26      1.67       7.116     0.843 unit           28
+SRAM2RW64x4    macro             2     54.61     80.05    4371.265     0.009
+SRAM2RW128x16  macro             2     87.63    135.67   11889.025     0.007
+AOI222X2_RVT   lib_cell          2      2.43      1.67       4.066     2.213 unit           16
+XOR3X2_RVT     lib_cell          2      4.41      1.67       7.370     0.814 unit           29
+XNOR2X2_RVT    lib_cell          1      2.74      1.67       4.575     1.093 unit           18
+DFFSSRX2_RVT   lib_cell          1      4.56      1.67       7.624     1.049 unit           30
+
+NET INFORMATION
+------------------------------------------------------------------
+NetType                 Count FloatingNets         Vias Nets/Cells
+------------------------------------------------------------------
+Total                  238679          707      2439748      0.958
+Signal                 234932          706      1841996      0.943
+Power                       1            0       240879      0.000
+Ground                      1            0       241453      0.000
+Analog Signal               0            0            0      0.000
+Analog Ground               0            0            0      0.000
+Analog Power                0            0            0      0.000
+Clock                    3744            0       115420      0.015
+Tie Low                     1            1            0      0.000
+Tie High                    0            0            0      0.000
+Others                      0            0            0      0.000
+
+NET FANOUT AND PIN COUNT INFORMATION
+---------------------------------------------------
+Fanout        Netcount     netPinCount     NetCount
+---------------------------------------------------
+<2              157853     <2                   707
+2                37158     2                 157146
+3                14786     3                  37158
+4                 4612     4                  14786
+5                 2648     5                   4612
+6-10             11115     6-10               11375
+11-20            10505     11-20              12893
+21-30                0     21-30                  0
+31-50                0     31-50                  0
+51-100               0     51-100                 0
+101-500              0     101-500                0
+501-1000             0     501-1000               0
+>1000                2     >1000                  2
+
+PORT AND PIN INFORMATION
+------------------------------------------------------------------------------
+Type         Total     Input    Output     Inout      3-st     Power    Ground
+------------------------------------------------------------------------------
+Total      1307779   1033963    273816         0      1040    249073    249073
+Macro         2666      1626      1040         0      1040        25        25
+Ports         1752       762       990         0         0         1         1
+------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+                              FLOORPLAN INFORMATION
+--------------------------------------------------------------------------------
+
+CORE AND CHIP AREA INFORMATION
+---------------------------
+Core Area is :  1689552.362
+Chip Area is :  1741945.482
+---------------------------
+
+SITE ROW INFORMATION
+-----------------------------------------------------------------------
+Site Name    Width    Height   Total Rows     Total Tiles          Area
+-----------------------------------------------------------------------
+unit          0.15      1.67          777         6648012   1689552.362
+-----------------------------------------------------------------------
+
+BLOCKAGE INFORMATION
+------------------------------------------------
+Blockage Type                Count          Area
+------------------------------------------------
+Hard placement                  25    421656.142
+Soft placement                   0         0.000
+Hard macro                       0         0.000
+Partial placement                0         0.000
+Register                         0         0.000
+Placement allow Buffer Only      0         0.000
+Placement allow RP Group Only
+                                 0         0.000
+RP Group                         0         0.000
+Category                         0         0.000
+Routing                          0         0.000
+Routing for Top                  0         0.000
+Routing For Design Rule          0         0.000
+Shaping                          0         0.000
+------------------------------------------------
+
+POWER DOMAIN INFORMATION
+--------------------------------------------------------------------
+Power Domain Name    VA Name         Primary Power Net Primary Ground Net
+--------------------------------------------------------------------
+DEFAULT_POWER_DOMAIN DEFAULT_VA      VDD               VSS
+--------------------------------------------------------------------
+
+VOLTAGE AREA INFORMATION
+-------------------------------------------------------------------------------------
+VA Name          Number             Area       Target    bbox    bbox    bbox    bbox
+              of shapes                   Utilization     llx     lly     urx     ury
+-------------------------------------------------------------------------------------
+DEFAULT_VA            1      1689552.362         1.00   10.00   10.00 1310.51 1309.14
+-------------------------------------------------------------------------------------
+
+GROUP BOUND INFORMATION
+----------------------------------------
+No Group Bound exists
+
+EXCLUSIVE MOVEBOUND INFORMATION
+----------------------------------------
+No Exclusive MoveBound exists.
+
+HARD AND SOFT MOVEBOUND INFORMATION
+----------------------------------------
+No Hard Or Soft MoveBound exists.
+
+ROUTE GUIDE INFORMATION
+------------------------------------------------
+Route Guide Type             Count          Area
+------------------------------------------------
+Extra Detour Region              0         0.000
+Over icovl CellLayers            0         0.000
+River Routing                    0         0.000
+Area Double Via                  0         0.000
+Access Preference                0         0.000
+Default                          0         0.000
+Switched Direction Only          0         0.000
+Max Patterns                     0         0.000
+Others                           0         0.000
+------------------------------------------------
+
+MULTIBIT REGISTER INFORMATION
+-----------------------------------------------
+No Multibit cells exist
+
+MULTIBIT LS/ISO CELLS INFORMATION
+-----------------------------------------------
+No Multibit cells exist
+
+RP GROUP INFORMATION
+----------------------------------------
+No RP Group exists
+
+LAYER INFORMATION
+--------------------------------------------------------------------------
+Layer Name Direction Ignored Pitch  default minWidth minSpacing    sameNet
+                                      Width                     MinSpacing
+--------------------------------------------------------------------------
+M1         Hor       YES      0.15     0.05     0.05       0.05       0.00
+M2         Ver       NO       0.15     0.06     0.06       0.06       0.06
+M3         Hor       NO       0.30     0.06     0.06       0.06       0.06
+M4         Ver       NO       0.30     0.06     0.06       0.06       0.06
+M5         Hor       NO       0.61     0.06     0.06       0.06       0.06
+M6         Ver       NO       0.61     0.06     0.06       0.06       0.06
+M7         Hor       NO       1.22     0.06     0.06       0.06       0.06
+M8         Ver       NO       1.22     0.06     0.06       0.06       0.06
+M9         Hor       NO       2.43     0.16     0.16       0.16       0.00
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+                              ROUTING INFORMATION
+--------------------------------------------------------------------------------
+
+Total wire length = 6158491.24 micron
+Total number of wires = 2231967
+Total number of contacts = 2439748
+
+FINAL WIRING STATISTICS
+
+Signal Wiring Statistics
+
+Metal layer     Num wires  % of total#  Wire length % of total length
+PO                      0        0.00%         0.00             0.00%
+M1                  70418        3.36%     16012.19             0.28%
+M2                1184111       56.50%   1499707.73            26.02%
+M3                 625615       29.85%   1725156.90            29.94%
+M4                 123793        5.91%    801415.07            13.91%
+M5                  51985        2.48%    675785.80            11.73%
+M6                  23380        1.12%    432865.68             7.51%
+M7                  12374        0.59%    378010.59             6.56%
+M8                   3710        0.18%    201014.59             3.49%
+M9                    390        0.02%     32967.28             0.57%
+MRDL                    0        0.00%         0.00             0.00%
+
+Clock wiring statistics
+
+Metal layer     Num wires  % of total#  Wire length % of total length
+PO                      0        0.00%         0.00             0.00%
+M1                   2948        2.16%       781.79             0.20%
+M2                  69528       51.05%    147584.51            37.31%
+M3                  48558       35.65%    140581.10            35.54%
+M4                   9043        6.64%     51994.92            13.14%
+M5                   5713        4.19%     50929.50            12.88%
+M6                    341        0.25%      2461.97             0.62%
+M7                     60        0.04%      1221.62             0.31%
+M8                      0        0.00%         0.00             0.00%
+M9                      0        0.00%         0.00             0.00%
+MRDL                    0        0.00%         0.00             0.00%
+
+P/G wiring statistics
+
+Metal layer     Num wires  % of total#  Wire length % of total length
+PO                      0        0.00%         0.00             0.00%
+M1                   2641       61.11%    822106.35            56.87%
+M2                     38        0.88%         5.55             0.00%
+M3                     38        0.88%        10.18             0.00%
+M4                     38        0.88%         5.55             0.00%
+M5                     38        0.88%        10.18             0.00%
+M6                     38        0.88%         5.55             0.00%
+M7                     38        0.88%         5.55             0.00%
+M8                    436       10.09%    270343.87            18.70%
+M9                   1017       23.53%    352974.38            24.42%
+MRDL                    0        0.00%         0.00             0.00%
+
+Horizontal/Vertical Wire Distribution
+
+Metal layer  Hor. length  % of hor.    Ver. length  % of ver.
+PO                   0.00        0.00%         0.00        0.00%
+M1               15481.07        0.54%       531.12        0.02%
+M2               64183.63        2.23%   1435524.10       49.81%
+M3             1713424.42       59.47%     11732.48        0.41%
+M4                2305.36        0.08%    799109.71       27.73%
+M5              674973.80       23.43%       811.99        0.03%
+M6                 280.41        0.01%    432585.28       15.01%
+M7              377534.83       13.10%       475.76        0.02%
+M8                  73.26        0.00%    200941.32        6.97%
+M9               32964.85        1.14%         2.43        0.00%
+MRDL                 0.00        0.00%         0.00        0.00%
+
+FINAL VIA STATISTICS
+
+Via layer    Via def name                Count        % of layer vias
+VIA1         VIA12SQ_C                         706717       84.67%
+VIA1         VIA12SQ_C(rot)                     51947        6.22%
+VIA1         VIA12BAR_C                         10585        1.27%
+VIA1         VIA12BAR(rot)                        766        0.09%
+VIA1         VIA12BAR_C(rot)                      448        0.05%
+VIA1         VIA12BAR                              29        0.00%
+VIA1         VIA12SQ(rot)                           1        0.00%
+VIA1         VIA12SQ                                1        0.00%
+VIA1         VIA12SQ_C(1X10)                      123        0.01%
+VIA1         VIA12SQ_C(1X12)                    63168        7.57%
+VIA1         VIA12SQ_C(1X4)                        40        0.00%
+VIA1         VIA12SQ_C(1X6)                        40        0.00%
+VIA1         VIA12SQ_C(1X9)                        78        0.01%
+VIA1         VIA12SQ_C(1X7)                        39        0.00%
+VIA1         VIA12SQ(1X2)                          31        0.00%
+VIA1         VIA12SQ_C(1X2)                       672        0.08%
+VIA1         VIA12SQ_C(rot)(1X2)                    2        0.00%
+VIA1         VIA12SQ(rot)(1X2)                      2        0.00%
+  Double via conversion rate for layer VIA1 = 7.69% (64195 / 834689 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA1 = 0.09% (707 / 771121 vias)
+
+VIA2         VIA23SQ_C                           8467        0.88%
+VIA2         VIA23SQ_C(rot)                    893110       92.54%
+VIA2         VIA23SQ_C(1X10)                      123        0.01%
+VIA2         VIA23SQ_C(1X12)                    63168        6.55%
+VIA2         VIA23SQ_C(1X4)                        40        0.00%
+VIA2         VIA23SQ_C(1X6)                        40        0.00%
+VIA2         VIA23SQ_C(1X9)                        78        0.01%
+VIA2         VIA23SQ_C(1X7)                        39        0.00%
+  Double via conversion rate for layer VIA2 = 6.58% (63488 / 965065 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA2 = 0.00% (0 / 901500 vias)
+
+VIA3         VIA34SQ_C                         157902       71.02%
+VIA3         VIA34SQ_C(rot)                       960        0.43%
+VIA3         VIA34SQ_C(1X10)                      123        0.06%
+VIA3         VIA34SQ_C(1X12)                    63168       28.41%
+VIA3         VIA34SQ_C(1X4)                        40        0.02%
+VIA3         VIA34SQ_C(1X6)                        40        0.02%
+VIA3         VIA34SQ_C(1X9)                        78        0.04%
+VIA3         VIA34SQ_C(1X7)                        39        0.02%
+  Double via conversion rate for layer VIA3 = 28.55% (63488 / 222350 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA3 = 0.00% (0 / 158780 vias)
+
+VIA4         VIA45SQ_C                           5193        3.80%
+VIA4         VIA45SQ_C(rot)                     67874       49.70%
+VIA4         VIA45SQ_C(1X10)                      123        0.09%
+VIA4         VIA45SQ_C(1X12)                    63168       46.26%
+VIA4         VIA45SQ_C(1X4)                        40        0.03%
+VIA4         VIA45SQ_C(1X6)                        40        0.03%
+VIA4         VIA45SQ_C(1X9)                        78        0.06%
+VIA4         VIA45SQ_C(1X7)                        39        0.03%
+  Double via conversion rate for layer VIA4 = 46.49% (63488 / 136555 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA4 = 0.00% (0 / 72979 vias)
+
+VIA5         VIA56LG_C                             63        0.07%
+VIA5         VIA56SQ_C                          29136       30.64%
+VIA5         VIA56SQ_C(rot)                        13        0.01%
+VIA5         VIA56BAR_C                            10        0.01%
+VIA5         VIA56BAR(rot)                          2        0.00%
+VIA5         VIA56LG_C(2X1)                      2353        2.47%
+VIA5         VIA56SQ_C(1X10)                      123        0.13%
+VIA5         VIA56SQ_C(1X12)                    63168       66.43%
+VIA5         VIA56SQ_C(1X4)                        40        0.04%
+VIA5         VIA56SQ_C(1X6)                        40        0.04%
+VIA5         VIA56SQ_C(1X9)                        78        0.08%
+VIA5         VIA56SQ_C(1X7)                        39        0.04%
+VIA5         VIA56SQ_C(1X2)                        19        0.02%
+  Double via conversion rate for layer VIA5 = 69.27% (65860 / 95084 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA5 = 0.07% (19 / 29098 vias)
+
+VIA6         VIA67LG_C                             63        0.08%
+VIA6         VIA67SQ_C                            179        0.22%
+VIA6         VIA67SQ_C(rot)                     16219       19.71%
+VIA6         VIA67LG_C(2X1)                      2353        2.86%
+VIA6         VIA67SQ_C(1X10)                      123        0.15%
+VIA6         VIA67SQ_C(1X12)                    63168       76.75%
+VIA6         VIA67SQ_C(1X4)                        40        0.05%
+VIA6         VIA67SQ_C(1X6)                        40        0.05%
+VIA6         VIA67SQ_C(1X9)                        78        0.09%
+VIA6         VIA67SQ_C(1X7)                        39        0.05%
+  Double via conversion rate for layer VIA6 = 80.00% (65841 / 82302 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA6 = 0.00% (0 / 16322 vias)
+
+VIA7         VIA78LG_C                             63        0.09%
+VIA7         VIA78BAR_C                            72        0.10%
+VIA7         VIA78SQ_C                           6634        9.11%
+VIA7         VIA78LG_C(2X1)                      2353        3.23%
+VIA7         VIA78SQ_C(1X10)                      123        0.17%
+VIA7         VIA78SQ_C(1X12)                    63168       86.77%
+VIA7         VIA78SQ_C(1X4)                        40        0.05%
+VIA7         VIA78SQ_C(1X6)                        40        0.05%
+VIA7         VIA78SQ_C(1X9)                        78        0.11%
+VIA7         VIA78SQ_C(1X7)                        39        0.05%
+VIA7         VIA78SQ_C(1X2)                       189        0.26%
+  Double via conversion rate for layer VIA7 = 90.70% (66030 / 72799 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA7 = 2.77% (189 / 6819 vias)
+
+VIA8         VIA89_C                             1784        5.77%
+VIA8         VIA89_C(rot)                         768        2.49%
+VIA8         VIA89_C(14X14)                         8        0.03%
+VIA8         VIA89_C(6X6)                       26000       84.13%
+VIA8         VIA89_C(14X6)                        400        1.29%
+VIA8         VIA89_C(6X14)                        520        1.68%
+VIA8         VIA89_C(6X1)                         352        1.14%
+VIA8         VIA89_C(2X1)                         124        0.40%
+VIA8         VIA89_C(1X6)                         948        3.07%
+  Double via conversion rate for layer VIA8 = 91.74% (28352 / 30904 vias)
+    Among them, double via conversion rate of detail route vias for layer VIA8 = 0.00% (0 / 768 vias)
+
+
+Custom Via Statistics
+
+No custom vias found in the design.
+Overall double via conversion rate = 19.70%
+  Among them, overall double via conversion rate of detail route vias = 0.05% (915 / 1957387 vias)
+  *Detail route vias are vias whose shape_use is detail_route.
+
+Via Matrix Statistics
+
+No via matrices found in the design.
+
+FINAL DRC STATISTICS
+
+DRC-SUMMARY:
+Total number of nets = 238678, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 1
+Total number of antenna violations = no antenna rules defined
+Total number of tie to rail violations = not checked
+1

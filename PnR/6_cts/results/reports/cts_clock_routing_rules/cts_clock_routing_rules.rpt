@@ -1,0 +1,12 @@
+****************************************
+ Report : clock routing rules
+ Design : NV_NVDLA_partition_o
+ Date   : Sat Aug  1 22:18:08 2026
+****************************************
+   Clock: nvdla_core_clk (mode func); Net Type: sink;     Rule: default rule; Min Layer: M1; Max Layer: M3
+   Clock: nvdla_core_clk (mode func); Net Type: internal; Rule: clk_network_NDR_internal; Min Layer: M4; Max Layer: M7
+   Clock: nvdla_core_clk (mode func); Net Type: root;     Rule: clk_network_NDR_root; Min Layer: M4; Max Layer: M7
+   Clock: nvdla_falcon_clk (mode func); Net Type: sink;     Rule: default rule; Min Layer: M1; Max Layer: M3
+   Clock: nvdla_falcon_clk (mode func); Net Type: internal; Rule: clk_network_NDR_internal; Min Layer: M4; Max Layer: M7
+   Clock: nvdla_falcon_clk (mode func); Net Type: root;     Rule: clk_network_NDR_root; Min Layer: M4; Max Layer: M7
+

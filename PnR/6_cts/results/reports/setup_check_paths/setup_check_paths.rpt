@@ -1,0 +1,71 @@
+
+****************************************
+Report : Violation analysis
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Sat Aug  1 22:48:36 2026
+****************************************
+
+START_CMD: analyze_design_violations CPU:   2004 s ( 0.56 hr) ELAPSE:   1930 s ( 0.54 hr) MEM-PEAK:  3475 Mb Sat Aug  1 22:48:36 2026
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 enabled
+Timing Window Analysis:                    enabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     enabled
+Advanced Receiver Model:                   disabled
+************************************************************
+Warning: Corner fast_cmin:  0 process number, 3 process label, 0 voltage, and 0 temperature mismatches. (PVT-030)
+Warning: 248327 cells affected for early, 248327 for late. (PVT-031)
+Warning: 757 port driving_cells affected for early, 757 for late. (PVT-034)
+Warning: Corner slow_cmax:  0 process number, 3 process label, 0 voltage, and 0 temperature mismatches. (PVT-030)
+Warning: 248327 cells affected for early, 248327 for late. (PVT-031)
+Warning: 759 port driving_cells affected for early, 759 for late. (PVT-034)
+Information: The stitching and editing of coupling caps is turned ON for design 'NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_routing_f_optv1.design'. (TIM-125)
+Information: Design NV_NVDLA_partition_o_routing_f_optv1 has 237226 nets, 0 global routed, 237224 detail routed. (NEX-024)
+Warning: Technology layer 'MRDL' setting 'routing-direction' is not valid (NEX-001)
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (100000 100000) (13105120 13091440)
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 2
+Use advanced legalizer engine : 0
+Design utilization is 0.739131
+Information: The RC mode used is DR for design 'NV_NVDLA_partition_o'. (NEX-022)
+---extraction options---
+Corner: slow_cmax
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ late_ccap_scale               : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+ early_ccap_scale              : 1
+Corner: fast_cmin
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ late_ccap_scale               : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+ early_ccap_scale              : 1
+Global options:
+ late_ccap_threshold       : 0.003pf
+ late_ccap_ratio           : 0.03
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 12
+ extract.connect_open           : true
+ extract.incremental_extraction : true
+ extract.enable_coupling_cap    : true
+Extracting design: NV_NVDLA_partition_o_routing_f_optv1 
+Information: coupling capacitance is created explicitly. (NEX-029)
+Information: 237224 nets are successfully extracted. (NEX-028)
+Information: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 237224, routed nets = 237224, across physical hierarchy nets = 0, parasitics cached nets = 237224, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)

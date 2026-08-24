@@ -1,0 +1,24 @@
+****************************************
+Report : report_utilization
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Sat Aug  1 22:30:32 2026
+****************************************
+Utilization Ratio:			0.4724
+Utilization options:
+ - Area calculation based on:		site_row of block NV_NVDLA_partition_o_placement_f_optv1
+ - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:				1689552.3617
+Total Capacity Area:			1262636.9501
+Total Area of cells:			596506.7194
+Area of excluded objects:
+ - hard_macros         :		319586.3341
+ - macro_keepouts      :		2299.7491
+ - soft_macros         :		0.0000
+ - io_cells            :		0.0000
+ - hard_blockages      :		426832.3066
+
+Utilization of site-rows with:
+ - Site 'unit':				0.4724
+
+0.4724

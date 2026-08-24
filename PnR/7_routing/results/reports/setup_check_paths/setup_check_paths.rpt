@@ -1,0 +1,127 @@
+Information: The RC mode used is DR for design 'NV_NVDLA_partition_o'. (NEX-022)
+Extracting design(INC): NV_NVDLA_partition_o_routing_f_optv1 
+Information: coupling capacitance is created explicitly. (NEX-029)
+Information: 238051 nets are successfully extracted. (NEX-028)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+        -nosplit
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Mon Aug 24 05:04:02 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: u_NV_NVDLA_mcif_u_read_u_ig_u_spt_p2_skid_ready_flop_reg (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Endpoint: u_NV_NVDLA_mcif_u_read_u_cq_nvdla_core_clk_rd_mgate_skid_p_clkgate_qd_reg (falling edge-triggered flip-flop clocked by nvdla_core_clk)
+  Mode: func
+  Corner: slow_cmax
+  Scenario: func_slow_cmax
+  Path Group: nvdla_core_clk
+  Path Type: max
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock nvdla_core_clk (rise edge)                                                            0.00      0.00
+  clock network delay (propagated)                                                            1.00      1.00
+
+  u_NV_NVDLA_mcif_u_read_u_ig_u_spt_p2_skid_ready_flop_reg/CLK (DFFASX1_RVT)                  0.00      1.00 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_spt_p2_skid_ready_flop_reg/Q (DFFASX1_RVT)                    0.22      1.22 f
+  PLACE_BUFT_RR_23588/Y (NBUFFX8_RVT)                                                         0.07      1.29 f
+  PLACE_HFSINV_957_23268/Y (INVX4_RVT)                                                        0.04      1.33 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_spt_U45/Y (AO22X2_RVT)                                        0.12      1.45 r
+  PLACE_BINV_R_28020/Y (INVX8_RVT)                                                            0.04      1.50 f
+  PLACE_BINV_R_28019/Y (INVX8_RVT)                                                            0.04      1.54 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U23/Y (NAND3X1_RVT)                                       0.13      1.67 f
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U67/Y (OAI221X1_RVT)                                      0.12      1.78 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U68/Y (AO222X1_RVT)                                       0.10      1.88 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U69/Y (OA22X1_RVT)                                        0.08      1.96 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U71/Y (AO22X1_RVT)                                        0.08      2.03 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U74/Y (AO222X1_RVT)                                       0.14      2.17 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U75/Y (AO222X1_RVT)                                       0.13      2.30 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U77/Y (AO222X1_RVT)                                       0.15      2.45 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U78/Y (AO222X1_RVT)                                       0.14      2.59 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U80/Y (AO222X1_RVT)                                       0.15      2.74 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U81/Y (AO222X1_RVT)                                       0.12      2.87 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U82/Y (OA21X1_RVT)                                        0.09      2.95 r
+  PLACE_HFSBUF_65_22970/Y (NBUFFX16_RVT)                                                      0.07      3.02 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U83/Y (AND2X1_RVT)                                        0.08      3.10 r
+  u_NV_NVDLA_mcif_u_read_u_ig_u_cvt_U97/Y (AND2X4_RVT)                                        0.13      3.23 r
+  PLACE_BINV_R_23582/Y (INVX4_RVT)                                                            0.05      3.28 f
+  PLACE_BINV_R_23579/Y (INVX8_RVT)                                                            0.03      3.32 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C24578/Y (AND2X1_RVT)                                           0.06      3.37 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C24577/Y (AND2X1_RVT)                                           0.06      3.43 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C24576/Y (AND2X1_RVT)                                           0.06      3.49 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C24575/Y (AND2X1_RVT)                                           0.07      3.55 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C24574/Y (AND2X1_RVT)                                           0.07      3.62 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C24584/Y (AND2X1_RVT)                                           0.06      3.68 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C24583/Y (AND2X1_RVT)                                           0.07      3.75 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C26739/Y (OR2X1_RVT)                                            0.06      3.81 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C26738/Y (OR2X1_RVT)                                            0.06      3.87 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C26737/Y (OR2X1_RVT)                                            0.06      3.93 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C26736/Y (OR2X1_RVT)                                            0.06      3.98 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C26735/Y (OR2X1_RVT)                                            0.06      4.04 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C26734/Y (OR2X1_RVT)                                            0.06      4.09 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C26733/Y (OR2X1_RVT)                                            0.06      4.15 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C26732/Y (OR2X1_RVT)                                            0.06      4.21 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C26731/Y (OR2X1_RVT)                                            0.06      4.27 r
+  PLACE_HFSINV_119_22531/Y (INVX2_RVT)                                                        0.02      4.30 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C20913/Y (AND2X1_RVT)                                           0.08      4.37 f
+  PLACE_BUFT_S_23575/Y (NBUFFX4_RVT)                                                          0.08      4.45 f
+  PLACE_HFSINV_598_22453/Y (INVX2_RVT)                                                        0.05      4.51 r
+  u_NV_NVDLA_mcif_u_read_u_cq_U1275/Y (AO22X1_RVT)                                            0.09      4.60 r
+  u_NV_NVDLA_mcif_u_read_u_cq_I_14/Y (INVX1_RVT)                                              0.03      4.63 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C12730/Y (OR2X1_RVT)                                            0.06      4.70 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C12731/Y (OR2X1_RVT)                                            0.06      4.75 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C12732/Y (OR2X1_RVT)                                            0.05      4.81 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C12733/Y (OR2X1_RVT)                                            0.05      4.86 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C12734/Y (OR2X1_RVT)                                            0.05      4.92 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C12735/Y (OR2X1_RVT)                                            0.05      4.97 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C12736/Y (OR2X1_RVT)                                            0.05      5.02 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C12737/Y (OR2X1_RVT)                                            0.05      5.08 f
+  u_NV_NVDLA_mcif_u_read_u_cq_I_15/Y (INVX1_RVT)                                              0.02      5.10 r
+  u_NV_NVDLA_mcif_u_read_u_cq_U1285/Y (AO22X1_RVT)                                            0.07      5.17 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C20929/Y (OR2X2_RVT)                                            0.07      5.24 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C11351/Y (XOR2X2_RVT)                                           0.12      5.36 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26745/Y (OR2X1_RVT)                                            0.06      5.42 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26744/Y (OR2X1_RVT)                                            0.06      5.48 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26743/Y (OR2X1_RVT)                                            0.06      5.55 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26742/Y (OR2X1_RVT)                                            0.06      5.61 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26741/Y (OR2X1_RVT)                                            0.07      5.68 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26740/Y (OR2X2_RVT)                                            0.07      5.74 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26770/Y (OR2X1_RVT)                                            0.06      5.80 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26769/Y (OR2X1_RVT)                                            0.06      5.86 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26768/Y (OR2X1_RVT)                                            0.07      5.93 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26767/Y (OR2X1_RVT)                                            0.06      5.99 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26766/Y (OR2X1_RVT)                                            0.07      6.06 f
+  PLACE_SGI36_23665/Y (OR2X1_RVT)                                                             0.06      6.11 f
+  PLACE_SGI148_23655/Y (AO221X1_RVT)                                                          0.08      6.19 f
+  PLACE_SGI215_23637/Y (AO221X1_RVT)                                                          0.08      6.27 f
+  PLACE_SGI131_23636/Y (AO221X1_RVT)                                                          0.07      6.34 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26756/Y (OR2X1_RVT)                                            0.07      6.41 f
+  PLACE_SGI36_23602/Y (OR2X1_RVT)                                                             0.06      6.47 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26753/Y (OR2X1_RVT)                                            0.07      6.53 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26752/Y (OR2X1_RVT)                                            0.06      6.59 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26751/Y (OR2X1_RVT)                                            0.06      6.65 f
+  u_NV_NVDLA_mcif_u_read_u_cq_nvdla_core_clk_rd_mgate_skid_p_clkgate_C11/Y (OR2X1_RVT)        0.06      6.71 f
+  u_NV_NVDLA_mcif_u_read_u_cq_nvdla_core_clk_rd_mgate_skid_p_clkgate_qd_reg/D (DFFNX1_RVT)    0.00      6.71 f
+  data arrival time                                                                                     6.71
+
+  clock nvdla_core_clk (fall edge)                                                            6.00      6.00
+  clock network delay (propagated)                                                            1.00      7.00
+  clock reconvergence pessimism                                                               0.06      7.06
+  u_NV_NVDLA_mcif_u_read_u_cq_nvdla_core_clk_rd_mgate_skid_p_clkgate_qd_reg/CLK (DFFNX1_RVT)   0.00     7.06 f
+  clock uncertainty                                                                          -0.28      6.78
+  library setup time                                                                         -0.06      6.72
+  data required time                                                                                    6.72
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                    6.72
+  data arrival time                                                                                    -6.71
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                           0.01
+
+
+1

@@ -1,0 +1,134 @@
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 enabled
+Timing Window Analysis:                    enabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     enabled
+Advanced Receiver Model:                   disabled
+************************************************************
+Warning: Corner fast_cmin:  0 process number, 3 process label, 0 voltage, and 0 temperature mismatches. (PVT-030)
+Warning: 258081 cells affected for early, 258081 for late. (PVT-031)
+Warning: 757 port driving_cells affected for early, 757 for late. (PVT-034)
+Warning: Corner slow_cmax:  0 process number, 3 process label, 0 voltage, and 0 temperature mismatches. (PVT-030)
+Warning: 258081 cells affected for early, 258081 for late. (PVT-031)
+Warning: 759 port driving_cells affected for early, 759 for late. (PVT-034)
+****************************************
+ Report : clock settings
+ Design : NV_NVDLA_partition_o_cts_f_optv1
+ Date   : Sat Aug  1 22:18:38 2026
+****************************************
+
+
+======================================
+Configurations 
+======================================
+
+##Global
+  Corner = fast_cmin
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = slow_cmax
+    Max transition: 0.200
+    Max capacitance: 32.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+
+##nvdla_core_clk
+  Corner = fast_cmin
+    Max transition: 0.400
+    Max capacitance: 45.000
+    Target skew: 1.200
+    Target latency: 0.100
+  Corner = slow_cmax
+    Max transition: 0.400
+    Max capacitance: 45.000
+    Target skew: 1.200
+    Target latency: 0.100
+
+##nvdla_falcon_clk
+  Corner = fast_cmin
+    Max transition: 0.400
+    Max capacitance: 45.000
+    Target skew: 0.400
+    Target latency: 0.100
+  Corner = slow_cmax
+    Max transition: 0.400
+    Max capacitance: 45.000
+    Target skew: 0.400
+    Target latency: 0.100
+
+
+======================================
+Routing Rules 
+======================================
+
+##Global
+Routing rule for sink nets: Not specified
+Routing rule for internal nets: Not specified
+Routing rule for root nets: Not specified
+Routing rule for all nets: Not specified
+Net-based routing rules (by set_clock_routing_rule): Not specified
+Net-based routing rules (by set_routing_rule): Not specified
+
+##nvdla_core_clk
+Routing rule for sink nets: Default Min Layer:M1 Max Layer:M3
+Routing rule for internal nets: clk_network_NDR_internal  Min Layer:M4 Max Layer:M7
+Routing rule for root nets: clk_network_NDR_root  Min Layer:M4 Max Layer:M7
+Routing rule for all nets: Not specified
+Net-based routing rules (by set_clock_routing_rule): Not specified
+Net-based routing rules (by set_routing_rule): Not specified
+
+##nvdla_falcon_clk
+Routing rule for sink nets: Default Min Layer:M1 Max Layer:M3
+Routing rule for internal nets: clk_network_NDR_internal  Min Layer:M4 Max Layer:M7
+Routing rule for root nets: clk_network_NDR_root  Min Layer:M4 Max Layer:M7
+Routing rule for all nets: Not specified
+Net-based routing rules (by set_clock_routing_rule): Not specified
+Net-based routing rules (by set_routing_rule): Not specified
+
+
+======================================
+Buffers and Inverters 
+======================================
+
+##Buffers
+Name                                   Area      Max Transition       Max Load
+------------------------------------------------------------------------------
+saed32rvt_c/NBUFFX16_RVT              6.099               1.024         82.000
+saed32rvt_c/NBUFFX2_RVT               2.033               1.024         16.000
+saed32rvt_c/NBUFFX4_RVT               2.541               1.024         32.000
+saed32rvt_c/NBUFFX8_RVT               3.812               1.024         64.000
+
+##Inverters
+Name                                   Area      Max Transition       Max Load
+------------------------------------------------------------------------------
+saed32rvt_c/IBUFFX16_RVT              6.608               1.024         82.000
+saed32rvt_c/IBUFFX2_RVT               2.541               1.024         16.000
+saed32rvt_c/IBUFFX4_RVT               3.050               1.024         32.000
+saed32rvt_c/IBUFFX8_RVT               4.320               1.024         64.000
+saed32rvt_c/INVX16_RVT                5.083               1.024         82.000
+saed32rvt_c/INVX2_RVT                 1.525               1.024         16.000
+saed32rvt_c/INVX4_RVT                 2.033               1.024         32.000
+saed32rvt_c/INVX8_RVT                 3.050               1.024         64.000
+
+
+======================================
+Spacing Rules 
+======================================
+
+##By design
+No by design spacing rule is specified
+
+##By clock
+No by clock spacing rule is specified
+
+##By libcell
+No by libcell spacing rule is specified
+
+##By clock and libcell
+No by clock and libcell spacing rule is specified
+1

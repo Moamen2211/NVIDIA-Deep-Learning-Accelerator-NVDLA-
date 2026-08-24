@@ -1,0 +1,14 @@
+Warning: Scenario func_fast_cmin is not configured for setup analysis: skipping. (UIC-058)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 2
+        -slack_lesser_than 0.00
+        -report_by design
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Sat Aug  1 22:37:52 2026
+****************************************
+No paths.
+1

@@ -1,0 +1,459 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 2
+        -report_by design
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Mon Jul  6 16:51:55 2026
+****************************************
+
+  Startpoint: u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_interp_in_shift_d1_reg_0_ (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Endpoint: u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_int_add_reg_87_ (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Mode: func
+  Corner: slow_cmax
+  Scenario: func_slow_cmax
+  Path Group: nvdla_core_clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock nvdla_core_clk (rise edge)                 0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_interp_in_shift_d1_reg_0_/CLK (DFFARX1_RVT)
+                                                   0.00      0.00 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_interp_in_shift_d1_reg_0_/QN (DFFARX1_RVT)
+                                                   0.21      0.21 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U462/Y (NAND2X0_RVT)
+                                                   0.11      0.32 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U463/Y (NAND2X0_RVT)
+                                                   0.10      0.42 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U464/Y (XOR2X2_RVT)
+                                                   0.17      0.59 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U35/Y (INVX0_RVT)
+                                                   0.12      0.71 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U89/Y (INVX0_RVT)
+                                                   0.15      0.86 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U544/Y (OA22X1_RVT)
+                                                   0.17      1.03 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U679/Y (MUX21X1_RVT)
+                                                   0.11      1.14 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U1232/Y (OR4X1_RVT)
+                                                   0.13      1.27 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U1233/Y (NOR2X1_RVT)
+                                                   0.08      1.34 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U1236/Y (NAND4X0_RVT)
+                                                   0.06      1.40 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U1242/Y (AO21X1_RVT)
+                                                   0.10      1.51 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2533/Y (NAND2X0_RVT)
+                                                   0.04      1.55 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2534/Y (NAND2X0_RVT)
+                                                   0.05      1.60 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2535/Y (NAND2X0_RVT)
+                                                   0.08      1.68 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U23/Y (NBUFFX2_RVT)
+                                                   0.11      1.79 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U242/Y (MUX21X1_RVT)
+                                                   0.12      1.91 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2648/C1 (HADDX1_RVT)
+                                                   0.08      1.98 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2826/CO (FADDX1_RVT)
+                                                   0.10      2.09 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2824/CO (FADDX1_RVT)
+                                                   0.11      2.20 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2822/CO (FADDX1_RVT)
+                                                   0.11      2.31 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2820/CO (FADDX1_RVT)
+                                                   0.11      2.42 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2818/CO (FADDX1_RVT)
+                                                   0.11      2.53 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2816/CO (FADDX1_RVT)
+                                                   0.11      2.63 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2814/CO (FADDX1_RVT)
+                                                   0.11      2.74 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2812/CO (FADDX1_RVT)
+                                                   0.11      2.85 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2810/CO (FADDX1_RVT)
+                                                   0.11      2.96 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2808/CO (FADDX1_RVT)
+                                                   0.11      3.07 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2806/CO (FADDX1_RVT)
+                                                   0.11      3.18 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2804/CO (FADDX1_RVT)
+                                                   0.11      3.29 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2802/CO (FADDX1_RVT)
+                                                   0.11      3.40 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2800/CO (FADDX1_RVT)
+                                                   0.11      3.51 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2798/CO (FADDX1_RVT)
+                                                   0.11      3.61 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2796/CO (FADDX1_RVT)
+                                                   0.11      3.72 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2794/CO (FADDX1_RVT)
+                                                   0.11      3.83 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2792/CO (FADDX1_RVT)
+                                                   0.11      3.94 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2790/CO (FADDX1_RVT)
+                                                   0.11      4.05 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2788/CO (FADDX1_RVT)
+                                                   0.11      4.16 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2786/CO (FADDX1_RVT)
+                                                   0.11      4.27 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2784/CO (FADDX1_RVT)
+                                                   0.11      4.38 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2782/CO (FADDX1_RVT)
+                                                   0.11      4.49 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2780/CO (FADDX1_RVT)
+                                                   0.11      4.60 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2778/CO (FADDX1_RVT)
+                                                   0.11      4.70 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2776/CO (FADDX1_RVT)
+                                                   0.11      4.81 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2774/CO (FADDX1_RVT)
+                                                   0.11      4.92 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2772/CO (FADDX1_RVT)
+                                                   0.11      5.03 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2770/CO (FADDX1_RVT)
+                                                   0.11      5.14 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2768/CO (FADDX1_RVT)
+                                                   0.11      5.25 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2766/CO (FADDX1_RVT)
+                                                   0.11      5.36 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2764/CO (FADDX1_RVT)
+                                                   0.11      5.47 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2762/CO (FADDX1_RVT)
+                                                   0.11      5.58 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2760/CO (FADDX1_RVT)
+                                                   0.11      5.69 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2758/CO (FADDX1_RVT)
+                                                   0.11      5.79 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2756/CO (FADDX1_RVT)
+                                                   0.11      5.90 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2754/CO (FADDX1_RVT)
+                                                   0.11      6.01 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2752/CO (FADDX1_RVT)
+                                                   0.11      6.12 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2750/CO (FADDX1_RVT)
+                                                   0.11      6.23 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2748/CO (FADDX1_RVT)
+                                                   0.11      6.34 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2746/CO (FADDX1_RVT)
+                                                   0.11      6.45 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2744/CO (FADDX1_RVT)
+                                                   0.11      6.56 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2742/CO (FADDX1_RVT)
+                                                   0.11      6.67 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2740/CO (FADDX1_RVT)
+                                                   0.11      6.78 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2738/CO (FADDX1_RVT)
+                                                   0.11      6.88 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2736/CO (FADDX1_RVT)
+                                                   0.11      6.99 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2734/CO (FADDX1_RVT)
+                                                   0.11      7.10 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2732/CO (FADDX1_RVT)
+                                                   0.11      7.21 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2730/CO (FADDX1_RVT)
+                                                   0.11      7.32 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2728/CO (FADDX1_RVT)
+                                                   0.11      7.43 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2726/CO (FADDX1_RVT)
+                                                   0.11      7.54 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2724/CO (FADDX1_RVT)
+                                                   0.11      7.65 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2722/CO (FADDX1_RVT)
+                                                   0.11      7.76 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2720/CO (FADDX1_RVT)
+                                                   0.11      7.87 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2718/CO (FADDX1_RVT)
+                                                   0.11      7.97 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2716/CO (FADDX1_RVT)
+                                                   0.11      8.08 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2714/CO (FADDX1_RVT)
+                                                   0.11      8.19 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2712/CO (FADDX1_RVT)
+                                                   0.11      8.30 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2710/CO (FADDX1_RVT)
+                                                   0.11      8.41 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2708/CO (FADDX1_RVT)
+                                                   0.11      8.52 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2706/CO (FADDX1_RVT)
+                                                   0.11      8.63 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2704/CO (FADDX1_RVT)
+                                                   0.11      8.74 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2702/CO (FADDX1_RVT)
+                                                   0.11      8.85 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2700/CO (FADDX1_RVT)
+                                                   0.11      8.96 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2698/CO (FADDX1_RVT)
+                                                   0.11      9.06 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2696/CO (FADDX1_RVT)
+                                                   0.11      9.17 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2694/CO (FADDX1_RVT)
+                                                   0.11      9.28 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2692/CO (FADDX1_RVT)
+                                                   0.11      9.39 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2690/CO (FADDX1_RVT)
+                                                   0.11      9.50 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2688/CO (FADDX1_RVT)
+                                                   0.11      9.61 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2686/CO (FADDX1_RVT)
+                                                   0.11      9.72 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2684/CO (FADDX1_RVT)
+                                                   0.11      9.83 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2682/CO (FADDX1_RVT)
+                                                   0.11      9.94 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2680/CO (FADDX1_RVT)
+                                                   0.11     10.05 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2678/CO (FADDX1_RVT)
+                                                   0.11     10.15 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2676/CO (FADDX1_RVT)
+                                                   0.11     10.26 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2673/CO (FADDX1_RVT)
+                                                   0.11     10.37 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2670/CO (FADDX1_RVT)
+                                                   0.11     10.48 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2668/CO (FADDX1_RVT)
+                                                   0.11     10.59 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2666/CO (FADDX1_RVT)
+                                                   0.11     10.70 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2664/CO (FADDX1_RVT)
+                                                   0.11     10.81 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2662/CO (FADDX1_RVT)
+                                                   0.11     10.92 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2660/CO (FADDX1_RVT)
+                                                   0.11     11.03 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2658/CO (FADDX1_RVT)
+                                                   0.11     11.14 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2656/CO (FADDX1_RVT)
+                                                   0.11     11.24 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2654/CO (FADDX1_RVT)
+                                                   0.11     11.35 r
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2651/S (FADDX1_RVT)
+                                                   0.16     11.51 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U2653/Y (AO22X1_RVT)
+                                                   0.09     11.60 f
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_int_add_reg_87_/D (DFFARX1_RVT)
+                                                   0.00     11.60 f
+  data arrival time                                         11.60
+
+  clock nvdla_core_clk (rise edge)                12.00     12.00
+  clock network delay (ideal)                      0.00     12.00
+  u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_int_add_reg_87_/CLK (DFFARX1_RVT)
+                                                   0.00     12.00 r
+  clock uncertainty                               -0.05     11.95
+  library setup time                              -0.05     11.90
+  data required time                                        11.90
+  ------------------------------------------------------------------------
+  data required time                                        11.90
+  data arrival time                                        -11.60
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.30
+
+
+
+  Startpoint: u_NV_NVDLA_mcif_u_read_u_cq_rd_skid5_0_vld_reg (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Endpoint: u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_UJ_clk_jtag_Data_reg_r0_qd_reg (falling edge-triggered flip-flop clocked by nvdla_core_clk)
+  Mode: func
+  Corner: slow_cmax
+  Scenario: func_slow_cmax
+  Path Group: nvdla_core_clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock nvdla_core_clk (rise edge)                 0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  u_NV_NVDLA_mcif_u_read_u_cq_rd_skid5_0_vld_reg/CLK (DFFARX1_RVT)
+                                                   0.00      0.00 r
+  u_NV_NVDLA_mcif_u_read_u_cq_rd_skid5_0_vld_reg/Q (DFFARX1_RVT)
+                                                   0.23      0.23 f
+  u_NV_NVDLA_mcif_u_read_u_cq_I_2818/Y (INVX0_RVT)
+                                                   0.06      0.28 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C25162/Y (OR2X1_RVT)
+                                                   0.06      0.34 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C25161/Y (OR2X1_RVT)
+                                                   0.05      0.40 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C25160/Y (OR2X1_RVT)
+                                                   0.05      0.45 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C25159/Y (AND2X1_RVT)
+                                                   0.09      0.54 r
+  u_NV_NVDLA_mcif_u_read_u_cq_I_2922/Y (INVX0_RVT)
+                                                   0.12      0.66 f
+  u_NV_NVDLA_mcif_u_read_u_cq_U185/Y (NBUFFX2_RVT)
+                                                   0.14      0.80 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C25723/Y (AND2X1_RVT)
+                                                   0.08      0.88 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C25722/Y (AND2X1_RVT)
+                                                   0.05      0.93 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C25721/Y (AND2X1_RVT)
+                                                   0.05      0.98 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C25720/Y (AND2X1_RVT)
+                                                   0.05      1.04 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C25719/Y (AND2X1_RVT)
+                                                   0.06      1.09 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C25718/Y (AND2X1_RVT)
+                                                   0.06      1.15 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26627/Y (OR2X1_RVT)
+                                                   0.05      1.20 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26626/Y (OR2X1_RVT)
+                                                   0.06      1.26 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26625/Y (OR2X1_RVT)
+                                                   0.06      1.32 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26624/Y (OR2X1_RVT)
+                                                   0.06      1.38 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26623/Y (OR2X1_RVT)
+                                                   0.06      1.44 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26622/Y (OR2X1_RVT)
+                                                   0.06      1.50 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26621/Y (OR2X1_RVT)
+                                                   0.06      1.56 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26620/Y (OR2X1_RVT)
+                                                   0.06      1.62 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26619/Y (OR2X1_RVT)
+                                                   0.06      1.68 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26618/Y (OR2X1_RVT)
+                                                   0.06      1.73 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26617/Y (OR2X1_RVT)
+                                                   0.06      1.79 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26616/Y (OR2X1_RVT)
+                                                   0.06      1.85 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26615/Y (OR2X1_RVT)
+                                                   0.06      1.91 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26614/Y (OR2X1_RVT)
+                                                   0.06      1.97 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26613/Y (OR2X1_RVT)
+                                                   0.06      2.03 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26612/Y (OR2X1_RVT)
+                                                   0.06      2.09 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26611/Y (OR2X1_RVT)
+                                                   0.06      2.15 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26610/Y (OR2X1_RVT)
+                                                   0.06      2.21 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26609/Y (OR2X1_RVT)
+                                                   0.06      2.27 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26608/Y (OR2X1_RVT)
+                                                   0.06      2.33 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26607/Y (OR2X1_RVT)
+                                                   0.06      2.39 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26606/Y (OR2X1_RVT)
+                                                   0.06      2.44 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26605/Y (OR2X1_RVT)
+                                                   0.06      2.50 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26604/Y (OR2X1_RVT)
+                                                   0.06      2.56 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26603/Y (OR2X1_RVT)
+                                                   0.06      2.62 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26602/Y (OR2X1_RVT)
+                                                   0.06      2.68 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26601/Y (OR2X1_RVT)
+                                                   0.06      2.74 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26600/Y (OR2X1_RVT)
+                                                   0.06      2.80 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26599/Y (OR2X1_RVT)
+                                                   0.06      2.86 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26598/Y (OR2X1_RVT)
+                                                   0.06      2.92 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26597/Y (OR2X1_RVT)
+                                                   0.06      2.98 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26596/Y (OR2X1_RVT)
+                                                   0.06      3.04 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26595/Y (OR2X1_RVT)
+                                                   0.06      3.10 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26594/Y (OR2X1_RVT)
+                                                   0.06      3.16 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26593/Y (OR2X1_RVT)
+                                                   0.06      3.22 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26592/Y (OR2X1_RVT)
+                                                   0.06      3.28 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26591/Y (OR2X1_RVT)
+                                                   0.06      3.33 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26590/Y (OR2X1_RVT)
+                                                   0.06      3.39 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26589/Y (OR2X1_RVT)
+                                                   0.06      3.45 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26588/Y (OR2X1_RVT)
+                                                   0.06      3.51 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26587/Y (OR2X1_RVT)
+                                                   0.06      3.57 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26586/Y (OR2X1_RVT)
+                                                   0.06      3.63 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26585/Y (OR2X1_RVT)
+                                                   0.06      3.69 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26584/Y (OR2X1_RVT)
+                                                   0.06      3.75 f
+  u_NV_NVDLA_mcif_u_read_u_cq_C26583/Y (OR2X2_RVT)
+                                                   0.10      3.85 f
+  u_NV_NVDLA_mcif_u_read_u_cq_I_1581/Y (INVX2_RVT)
+                                                   0.09      3.94 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C8354/Y (OR2X1_RVT)
+                                                   0.08      4.02 r
+  u_NV_NVDLA_mcif_u_read_u_cq_C8355/Y (OR2X1_RVT)
+                                                   0.05      4.07 r
+  u_NV_NVDLA_mcif_u_read_u_cq_I_2686/Y (INVX0_RVT)
+                                                   0.02      4.09 f
+  u_NV_NVDLA_mcif_u_read_u_cq_B_585/Y (NBUFFX2_RVT)
+                                                   0.05      4.13 f
+  u_NV_NVDLA_mcif_u_read_u_cq_U1007/Y (AO22X1_RVT)
+                                                   0.08      4.21 f
+  u_NV_NVDLA_mcif_u_read_u_cq_U1011/Y (NOR4X0_RVT)
+                                                   0.14      4.36 r
+  u_NV_NVDLA_mcif_u_read_u_cq_U1012/Y (NAND2X0_RVT)
+                                                   0.08      4.43 f
+  u_NV_NVDLA_mcif_u_read_u_cq_U1037/Y (NAND2X0_RVT)
+                                                   0.08      4.51 r
+  u_NV_NVDLA_mcif_u_read_u_cq_U1038/Y (NAND3X0_RVT)
+                                                   0.12      4.63 f
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_U82/Y (AOI22X1_RVT)
+                                                   0.14      4.77 r
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_U83/Y (OA221X1_RVT)
+                                                   0.07      4.84 r
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_U84/Y (OA221X1_RVT)
+                                                   0.08      4.92 r
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_U85/Y (OA221X1_RVT)
+                                                   0.08      5.00 r
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_U13/Y (AND2X1_RVT)
+                                                   0.06      5.06 r
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_C223/Y (AND2X1_RVT)
+                                                   0.05      5.11 r
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_C222/Y (AND2X1_RVT)
+                                                   0.05      5.17 r
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_C221/Y (AND2X1_RVT)
+                                                   0.05      5.22 r
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_C220/Y (AND2X1_RVT)
+                                                   0.06      5.28 r
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_I_15/Y (INVX0_RVT)
+                                                   0.02      5.30 f
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_B_6/Y (NBUFFX2_RVT)
+                                                   0.04      5.35 f
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_U34/Y (AO22X1_RVT)
+                                                   0.06      5.40 f
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_C284/Y (OR2X1_RVT)
+                                                   0.05      5.46 f
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_C289/Y (OR2X1_RVT)
+                                                   0.06      5.52 f
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_UJ_clk_jtag_Data_reg_r0_C11/Y (OR2X1_RVT)
+                                                   0.05      5.57 f
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_UJ_clk_jtag_Data_reg_r0_qd_reg/D (DFFNX1_RVT)
+                                                   0.00      5.57 f
+  data arrival time                                          5.57
+
+  clock nvdla_core_clk (fall edge)                 6.00      6.00
+  clock network delay (ideal)                      0.00      6.00
+  u_NV_NVDLA_mcif_u_read_u_cq_adr_ram_r_nv_ram_rwst_256x8_UJ_clk_jtag_Data_reg_r0_qd_reg/CLK (DFFNX1_RVT)
+                                                   0.00      6.00 f
+  clock uncertainty                               -0.05      5.95
+  library setup time                              -0.06      5.89
+  data required time                                         5.89
+  ------------------------------------------------------------------------
+  data required time                                         5.89
+  data arrival time                                         -5.57
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.32
+
+
+1

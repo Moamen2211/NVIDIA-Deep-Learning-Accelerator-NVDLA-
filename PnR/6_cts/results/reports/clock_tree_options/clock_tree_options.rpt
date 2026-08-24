@@ -1,0 +1,36 @@
+Using libraries: NV_NVDLA_partition_o.dlib saed32sram_c saed32nm_std_ndm_physical_only saed32rvt_c
+Warning: In library NV_NVDLA_partition_o.dlib, no block views exist for block NV_NVDLA_partition_o. (LNK-064)
+Warning: In library NV_NVDLA_partition_o.dlib, no block views exist for block NV_NVDLA_partition_o_routing. (LNK-064)
+Warning: In library NV_NVDLA_partition_o.dlib, no block views exist for block NV_NVDLA_partition_o_eng_elgammal_cts. (LNK-064)
+Visiting block NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_cts_f_optv1.design
+Design 'NV_NVDLA_partition_o' was successfully linked.
+****************************************
+ Report : target skew and latency
+ Design : NV_NVDLA_partition_o
+ Date   : Sat Aug  1 22:18:07 2026
+****************************************
+
+##Target Skew
+
+Clock                        Corner                        Target
+-----------------------------------------------------------------
+nvdla_core_clk (mode func)   fast_cmin                     1.2
+nvdla_core_clk (mode func)   slow_cmax                     1.2
+nvdla_falcon_clk (mode func) fast_cmin                     0.4
+nvdla_falcon_clk (mode func) slow_cmax                     0.4
+
+##Target Latency
+
+Clock                        Corner                        Target
+-----------------------------------------------------------------
+nvdla_core_clk (mode func)   slow_cmax                     0.1
+nvdla_core_clk (mode func)   fast_cmin                     0.1
+nvdla_falcon_clk (mode func) slow_cmax                     0.1
+nvdla_falcon_clk (mode func) fast_cmin                     0.1
+
+##Max Level Count
+
+Clock                                  Count
+-----------------------------------------------------------------
+No max level constraints found.
+1

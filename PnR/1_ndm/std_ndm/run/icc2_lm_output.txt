@@ -1,0 +1,170 @@
+
+icc2_lm_shell> # ########################################## #
+icc2_lm_shell> # =============== WorkSpace  =============== #
+icc2_lm_shell> # ########################################## #
+icc2_lm_shell> # -- Depend on  (technology file ) process of creating a reference library
+icc2_lm_shell> set tech_file "/home/ICer/Downloads/SAED32/saed32nm_1p9m_mw.tf"
+/home/ICer/Downloads/SAED32/saed32nm_1p9m_mw.tf
+icc2_lm_shell> create_workspace -flow exploration -technology $tech_file saed32nm_std_ndm
+Information: Loading technology file '/home/ICer/Downloads/SAED32/saed32nm_1p9m_mw.tf' (FILE-007)
+... created workspace saed32nm_std_ndm in exploration flow
+icc2_lm_shell> 
+icc2_lm_shell> # and filler cells \are not accidentally dropped during the NDM creation.
+icc2_lm_shell> set_app_options -list {lib.workspace.keep_all_physical_cells {true}   }
+lib.workspace.keep_all_physical_cells true
+icc2_lm_shell> 
+icc2_lm_shell> # Creates the view used for routing and placement.
+icc2_lm_shell> set_app_options -list {lib.workspace.save_design_views       {true}   }
+lib.workspace.save_design_views true
+icc2_lm_shell> 
+icc2_lm_shell> # Creates the view used for GDS export and DRC.
+icc2_lm_shell> set_app_options -list {lib.workspace.save_layout_views       {true}   }
+lib.workspace.save_layout_views true
+icc2_lm_shell> 
+icc2_lm_shell> # Allows the tool to write/modify data in the workspace.
+icc2_lm_shell> set_app_options -list {design.enable_lib_cell_editing        {mutable}}
+design.enable_lib_cell_editing mutable
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> read_db  "/home/ICer/Downloads/SAED32/STD/saed32rvt_ss0p95vn40c.db"
+Information: Loading db file '/home/ICer/Downloads/SAED32/STD/saed32rvt_ss0p95vn40c.db' (FILE-007)
+{saed32rvt_ss0p95vn40c}
+icc2_lm_shell> read_db  "/home/ICer/Downloads/SAED32/STD/saed32rvt_ff1p16v125c.db"
+Information: Loading db file '/home/ICer/Downloads/SAED32/STD/saed32rvt_ff1p16v125c.db' (FILE-007)
+{saed32rvt_ff1p16v125c}
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> read_lef  "/home/ICer/Downloads/SAED32/lef/saed32nm_rvt_1p9m.lef"
+Information: The default value of lib.workspace.library_developer_mode will be 'true' in future release. (LMUI-054)
+Error: File '/home/ICer/Downloads/SAED32/lef/saed32nm_rvt_1p9m.lef' cannot be found using search_path of: '. .'. (FILE-002)
+Error: Unable to open file '/home/ICer/Downloads/SAED32/lef/saed32nm_rvt_1p9m.lef' for reading; LEF file name is empty (FILE-001)
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> read_lef  "/home/ICer/Downloads/SAED32/saed32nm_rvt_1p9m.lef"
+Information: The default value of lib.workspace.library_developer_mode will be 'true' in future release. (LMUI-054)
+Information: Loading LEF file '/home/ICer/Downloads/SAED32/saed32nm_rvt_1p9m.lef' (FILE-007)
+Information: Read LEF into a new library 'saed32nm_rvt_1p9m'. (LEFR-022)
+Warning: Line 56, Invalid bus bit characters '_<>' are specified; using default characters '[]'. (LEFR-011)
+{saed32nm_rvt_1p9m}
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> group_libs
+...Created 2 lib groups
+...Created sub-workspace saed32rvt_c with type normal: 2 logical libs, 1 physical lib, 0 scaling groups.
+...Created sub-workspace saed32nm_std_ndm_physical_only with type physical_only.
+...Created 2 sub-workspaces
+icc2_lm_shell> process_workspaces  -directory /home/ICer/EDA_projects/NVDLA/nv_small/PnR/1_ndm/std_ndm/ndm
+
+Checking workspace saed32rvt_c ...
+Checking libraries...
+Using saed32rvt_ss0p95vn40c as the base library.
+Warning: Library saed32rvt_ss0p95vn40c has 465 duplicate arc(s) (LM-006)
+Warning: Library saed32rvt_ff1p16v125c has 465 duplicate arc(s) (LM-006)
+Warning: Application option 'lib.workspace.keep_all_physical_cells' will be ignored in the exploration flow. (LMUI-061)
+Information: Combined 294 physical designs:294 with a design view (283 had ports reordered); (LM-034)
+Information: Skipped 56 physical designs (LM-052)
+... creating frames for saed32rvt_c
+Warning: Block AND2X2_RVT.frame has a very large regular routing blockage RB_9 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AND2X4_RVT.frame has a very large regular routing blockage RB_11 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AND3X4_RVT.frame has a very large regular routing blockage RB_12 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AND4X1_RVT.frame has a very large regular routing blockage RB_10 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO221X1_RVT.frame has a very large regular routing blockage RB_12 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO221X2_RVT.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO222X1_RVT.frame has a very large regular routing blockage RB_15 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO222X2_RVT.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO22X1_RVT.frame has a very large regular routing blockage RB_11 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO22X2_RVT.frame has a very large regular routing blockage RB_12 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AOI221X1_RVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AOI221X2_RVT.frame has a very large regular routing blockage RB_18 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AOI222X1_RVT.frame has a very large regular routing blockage RB_18 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AOI222X2_RVT.frame has a very large regular routing blockage RB_19 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block BSLEX4_RVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block BUSKP_RVT.frame has a very large regular routing blockage RB_12 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: There is no via region created in block 'DCAP_RVT.frame'. Please check your design and settings. (FRAM-069)
+Warning: There is no via region created in block 'DHFILLH2_RVT.frame'. Please check your design and settings. (FRAM-069)
+Warning: There is no via region created in block 'DHFILLHL2_RVT.frame'. Please check your design and settings. (FRAM-069)
+Warning: Block FADDX1_RVT.frame has a very large regular routing blockage RB_22 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block FADDX2_RVT.frame has a very large regular routing blockage RB_24 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block HADDX1_RVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block HADDX2_RVT.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block IBUFFX16_RVT.frame has a very large regular routing blockage RB_26 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block IBUFFX32_RVT.frame has a very large regular routing blockage RB_46 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block IBUFFX8_RVT.frame has a very large regular routing blockage RB_17 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLANDAOX8_RVT.frame has a very large regular routing blockage RB_36 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLANDX4_RVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLANDX8_RVT.frame has a very large regular routing blockage RB_18 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLORAOX8_RVT.frame has a very large regular routing blockage RB_42 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLORX2_RVT.frame has a very large regular routing blockage RB_9 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLORX4_RVT.frame has a very large regular routing blockage RB_11 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLORX8_RVT.frame has a very large regular routing blockage RB_18 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block MUX21X1_RVT.frame has a very large regular routing blockage RB_15 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block MUX21X2_RVT.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block MUX41X1_RVT.frame has a very large regular routing blockage RB_32 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block MUX41X2_RVT.frame has a very large regular routing blockage RB_34 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block NBUFFX16_RVT.frame has a very large regular routing blockage RB_24 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block NBUFFX32_RVT.frame has a very large regular routing blockage RB_42 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block NBUFFX4_RVT.frame has a very large regular routing blockage RB_10 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block NBUFFX8_RVT.frame has a very large regular routing blockage RB_15 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OA221X2_RVT.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OA222X1_RVT.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OA222X2_RVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OR2X1_RVT.frame has a very large regular routing blockage RB_8 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OR2X2_RVT.frame has a very large regular routing blockage RB_9 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OR2X4_RVT.frame has a very large regular routing blockage RB_11 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OR3X2_RVT.frame has a very large regular routing blockage RB_10 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: There is no via region created in block 'SHFILL128_RVT.frame'. Please check your design and settings. (FRAM-069)
+Warning: There is no via region created in block 'SHFILL1_RVT.frame'. Please check your design and settings. (FRAM-069)
+Warning: There is no via region created in block 'SHFILL2_RVT.frame'. Please check your design and settings. (FRAM-069)
+Warning: There is no via region created in block 'SHFILL3_RVT.frame'. Please check your design and settings. (FRAM-069)
+Warning: There is no via region created in block 'SHFILL64_RVT.frame'. Please check your design and settings. (FRAM-069)
+Warning: Block TNBUFFX16_RVT.frame has a very large regular routing blockage RB_50 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block TNBUFFX2_RVT.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block TNBUFFX32_RVT.frame has a very large regular routing blockage RB_103 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block TNBUFFX4_RVT.frame has a very large regular routing blockage RB_20 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block TNBUFFX8_RVT.frame has a very large regular routing blockage RB_31 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block XOR3X2_RVT.frame has a very large regular routing blockage RB_31 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+... created 294 frames
+
+Workspace check succeeded!
+... wrote /home/ICer/EDA_projects/NVDLA/nv_small/PnR/1_ndm/std_ndm/ndm/saed32rvt_c.ndm
+... removing library 'saed32rvt_ss0p95vn40c'
+... removing library 'saed32rvt_ff1p16v125c'
+... removing library 'saed32nm_rvt_1p9m'
+... lib workspace removed!
+
+Checking workspace saed32nm_std_ndm_physical_only ...
+Checking libraries...
+Building a physical-only workspace...
+Using saed32rvt_ss0p95vn40c as the base library.
+... looking for physical-only designs ...
+Information: Copied 56 physical designs (LM-050)
+Information: Skipped 294 physical designs (LM-052)
+... creating frames for saed32nm_std_ndm_physical_only
+Warning: Block LSDNSSX8_RVT.frame has a very large regular routing blockage RB_17 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+... created 56 frames
+
+Workspace check succeeded!
+... wrote /home/ICer/EDA_projects/NVDLA/nv_small/PnR/1_ndm/std_ndm/ndm/saed32nm_std_ndm_physical_only.ndm
+... removing library 'saed32rvt_ss0p95vn40c'
+... removing library 'saed32nm_rvt_1p9m'
+... lib workspace removed!
+Information: 2/2 workspaces processed successfully (LMUI-044)
+icc2_lm_shell> 

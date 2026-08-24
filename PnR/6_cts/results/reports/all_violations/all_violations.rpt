@@ -1,0 +1,2916 @@
+****************************************
+Report : constraint
+        -all_violators
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Sat Aug  1 22:18:44 2026
+****************************************
+
+   late_timing
+   -----------
+
+Information: The stitching and editing of coupling caps is turned ON for design 'NV_NVDLA_partition_o.dlib:NV_NVDLA_partition_o_cts_f_optv1.design'. (TIM-125)
+Information: Design NV_NVDLA_partition_o_cts_f_optv1 has 246980 nets, 0 global routed, 3740 detail routed. (NEX-024)
+Warning: Technology layer 'MRDL' setting 'routing-direction' is not valid (NEX-001)
+Information: The RC mode used is CTO for design 'NV_NVDLA_partition_o'. (NEX-022)
+Information: Crosstalk analysis has been disabled. (TIM-114)
+Information: Design Average RC for design NV_NVDLA_partition_o_cts_f_optv1  (NEX-011)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.083923 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.100498 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 246978, routed nets = 3740, across physical hierarchy nets = 0, parasitics cached nets = 246978, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
+----------------------------------------------------------------------------------------------------------
+No paths.
+
+   early_timing
+   -----------
+
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
+----------------------------------------------------------------------------------------------------------
+No paths.
+
+   Mode: func Corner: slow_cmax
+   Scenario: func_slow_cmax
+   max_transition                                                              
+                             Required        Actual                            
+   Net                      Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+   net_net_3583                 0.09           0.09          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_pipe_pp1_p2_pipe_data_reg_24_/Q
+                                0.09           0.09          -0.00  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_ig_u_bpt0_pipe_p2_n6
+                                0.20           0.20          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_ig_u_bpt0_pipe_p2_U10/Y
+                                0.20           0.20          -0.00  (VIOLATED) 
+     PIN : U879/A1              0.20           0.20          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_ig_u_bpt0_pipe_p2_U14/A1
+                                0.20           0.20          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_ig_u_bpt0_pipe_p2_U11/A
+                                0.20           0.20          -0.00  (VIOLATED) 
+     PIN : U750/A2              0.20           0.20          -0.00  (VIOLATED) 
+     PIN : U808/A1              0.20           0.20          -0.00  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_rdma_u_reg_u_dual_reg_d1_n185
+                                0.20           0.20          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_rdma_u_reg_u_dual_reg_d1_U200/Y
+                                0.20           0.20          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_rdma_u_reg_u_dual_reg_d1_U201/A1
+                                0.20           0.20          -0.00  (VIOLATED) 
+
+   copt_net_68474               0.09           0.09          -0.00  (VIOLATED) 
+     PIN : OPT_copt_h_inst_133735/Y
+                                0.09           0.09          -0.00  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 4
+
+   Mode: func Corner: slow_cmax
+   Scenario: func_slow_cmax
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+   OPT_ZBUF_936                32.00          74.51         -42.51  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100048/Y
+                               32.00          74.51         -42.51  (VIOLATED) 
+
+   BUF_net_11761               32.00          73.34         -41.34  (VIOLATED) 
+     PIN : PLACE_BINV_R_35869/Y
+                               32.00          73.34         -41.34  (VIOLATED) 
+
+   OPT_ZBUF_1069               32.00          72.95         -40.95  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100184/Y
+                               32.00          72.95         -40.95  (VIOLATED) 
+
+   PLACE_HFSNET_7462           32.00          72.63         -40.63  (VIOLATED) 
+     PIN : PLACE_BINV_RR_50110/Y
+                               32.00          72.63         -40.63  (VIOLATED) 
+
+   PLACE_ZINV_5                32.00          72.09         -40.09  (VIOLATED) 
+     PIN : PLACE_ZINV_inst_52920/Y
+                               32.00          72.09         -40.09  (VIOLATED) 
+
+   OPT_ZBUF_1043               32.00          69.65         -37.65  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100158/Y
+                               32.00          69.65         -37.65  (VIOLATED) 
+
+   OPT_ZBUF_911                32.00          66.43         -34.43  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100023/Y
+                               32.00          66.43         -34.43  (VIOLATED) 
+
+   PLACE_HFSNET_161            32.00          64.86         -32.86  (VIOLATED) 
+     PIN : PLACE_BINV_RR_52029/Y
+                               32.00          64.86         -32.86  (VIOLATED) 
+
+   OPT_ZBUF_184                32.00          64.28         -32.28  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_76943/Y
+                               32.00          64.28         -32.28  (VIOLATED) 
+
+   OPT_ZBUF_941                32.00          62.16         -30.16  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100053/Y
+                               32.00          62.16         -30.16  (VIOLATED) 
+
+   PLACE_HFSNET_102            32.00          61.54         -29.54  (VIOLATED) 
+     PIN : PLACE_HFSBUF_786_131/Y
+                               32.00          61.54         -29.54  (VIOLATED) 
+
+   PLACE_HFSNET_19001          32.00          60.65         -28.65  (VIOLATED) 
+     PIN : PLACE_BINV_RR_42509/Y
+                               32.00          60.65         -28.65  (VIOLATED) 
+
+   PLACE_HFSNET_19570          32.00          60.57         -28.57  (VIOLATED) 
+     PIN : PLACE_BINV_RR_42552/Y
+                               32.00          60.57         -28.57  (VIOLATED) 
+
+   PLACE_HFSNET_19566          32.00          60.26         -28.26  (VIOLATED) 
+     PIN : PLACE_BINV_RR_42548/Y
+                               32.00          60.26         -28.26  (VIOLATED) 
+
+   BUF_net_10312               32.00          59.50         -27.50  (VIOLATED) 
+     PIN : PLACE_BINV_R_34420/Y
+                               32.00          59.50         -27.50  (VIOLATED) 
+
+   PLACE_HFSNET_95             32.00          59.45         -27.45  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_51886/Y
+                               32.00          59.45         -27.45  (VIOLATED) 
+
+   BUF_net_22461               32.00          58.50         -26.50  (VIOLATED) 
+     PIN : PLACE_BINV_R_46569/Y
+                               32.00          58.50         -26.50  (VIOLATED) 
+
+   PLACE_HFSNET_12714          32.00          58.15         -26.15  (VIOLATED) 
+     PIN : PLACE_BINV_RR_51854/Y
+                               32.00          58.15         -26.15  (VIOLATED) 
+
+   BUF_net_14287               32.00          57.47         -25.47  (VIOLATED) 
+     PIN : PLACE_BINV_R_38395/Y
+                               32.00          57.47         -25.47  (VIOLATED) 
+
+   u_NV_NVDLA_csb_master_core_req_pd_d1[30]
+                               32.00          56.98         -24.98  (VIOLATED) 
+     PIN : PLACE_BINV_RR_26815/Y
+                               32.00          56.98         -24.98  (VIOLATED) 
+
+   OPT_ZBUF_1070               32.00          56.96         -24.96  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100185/Y
+                               32.00          56.96         -24.96  (VIOLATED) 
+
+   PLACE_HFSNET_10836          32.00          56.23         -24.23  (VIOLATED) 
+     PIN : PLACE_HFSINV_172_10865/Y
+                               32.00          56.23         -24.23  (VIOLATED) 
+
+   BUF_net_22538               32.00          56.11         -24.11  (VIOLATED) 
+     PIN : PLACE_BINV_R_46646/Y
+                               32.00          56.11         -24.11  (VIOLATED) 
+
+   PLACE_HFSNET_10809          32.00          56.08         -24.08  (VIOLATED) 
+     PIN : PLACE_HFSBUF_424_10838/Y
+                               32.00          56.08         -24.08  (VIOLATED) 
+
+   iso_net_sdp_rdma2csb_resp_valid
+                               32.00          55.04         -23.04  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_50275/Y
+                               32.00          55.04         -23.04  (VIOLATED) 
+
+   OPT_ZBUF_271                32.00          54.43         -22.43  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_99374/Y
+                               32.00          54.43         -22.43  (VIOLATED) 
+
+   PLACE_HFSNET_236            32.00          53.36         -21.36  (VIOLATED) 
+     PIN : PLACE_HFSINV_721_265/Y
+                               32.00          53.36         -21.36  (VIOLATED) 
+
+   BUF_net_18392               32.00          53.21         -21.21  (VIOLATED) 
+     PIN : PLACE_BINV_R_42500/Y
+                               32.00          53.21         -21.21  (VIOLATED) 
+
+   BUF_net_18424               32.00          52.61         -20.61  (VIOLATED) 
+     PIN : PLACE_BINV_R_42532/Y
+                               32.00          52.61         -20.61  (VIOLATED) 
+
+   PLACE_ZBUF_300              32.00          52.55         -20.55  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53129/Y
+                               32.00          52.55         -20.55  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_23_
+                               16.00          35.69         -19.69  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_23_/Y
+                               16.00          35.69         -19.69  (VIOLATED) 
+
+   OPT_ZBUF_2175               32.00          51.34         -19.34  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101318/Y
+                               32.00          51.34         -19.34  (VIOLATED) 
+
+   PLACE_HFSNET_206            32.00          51.22         -19.22  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_52113/Y
+                               32.00          51.22         -19.22  (VIOLATED) 
+
+   BUF_net_22467               32.00          51.05         -19.05  (VIOLATED) 
+     PIN : PLACE_BINV_R_46575/Y
+                               32.00          51.05         -19.05  (VIOLATED) 
+
+   OPT_ZBUF_1124               32.00          50.92         -18.92  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100239/Y
+                               32.00          50.92         -18.92  (VIOLATED) 
+
+   OPT_ZBUF_2620               32.00          50.87         -18.87  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101776/Y
+                               32.00          50.87         -18.87  (VIOLATED) 
+
+   PLACE_HFSNET_105            32.00          50.85         -18.85  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_52102/Y
+                               32.00          50.85         -18.85  (VIOLATED) 
+
+   BUF_net_9416                32.00          50.75         -18.75  (VIOLATED) 
+     PIN : PLACE_BINV_R_33524/Y
+                               32.00          50.75         -18.75  (VIOLATED) 
+
+   BUF_net_5751                32.00          50.71         -18.71  (VIOLATED) 
+     PIN : PLACE_BINV_R_29859/Y
+                               32.00          50.71         -18.71  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_24_
+                               16.00          34.59         -18.59  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_24_/Y
+                               16.00          34.59         -18.59  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_25_
+                               16.00          33.99         -17.99  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_25_/Y
+                               16.00          33.99         -17.99  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_28_
+                               16.00          33.77         -17.77  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_28_/Y
+                               16.00          33.77         -17.77  (VIOLATED) 
+
+   PLACE_HFSNET_875            32.00          49.66         -17.66  (VIOLATED) 
+     PIN : PLACE_HFSBUF_751_904/Y
+                               32.00          49.66         -17.66  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_19_
+                               16.00          33.39         -17.39  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_19_/Y
+                               16.00          33.39         -17.39  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_15_
+                               16.00          33.20         -17.20  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_15_/Y
+                               16.00          33.20         -17.20  (VIOLATED) 
+
+   OPT_ZBUF_1025               32.00          49.01         -17.01  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100140/Y
+                               32.00          49.01         -17.01  (VIOLATED) 
+
+   PLACE_HFSNET_19564          32.00          48.99         -16.99  (VIOLATED) 
+     PIN : PLACE_BINV_RR_42544/Y
+                               32.00          48.99         -16.99  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_32_
+                               16.00          32.78         -16.78  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_32_/Y
+                               16.00          32.78         -16.78  (VIOLATED) 
+
+   BUF_net_5725                32.00          48.76         -16.76  (VIOLATED) 
+     PIN : PLACE_BINV_R_29833/Y
+                               32.00          48.76         -16.76  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_17_
+                               16.00          32.40         -16.40  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_17_/Y
+                               16.00          32.40         -16.40  (VIOLATED) 
+
+   BUF_net_10552               32.00          48.27         -16.27  (VIOLATED) 
+     PIN : PLACE_BINV_R_34660/Y
+                               32.00          48.27         -16.27  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_35_
+                               16.00          31.83         -15.83  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_35_/Y
+                               16.00          31.83         -15.83  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_14_
+                               16.00          31.82         -15.82  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_14_/Y
+                               16.00          31.82         -15.82  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_18_
+                               16.00          31.80         -15.80  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_18_/Y
+                               16.00          31.80         -15.80  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_30_
+                               16.00          31.66         -15.66  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_30_/Y
+                               16.00          31.66         -15.66  (VIOLATED) 
+
+   net_net_17160               16.00          31.59         -15.59  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_26_/Y
+                               16.00          31.59         -15.59  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_22_
+                               16.00          31.45         -15.45  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_22_/Y
+                               16.00          31.45         -15.45  (VIOLATED) 
+
+   BUF_net_10436               32.00          47.24         -15.24  (VIOLATED) 
+     PIN : PLACE_BINV_R_34544/Y
+                               32.00          47.24         -15.24  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_21_
+                               16.00          31.23         -15.23  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_21_/Y
+                               16.00          31.23         -15.23  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_12_
+                               16.00          31.19         -15.19  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_12_/Y
+                               16.00          31.19         -15.19  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_16_
+                               16.00          31.13         -15.13  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_16_/Y
+                               16.00          31.13         -15.13  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_13_
+                               16.00          31.10         -15.10  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_13_/Y
+                               16.00          31.10         -15.10  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_29_
+                               16.00          31.05         -15.05  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_29_/Y
+                               16.00          31.05         -15.05  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_11_
+                               16.00          30.95         -14.95  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_11_/Y
+                               16.00          30.95         -14.95  (VIOLATED) 
+
+   net_net_16487               16.00          30.87         -14.87  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_27_/Y
+                               16.00          30.87         -14.87  (VIOLATED) 
+
+   PLACE_ZBUF_179              32.00          46.83         -14.83  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_52993/Y
+                               32.00          46.83         -14.83  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_37_
+                               16.00          30.82         -14.82  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_37_/Y
+                               16.00          30.82         -14.82  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_6_
+                               16.00          30.60         -14.60  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_6_/Y
+                               16.00          30.60         -14.60  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_36_
+                               16.00          30.59         -14.59  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_36_/Y
+                               16.00          30.59         -14.59  (VIOLATED) 
+
+   net_net_25681               16.00          30.58         -14.58  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_10_/Y
+                               16.00          30.58         -14.58  (VIOLATED) 
+
+   BUF_net_11134               32.00          46.39         -14.39  (VIOLATED) 
+     PIN : PLACE_BINV_R_35242/Y
+                               32.00          46.39         -14.39  (VIOLATED) 
+
+   OPT_ZBUF_1040               32.00          46.35         -14.35  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100155/Y
+                               32.00          46.35         -14.35  (VIOLATED) 
+
+   net_net_25682               16.00          30.25         -14.25  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_5_/Y
+                               16.00          30.25         -14.25  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_4_
+                               16.00          30.16         -14.16  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_4_/Y
+                               16.00          30.16         -14.16  (VIOLATED) 
+
+   net_net_9421                32.00          45.94         -13.94  (VIOLATED) 
+     PIN : PLACE_BINV_RR_33530/Y
+                               32.00          45.94         -13.94  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_9_
+                               16.00          29.93         -13.93  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_9_/Y
+                               16.00          29.93         -13.93  (VIOLATED) 
+
+   net_net_14291               32.00          45.63         -13.63  (VIOLATED) 
+     PIN : PLACE_BINV_RR_38400/Y
+                               32.00          45.63         -13.63  (VIOLATED) 
+
+   OPT_ZBUF_2001               32.00          45.07         -13.07  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101144/Y
+                               32.00          45.07         -13.07  (VIOLATED) 
+
+   BUF_net_20863               32.00          45.02         -13.02  (VIOLATED) 
+     PIN : PLACE_BINV_R_44971/Y
+                               32.00          45.02         -13.02  (VIOLATED) 
+
+   net_net_25683               16.00          29.00         -13.00  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_3_/Y
+                               16.00          29.00         -13.00  (VIOLATED) 
+
+   BUF_net_22561               32.00          44.27         -12.27  (VIOLATED) 
+     PIN : PLACE_BINV_R_46669/Y
+                               32.00          44.27         -12.27  (VIOLATED) 
+
+   PLACE_HFSNET_79             32.00          44.03         -12.03  (VIOLATED) 
+     PIN : PLACE_HFSBUF_713_108/Y
+                               32.00          44.03         -12.03  (VIOLATED) 
+
+   PLACE_ZBUF_342              32.00          44.00         -12.00  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53171/Y
+                               32.00          44.00         -12.00  (VIOLATED) 
+
+   OPT_ZBUF_2657               32.00          43.89         -11.89  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101853/Y
+                               32.00          43.89         -11.89  (VIOLATED) 
+
+   PLACE_HFSNET_11047          32.00          43.79         -11.79  (VIOLATED) 
+     PIN : PLACE_HFSBUF_730_11076/Y
+                               32.00          43.79         -11.79  (VIOLATED) 
+
+   BUF_net_19674               32.00          43.77         -11.77  (VIOLATED) 
+     PIN : PLACE_BINV_R_43782/Y
+                               32.00          43.77         -11.77  (VIOLATED) 
+
+   BUF_net_10301               32.00          43.51         -11.51  (VIOLATED) 
+     PIN : PLACE_BINV_R_34409/Y
+                               32.00          43.51         -11.51  (VIOLATED) 
+
+   BUF_net_18373               32.00          43.46         -11.46  (VIOLATED) 
+     PIN : PLACE_BINV_R_42481/Y
+                               32.00          43.46         -11.46  (VIOLATED) 
+
+   BUF_net_22435               32.00          43.41         -11.41  (VIOLATED) 
+     PIN : PLACE_BINV_R_46543/Y
+                               32.00          43.41         -11.41  (VIOLATED) 
+
+   BUF_net_9095                32.00          43.12         -11.12  (VIOLATED) 
+     PIN : PLACE_BINV_R_33203/Y
+                               32.00          43.12         -11.12  (VIOLATED) 
+
+   PLACE_HFSNET_877            32.00          42.96         -10.96  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_51580/Y
+                               32.00          42.96         -10.96  (VIOLATED) 
+
+   BUF_net_10652               32.00          42.90         -10.90  (VIOLATED) 
+     PIN : PLACE_BINV_R_34760/Y
+                               32.00          42.90         -10.90  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[57]      16.00          26.88         -10.88  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_57_/Y
+                               16.00          26.88         -10.88  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[61]      16.00          26.65         -10.65  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_61_/Y
+                               16.00          26.65         -10.65  (VIOLATED) 
+
+   BUF_net_22773               32.00          42.65         -10.65  (VIOLATED) 
+     PIN : PLACE_BINV_R_46881/Y
+                               32.00          42.65         -10.65  (VIOLATED) 
+
+   BUF_net_10596               32.00          42.63         -10.63  (VIOLATED) 
+     PIN : PLACE_BINV_R_34704/Y
+                               32.00          42.63         -10.63  (VIOLATED) 
+
+   BUF_net_22732               32.00          42.51         -10.51  (VIOLATED) 
+     PIN : PLACE_BINV_R_46840/Y
+                               32.00          42.51         -10.51  (VIOLATED) 
+
+   BUF_net_22645               32.00          42.19         -10.19  (VIOLATED) 
+     PIN : PLACE_BINV_R_46753/Y
+                               32.00          42.19         -10.19  (VIOLATED) 
+
+   PLACE_ZBUF_107              32.00          42.19         -10.19  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_52911/Y
+                               32.00          42.19         -10.19  (VIOLATED) 
+
+   BUF_net_6139                32.00          42.09         -10.09  (VIOLATED) 
+     PIN : PLACE_BINV_R_30247/Y
+                               32.00          42.09         -10.09  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[42]      16.00          26.08         -10.08  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_42_/Y
+                               16.00          26.08         -10.08  (VIOLATED) 
+
+   OPT_ZBUF_2668               32.00          41.92          -9.92  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101864/Y
+                               32.00          41.92          -9.92  (VIOLATED) 
+
+   PLACE_HFSNET_15745          32.00          41.89          -9.89  (VIOLATED) 
+     PIN : PLACE_HFSBUF_992_15774/Y
+                               32.00          41.89          -9.89  (VIOLATED) 
+
+   OPT_ZBUF_3142               32.00          41.77          -9.77  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165581/Y
+                               32.00          41.77          -9.77  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[40]      16.00          25.66          -9.66  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_40_/Y
+                               16.00          25.66          -9.66  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[51]      16.00          25.37          -9.37  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_51_/Y
+                               16.00          25.37          -9.37  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[44]      16.00          25.33          -9.33  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_44_/Y
+                               16.00          25.33          -9.33  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[38]      16.00          25.10          -9.10  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_38_/Y
+                               16.00          25.10          -9.10  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[52]      16.00          25.09          -9.09  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_52_/Y
+                               16.00          25.09          -9.09  (VIOLATED) 
+
+   BUF_net_23036               32.00          40.94          -8.94  (VIOLATED) 
+     PIN : PLACE_BINV_R_47144/Y
+                               32.00          40.94          -8.94  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[53]      16.00          24.87          -8.87  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_53_/Y
+                               16.00          24.87          -8.87  (VIOLATED) 
+
+   OPT_ZBUF_1430               32.00          40.80          -8.80  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100552/Y
+                               32.00          40.80          -8.80  (VIOLATED) 
+
+   PLACE_ZBUF_397              32.00          40.73          -8.73  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53236/Y
+                               32.00          40.73          -8.73  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_pd[48]      16.00          24.69          -8.69  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_48_/Y
+                               16.00          24.69          -8.69  (VIOLATED) 
+
+   PLACE_ZBUF_396              32.00          40.49          -8.49  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53235/Y
+                               32.00          40.49          -8.49  (VIOLATED) 
+
+   PLACE_ZINV_22               32.00          40.40          -8.40  (VIOLATED) 
+     PIN : PLACE_ZINV_inst_53406/Y
+                               32.00          40.40          -8.40  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n8354
+                               32.00          40.37          -8.37  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U6193/Y
+                               32.00          40.37          -8.37  (VIOLATED) 
+
+   PLACE_ZBUF_393              32.00          40.34          -8.34  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53232/Y
+                               32.00          40.34          -8.34  (VIOLATED) 
+
+   PLACE_HFSNET_10824          32.00          40.32          -8.32  (VIOLATED) 
+     PIN : PLACE_HFSINV_187_10853/Y
+                               32.00          40.32          -8.32  (VIOLATED) 
+
+   OPT_ZBUF_2937               32.00          40.30          -8.30  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165375/Y
+                               32.00          40.30          -8.30  (VIOLATED) 
+
+   OPT_ZBUF_1731               32.00          40.26          -8.26  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100870/Y
+                               32.00          40.26          -8.26  (VIOLATED) 
+
+   BUF_net_17605               32.00          40.11          -8.11  (VIOLATED) 
+     PIN : PLACE_BINV_R_41713/Y
+                               32.00          40.11          -8.11  (VIOLATED) 
+
+   mcif2sdp_rd_rsp_valid       16.00          24.06          -8.06  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_valid/Y
+                               16.00          24.06          -8.06  (VIOLATED) 
+
+   BUF_net_23040               32.00          39.97          -7.97  (VIOLATED) 
+     PIN : PLACE_BINV_R_47148/Y
+                               32.00          39.97          -7.97  (VIOLATED) 
+
+   net_net_10752               32.00          39.86          -7.86  (VIOLATED) 
+     PIN : PLACE_BINV_RR_34861/Y
+                               32.00          39.86          -7.86  (VIOLATED) 
+
+   PLACE_HFSNET_10899          32.00          39.86          -7.86  (VIOLATED) 
+     PIN : PLACE_HFSINV_578_10928/Y
+                               32.00          39.86          -7.86  (VIOLATED) 
+
+   OPT_ZBUF_642                32.00          39.84          -7.84  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_99747/Y
+                               32.00          39.84          -7.84  (VIOLATED) 
+
+   BUF_net_16369               32.00          39.72          -7.72  (VIOLATED) 
+     PIN : PLACE_BINV_R_40477/Y
+                               32.00          39.72          -7.72  (VIOLATED) 
+
+   PLACE_ZBUF_401              32.00          39.70          -7.70  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53243/Y
+                               32.00          39.70          -7.70  (VIOLATED) 
+
+   OPT_ZBUF_2776               32.00          39.68          -7.68  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165213/Y
+                               32.00          39.68          -7.68  (VIOLATED) 
+
+   BUF_net_4867                32.00          39.66          -7.66  (VIOLATED) 
+     PIN : PLACE_BINV_R_28975/Y
+                               32.00          39.66          -7.66  (VIOLATED) 
+
+   PLACE_HFSNET_137            32.00          39.66          -7.66  (VIOLATED) 
+     PIN : PLACE_HFSINV_424_166/Y
+                               32.00          39.66          -7.66  (VIOLATED) 
+
+   PLACE_ZBUF_399              32.00          39.45          -7.45  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53238/Y
+                               32.00          39.45          -7.45  (VIOLATED) 
+
+   OPT_ZBUF_2824               32.00          39.41          -7.41  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165261/Y
+                               32.00          39.41          -7.41  (VIOLATED) 
+
+   net_aps_28460               32.00          39.23          -7.23  (VIOLATED) 
+     PIN : PLACE_RLB_52568/Y
+                               32.00          39.23          -7.23  (VIOLATED) 
+
+   BUF_net_14333               32.00          39.19          -7.19  (VIOLATED) 
+     PIN : PLACE_BINV_R_38441/Y
+                               32.00          39.19          -7.19  (VIOLATED) 
+
+   OPT_ZBUF_1021               32.00          39.14          -7.14  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100136/Y
+                               32.00          39.14          -7.14  (VIOLATED) 
+
+   BUF_net_20366               32.00          39.03          -7.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_44474/Y
+                               32.00          39.03          -7.03  (VIOLATED) 
+
+   BUF_net_10974               32.00          38.62          -6.62  (VIOLATED) 
+     PIN : PLACE_BINV_R_35082/Y
+                               32.00          38.62          -6.62  (VIOLATED) 
+
+   OPT_ZBUF_2066               32.00          38.60          -6.60  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165065/Y
+                               32.00          38.60          -6.60  (VIOLATED) 
+
+   PLACE_HFSNET_11357          32.00          38.58          -6.58  (VIOLATED) 
+     PIN : PLACE_HFSBUF_359_11386/Y
+                               32.00          38.58          -6.58  (VIOLATED) 
+
+   PLACE_ZBUF_142              32.00          38.49          -6.49  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_52950/Y
+                               32.00          38.49          -6.49  (VIOLATED) 
+
+   OPT_ZBUF_264                32.00          38.45          -6.45  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_99358/Y
+                               32.00          38.45          -6.45  (VIOLATED) 
+
+   PLACE_HFSNET_65             32.00          38.31          -6.31  (VIOLATED) 
+     PIN : PLACE_HFSINV_408_94/Y
+                               32.00          38.31          -6.31  (VIOLATED) 
+
+   BUF_net_21987               32.00          38.31          -6.31  (VIOLATED) 
+     PIN : PLACE_BINV_R_46095/Y
+                               32.00          38.31          -6.31  (VIOLATED) 
+
+   BUF_net_22785               32.00          38.30          -6.30  (VIOLATED) 
+     PIN : PLACE_BINV_R_46893/Y
+                               32.00          38.30          -6.30  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_rdma_u_eg_n95
+                               32.00          38.20          -6.20  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_rdma_u_eg_U24/Y
+                               32.00          38.20          -6.20  (VIOLATED) 
+
+   BUF_net_10423               32.00          38.19          -6.19  (VIOLATED) 
+     PIN : PLACE_BINV_R_34531/Y
+                               32.00          38.19          -6.19  (VIOLATED) 
+
+   BUF_net_10322               32.00          38.17          -6.17  (VIOLATED) 
+     PIN : PLACE_BINV_R_34430/Y
+                               32.00          38.17          -6.17  (VIOLATED) 
+
+   BUF_net_6912                32.00          38.15          -6.15  (VIOLATED) 
+     PIN : PLACE_BUFT_P_31020/Y
+                               32.00          38.15          -6.15  (VIOLATED) 
+
+   PLACE_HFSNET_11367          32.00          38.02          -6.02  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_51841/Y
+                               32.00          38.02          -6.02  (VIOLATED) 
+
+   PLACE_HFSNET_179            32.00          38.00          -6.00  (VIOLATED) 
+     PIN : PLACE_HFSINV_107_208/Y
+                               32.00          38.00          -6.00  (VIOLATED) 
+
+   iso_net_mcif2sdp_rd_rsp_ready
+                               16.00          21.71          -5.71  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_ready/Y
+                               16.00          21.71          -5.71  (VIOLATED) 
+
+   BUF_net_20837               32.00          37.68          -5.68  (VIOLATED) 
+     PIN : PLACE_BINV_R_44945/Y
+                               32.00          37.68          -5.68  (VIOLATED) 
+
+   OPT_ZBUF_1022               32.00          37.65          -5.65  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100137/Y
+                               32.00          37.65          -5.65  (VIOLATED) 
+
+   PLACE_HFSNET_10883          32.00          37.58          -5.58  (VIOLATED) 
+     PIN : PLACE_HFSINV_289_10912/Y
+                               32.00          37.58          -5.58  (VIOLATED) 
+
+   PLACE_ZBUF_398              32.00          37.56          -5.56  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53237/Y
+                               32.00          37.56          -5.56  (VIOLATED) 
+
+   BUF_net_19582               32.00          37.55          -5.55  (VIOLATED) 
+     PIN : PLACE_BINV_R_43690/Y
+                               32.00          37.55          -5.55  (VIOLATED) 
+
+   OPT_ZBUF_1732               32.00          37.51          -5.51  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100871/Y
+                               32.00          37.51          -5.51  (VIOLATED) 
+
+   OPT_ZBUF_1178               32.00          37.51          -5.51  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100293/Y
+                               32.00          37.51          -5.51  (VIOLATED) 
+
+   BUF_net_19403               32.00          37.50          -5.50  (VIOLATED) 
+     PIN : PLACE_BINV_R_43511/Y
+                               32.00          37.50          -5.50  (VIOLATED) 
+
+   net_net_17741               32.00          37.41          -5.41  (VIOLATED) 
+     PIN : PLACE_HFSBUF_66_1720/Y
+                               32.00          37.41          -5.41  (VIOLATED) 
+
+   BUF_net_22748               32.00          37.37          -5.37  (VIOLATED) 
+     PIN : PLACE_BINV_R_46856/Y
+                               32.00          37.37          -5.37  (VIOLATED) 
+
+   PLACE_HFSNET_11004          32.00          37.36          -5.36  (VIOLATED) 
+     PIN : PLACE_HFSINV_194_11033/Y
+                               32.00          37.36          -5.36  (VIOLATED) 
+
+   PLACE_ZBUF_292              32.00          37.33          -5.33  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53119/Y
+                               32.00          37.33          -5.33  (VIOLATED) 
+
+   PLACE_HFSNET_11025          32.00          37.27          -5.27  (VIOLATED) 
+     PIN : PLACE_HFSINV_96_11054/Y
+                               32.00          37.27          -5.27  (VIOLATED) 
+
+   PLACE_HFSNET_10987          32.00          37.15          -5.15  (VIOLATED) 
+     PIN : PLACE_HFSINV_284_11016/Y
+                               32.00          37.15          -5.15  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n14574
+                               32.00          36.97          -4.97  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U10102/Y
+                               32.00          36.97          -4.97  (VIOLATED) 
+
+   net_net_27923               32.00          36.72          -4.72  (VIOLATED) 
+     PIN : PLACE_HFSINV_322_257/Y
+                               32.00          36.72          -4.72  (VIOLATED) 
+
+   BUF_net_10365               32.00          36.68          -4.68  (VIOLATED) 
+     PIN : PLACE_BINV_R_34473/Y
+                               32.00          36.68          -4.68  (VIOLATED) 
+
+   BUF_net_18367               32.00          36.67          -4.67  (VIOLATED) 
+     PIN : PLACE_BINV_R_42475/Y
+                               32.00          36.67          -4.67  (VIOLATED) 
+
+   PLACE_HFSNET_869            32.00          36.62          -4.62  (VIOLATED) 
+     PIN : PLACE_BINV_RR_46680/Y
+                               32.00          36.62          -4.62  (VIOLATED) 
+
+   BUF_net_10235               32.00          36.61          -4.61  (VIOLATED) 
+     PIN : PLACE_BINV_R_34343/Y
+                               32.00          36.61          -4.61  (VIOLATED) 
+
+   PLACE_HFSNET_11000          32.00          36.50          -4.50  (VIOLATED) 
+     PIN : PLACE_HFSINV_218_11029/Y
+                               32.00          36.50          -4.50  (VIOLATED) 
+
+   OPT_ZINV_5                  32.00          36.49          -4.49  (VIOLATED) 
+     PIN : OPT_ZINV_inst_76885/Y
+                               32.00          36.49          -4.49  (VIOLATED) 
+
+   BUF_net_21995               32.00          36.45          -4.45  (VIOLATED) 
+     PIN : PLACE_BINV_R_46103/Y
+                               32.00          36.45          -4.45  (VIOLATED) 
+
+   BUF_net_22670               32.00          36.45          -4.45  (VIOLATED) 
+     PIN : PLACE_BINV_R_46778/Y
+                               32.00          36.45          -4.45  (VIOLATED) 
+
+   OPT_ZBUF_85                 32.00          36.44          -4.44  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_76838/Y
+                               32.00          36.44          -4.44  (VIOLATED) 
+
+   OPT_ZBUF_2104               32.00          36.39          -4.39  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101247/Y
+                               32.00          36.39          -4.39  (VIOLATED) 
+
+   net_net_17780               32.00          36.37          -4.37  (VIOLATED) 
+     PIN : PLACE_HFSBUF_39_1728/Y
+                               32.00          36.37          -4.37  (VIOLATED) 
+
+   BUF_net_16817               32.00          36.29          -4.29  (VIOLATED) 
+     PIN : PLACE_BINV_R_40925/Y
+                               32.00          36.29          -4.29  (VIOLATED) 
+
+   OPT_ZBUF_2137               32.00          36.24          -4.24  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101280/Y
+                               32.00          36.24          -4.24  (VIOLATED) 
+
+   BUF_net_22619               32.00          36.22          -4.22  (VIOLATED) 
+     PIN : PLACE_BINV_R_46727/Y
+                               32.00          36.22          -4.22  (VIOLATED) 
+
+   PLACE_HFSNET_2616           32.00          36.18          -4.18  (VIOLATED) 
+     PIN : PLACE_HFSBUF_112724_2645/Y
+                               32.00          36.18          -4.18  (VIOLATED) 
+
+   PLACE_HFSNET_192            32.00          36.15          -4.15  (VIOLATED) 
+     PIN : PLACE_HFSINV_211_221/Y
+                               32.00          36.15          -4.15  (VIOLATED) 
+
+   PLACE_HFSNET_5869           32.00          36.02          -4.02  (VIOLATED) 
+     PIN : PLACE_HFSBUF_1108_5898/Y
+                               32.00          36.02          -4.02  (VIOLATED) 
+
+   PLACE_HFSNET_602            32.00          35.94          -3.94  (VIOLATED) 
+     PIN : PLACE_HFSBUF_180_631/Y
+                               32.00          35.94          -3.94  (VIOLATED) 
+
+   PLACE_HFSNET_22941          32.00          35.90          -3.90  (VIOLATED) 
+     PIN : PLACE_HFSBUF_65_22970/Y
+                               32.00          35.90          -3.90  (VIOLATED) 
+
+   PLACE_ZINV_34               32.00          35.89          -3.89  (VIOLATED) 
+     PIN : PLACE_ZINV_inst_53239/Y
+                               32.00          35.89          -3.89  (VIOLATED) 
+
+   OPT_ZBUF_131                32.00          35.88          -3.88  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_76887/Y
+                               32.00          35.88          -3.88  (VIOLATED) 
+
+   PLACE_HFSNET_3768           32.00          35.83          -3.83  (VIOLATED) 
+     PIN : PLACE_HFSINV_323_3797/Y
+                               32.00          35.83          -3.83  (VIOLATED) 
+
+   BUF_net_17681               32.00          35.80          -3.80  (VIOLATED) 
+     PIN : PLACE_BINV_R_41789/Y
+                               32.00          35.80          -3.80  (VIOLATED) 
+
+   BUF_net_16337               32.00          35.76          -3.76  (VIOLATED) 
+     PIN : PLACE_BUFT_P_40445/Y
+                               32.00          35.76          -3.76  (VIOLATED) 
+
+   PLACE_HFSNET_2968           32.00          35.63          -3.63  (VIOLATED) 
+     PIN : PLACE_HFSBUF_200302_2997/Y
+                               32.00          35.63          -3.63  (VIOLATED) 
+
+   BUF_net_5287                32.00          35.52          -3.52  (VIOLATED) 
+     PIN : PLACE_BINV_R_29395/Y
+                               32.00          35.52          -3.52  (VIOLATED) 
+
+   BUF_net_20025               32.00          35.50          -3.50  (VIOLATED) 
+     PIN : PLACE_BINV_R_44133/Y
+                               32.00          35.50          -3.50  (VIOLATED) 
+
+   PLACE_HFSNET_10950          32.00          35.48          -3.48  (VIOLATED) 
+     PIN : PLACE_HFSINV_278_10979/Y
+                               32.00          35.48          -3.48  (VIOLATED) 
+
+   BUF_net_18405               32.00          35.46          -3.46  (VIOLATED) 
+     PIN : PLACE_BINV_R_42513/Y
+                               32.00          35.46          -3.46  (VIOLATED) 
+
+   PLACE_ZBUF_394              32.00          35.44          -3.44  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53233/Y
+                               32.00          35.44          -3.44  (VIOLATED) 
+
+   BUF_net_16365               32.00          35.43          -3.43  (VIOLATED) 
+     PIN : PLACE_BINV_R_40473/Y
+                               32.00          35.43          -3.43  (VIOLATED) 
+
+   OPT_ZBUF_1444               32.00          35.42          -3.42  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100566/Y
+                               32.00          35.42          -3.42  (VIOLATED) 
+
+   BUF_net_18138               32.00          35.39          -3.39  (VIOLATED) 
+     PIN : PLACE_BINV_R_42246/Y
+                               32.00          35.39          -3.39  (VIOLATED) 
+
+   BUF_net_17735               32.00          35.38          -3.38  (VIOLATED) 
+     PIN : PLACE_BINV_R_41843/Y
+                               32.00          35.38          -3.38  (VIOLATED) 
+
+   PLACE_ZBUF_159              32.00          35.37          -3.37  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53318/Y
+                               32.00          35.37          -3.37  (VIOLATED) 
+
+   OPT_ZBUF_2938               32.00          35.37          -3.37  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165376/Y
+                               32.00          35.37          -3.37  (VIOLATED) 
+
+   BUF_net_12118               32.00          35.35          -3.35  (VIOLATED) 
+     PIN : PLACE_BINV_R_36226/Y
+                               32.00          35.35          -3.35  (VIOLATED) 
+
+   BUF_net_11008               32.00          35.35          -3.35  (VIOLATED) 
+     PIN : PLACE_BINV_R_35116/Y
+                               32.00          35.35          -3.35  (VIOLATED) 
+
+   BUF_net_22605               16.00          19.34          -3.34  (VIOLATED) 
+     PIN : PLACE_BINV_R_46713/Y
+                               16.00          19.34          -3.34  (VIOLATED) 
+
+   net_net_9446                32.00          35.30          -3.30  (VIOLATED) 
+     PIN : PLACE_HFSBUF_15_13825/Y
+                               32.00          35.30          -3.30  (VIOLATED) 
+
+   OPT_ZBUF_2211               32.00          35.30          -3.30  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101357/Y
+                               32.00          35.30          -3.30  (VIOLATED) 
+
+   net_net_27902               32.00          35.27          -3.27  (VIOLATED) 
+     PIN : PLACE_HFSINV_6297_12879/Y
+                               32.00          35.27          -3.27  (VIOLATED) 
+
+   mcif2sdp_n_rd_rsp_pd[37]    32.00          35.26          -3.26  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49788/Y
+                               32.00          35.26          -3.26  (VIOLATED) 
+
+   BUF_net_8948                32.00          35.26          -3.26  (VIOLATED) 
+     PIN : PLACE_BUFT_P_33056/Y
+                               32.00          35.26          -3.26  (VIOLATED) 
+
+   PLACE_HFSNET_10835          32.00          35.25          -3.25  (VIOLATED) 
+     PIN : PLACE_HFSINV_449_10864/Y
+                               32.00          35.25          -3.25  (VIOLATED) 
+
+   OPT_ZBUF_1730               32.00          35.24          -3.24  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100869/Y
+                               32.00          35.24          -3.24  (VIOLATED) 
+
+   PLACE_ZBUF_213              32.00          35.22          -3.22  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53346/Y
+                               32.00          35.22          -3.22  (VIOLATED) 
+
+   BUF_net_4096                32.00          35.21          -3.21  (VIOLATED) 
+     PIN : PLACE_BINV_R_28204/Y
+                               32.00          35.21          -3.21  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n8129
+                               32.00          35.15          -3.15  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U5852/Y
+                               32.00          35.15          -3.15  (VIOLATED) 
+
+   BUF_net_12660               32.00          35.14          -3.14  (VIOLATED) 
+     PIN : PLACE_BINV_R_36768/Y
+                               32.00          35.14          -3.14  (VIOLATED) 
+
+   OPT_ZBUF_2421               32.00          35.12          -3.12  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101571/Y
+                               32.00          35.12          -3.12  (VIOLATED) 
+
+   net_net_23608               16.00          19.06          -3.06  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_59_/Y
+                               16.00          19.06          -3.06  (VIOLATED) 
+
+   PLACE_HFSNET_123            32.00          35.04          -3.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_390_152/Y
+                               32.00          35.04          -3.04  (VIOLATED) 
+
+   OPT_ZBUF_2191               32.00          35.01          -3.01  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101334/Y
+                               32.00          35.01          -3.01  (VIOLATED) 
+
+   PLACE_HFSNET_16559          32.00          34.91          -2.91  (VIOLATED) 
+     PIN : PLACE_HFSINV_76_16588/Y
+                               32.00          34.91          -2.91  (VIOLATED) 
+
+   BUF_net_17749               32.00          34.89          -2.89  (VIOLATED) 
+     PIN : PLACE_BINV_R_41857/Y
+                               32.00          34.89          -2.89  (VIOLATED) 
+
+   BUF_net_5446                32.00          34.87          -2.87  (VIOLATED) 
+     PIN : PLACE_BINV_R_29554/Y
+                               32.00          34.87          -2.87  (VIOLATED) 
+
+   BUF_net_21001               32.00          34.79          -2.79  (VIOLATED) 
+     PIN : PLACE_BINV_R_45109/Y
+                               32.00          34.79          -2.79  (VIOLATED) 
+
+   PLACE_HFSNET_18696          32.00          34.78          -2.78  (VIOLATED) 
+     PIN : PLACE_HFSBUF_276_18725/Y
+                               32.00          34.78          -2.78  (VIOLATED) 
+
+   BUF_net_9751                32.00          34.78          -2.78  (VIOLATED) 
+     PIN : PLACE_BINV_R_33859/Y
+                               32.00          34.78          -2.78  (VIOLATED) 
+
+   BUF_net_12154               32.00          34.76          -2.76  (VIOLATED) 
+     PIN : PLACE_BINV_R_36262/Y
+                               32.00          34.76          -2.76  (VIOLATED) 
+
+   net_net_17168               16.00          18.74          -2.74  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_7_/Y
+                               16.00          18.74          -2.74  (VIOLATED) 
+
+   BUF_net_27635               16.00          18.72          -2.72  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_55_/Y
+                               16.00          18.72          -2.72  (VIOLATED) 
+
+   OPT_ZBUF_2535               32.00          34.70          -2.70  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101685/Y
+                               32.00          34.70          -2.70  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_20_
+                               16.00          18.69          -2.69  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_20_/Y
+                               16.00          18.69          -2.69  (VIOLATED) 
+
+   BUF_net_7205                32.00          34.64          -2.64  (VIOLATED) 
+     PIN : PLACE_BUFT_P_31313/Y
+                               32.00          34.64          -2.64  (VIOLATED) 
+
+   BUF_net_22341               32.00          34.61          -2.61  (VIOLATED) 
+     PIN : PLACE_BINV_R_46449/Y
+                               32.00          34.61          -2.61  (VIOLATED) 
+
+   OPT_ZBUF_2443               32.00          34.59          -2.59  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101593/Y
+                               32.00          34.59          -2.59  (VIOLATED) 
+
+   net_net_17663               32.00          34.47          -2.47  (VIOLATED) 
+     PIN : PLACE_HFSBUF_49_1706/Y
+                               32.00          34.47          -2.47  (VIOLATED) 
+
+   BUF_net_22738               32.00          34.45          -2.45  (VIOLATED) 
+     PIN : PLACE_BINV_R_46846/Y
+                               32.00          34.45          -2.45  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_8_
+                               16.00          18.39          -2.39  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_8_/Y
+                               16.00          18.39          -2.39  (VIOLATED) 
+
+   PLACE_HFSNET_10869          32.00          34.38          -2.38  (VIOLATED) 
+     PIN : PLACE_HFSINV_352_10898/Y
+                               32.00          34.38          -2.38  (VIOLATED) 
+
+   BUF_net_12623               32.00          34.35          -2.35  (VIOLATED) 
+     PIN : PLACE_BINV_R_36731/Y
+                               32.00          34.35          -2.35  (VIOLATED) 
+
+   PLACE_HFSNET_11241          32.00          34.31          -2.31  (VIOLATED) 
+     PIN : PLACE_HFSBUF_2663_11270/Y
+                               32.00          34.31          -2.31  (VIOLATED) 
+
+   BUF_net_27634               16.00          18.27          -2.27  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_56_/Y
+                               16.00          18.27          -2.27  (VIOLATED) 
+
+   BUF_net_11312               32.00          34.15          -2.15  (VIOLATED) 
+     PIN : PLACE_BINV_R_35420/Y
+                               32.00          34.15          -2.15  (VIOLATED) 
+
+   PLACE_HFSNET_681            32.00          34.15          -2.15  (VIOLATED) 
+     PIN : PLACE_HFSBUF_32_710/Y
+                               32.00          34.15          -2.15  (VIOLATED) 
+
+   BUF_net_17727               32.00          34.15          -2.15  (VIOLATED) 
+     PIN : PLACE_BINV_R_41835/Y
+                               32.00          34.15          -2.15  (VIOLATED) 
+
+   PLACE_HFSNET_680            32.00          34.13          -2.13  (VIOLATED) 
+     PIN : PLACE_HFSBUF_32_709/Y
+                               32.00          34.13          -2.13  (VIOLATED) 
+
+   net_net_24936               16.00          18.13          -2.13  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_50_/Y
+                               16.00          18.13          -2.13  (VIOLATED) 
+
+   OPT_ZINV_7                  32.00          34.13          -2.13  (VIOLATED) 
+     PIN : OPT_ZINV_inst_76903/Y
+                               32.00          34.13          -2.13  (VIOLATED) 
+
+   PLACE_HFSNET_10898          32.00          34.10          -2.10  (VIOLATED) 
+     PIN : PLACE_HFSINV_886_10927/Y
+                               32.00          34.10          -2.10  (VIOLATED) 
+
+   PLACE_HFSNET_679            32.00          34.07          -2.07  (VIOLATED) 
+     PIN : PLACE_HFSBUF_32_708/Y
+                               32.00          34.07          -2.07  (VIOLATED) 
+
+   BUF_net_20185               32.00          34.05          -2.05  (VIOLATED) 
+     PIN : PLACE_BINV_R_44293/Y
+                               32.00          34.05          -2.05  (VIOLATED) 
+
+   PLACE_ZBUF_384              32.00          34.01          -2.01  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53220/Y
+                               32.00          34.01          -2.01  (VIOLATED) 
+
+   BUF_net_20872               32.00          33.99          -1.99  (VIOLATED) 
+     PIN : PLACE_BINV_R_44980/Y
+                               32.00          33.99          -1.99  (VIOLATED) 
+
+   BUF_net_16370               32.00          33.98          -1.98  (VIOLATED) 
+     PIN : PLACE_BINV_R_40478/Y
+                               32.00          33.98          -1.98  (VIOLATED) 
+
+   BUF_net_6633                32.00          33.97          -1.97  (VIOLATED) 
+     PIN : PLACE_BUFT_P_30741/Y
+                               32.00          33.97          -1.97  (VIOLATED) 
+
+   BUF_net_6577                32.00          33.94          -1.94  (VIOLATED) 
+     PIN : PLACE_BINV_R_30685/Y
+                               32.00          33.94          -1.94  (VIOLATED) 
+
+   BUF_net_10648               32.00          33.91          -1.91  (VIOLATED) 
+     PIN : PLACE_BINV_R_34756/Y
+                               32.00          33.91          -1.91  (VIOLATED) 
+
+   BUF_net_18134               32.00          33.90          -1.90  (VIOLATED) 
+     PIN : PLACE_BINV_R_42242/Y
+                               32.00          33.90          -1.90  (VIOLATED) 
+
+   BUF_net_27637               16.00          17.90          -1.90  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_49_/Y
+                               16.00          17.90          -1.90  (VIOLATED) 
+
+   BUF_net_6480                32.00          33.87          -1.87  (VIOLATED) 
+     PIN : PLACE_BINV_R_30588/Y
+                               32.00          33.87          -1.87  (VIOLATED) 
+
+   net_net_23617               16.00          17.83          -1.83  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_33_/Y
+                               16.00          17.83          -1.83  (VIOLATED) 
+
+   net_net_17644               32.00          33.66          -1.66  (VIOLATED) 
+     PIN : PLACE_BINV_RR_41753/Y
+                               32.00          33.66          -1.66  (VIOLATED) 
+
+   BUF_net_17731               32.00          33.66          -1.66  (VIOLATED) 
+     PIN : PLACE_BINV_R_41839/Y
+                               32.00          33.66          -1.66  (VIOLATED) 
+
+   BUF_net_8128                32.00          33.63          -1.63  (VIOLATED) 
+     PIN : PLACE_BINV_R_32236/Y
+                               32.00          33.63          -1.63  (VIOLATED) 
+
+   BUF_net_20615               32.00          33.62          -1.62  (VIOLATED) 
+     PIN : PLACE_BINV_R_44723/Y
+                               32.00          33.62          -1.62  (VIOLATED) 
+
+   BUF_net_9007                32.00          33.56          -1.56  (VIOLATED) 
+     PIN : PLACE_BINV_R_33115/Y
+                               32.00          33.56          -1.56  (VIOLATED) 
+
+   BUF_net_7217                32.00          33.56          -1.56  (VIOLATED) 
+     PIN : PLACE_BUFT_P_31325/Y
+                               32.00          33.56          -1.56  (VIOLATED) 
+
+   PLACE_HFSNET_676            32.00          33.53          -1.53  (VIOLATED) 
+     PIN : PLACE_HFSBUF_32_705/Y
+                               32.00          33.53          -1.53  (VIOLATED) 
+
+   PLACE_HFSNET_2896           32.00          33.51          -1.51  (VIOLATED) 
+     PIN : PLACE_HFSBUF_185605_2925/Y
+                               32.00          33.51          -1.51  (VIOLATED) 
+
+   PLACE_ZBUF_64               32.00          33.48          -1.48  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_52865/Y
+                               32.00          33.48          -1.48  (VIOLATED) 
+
+   BUF_net_6437                32.00          33.46          -1.46  (VIOLATED) 
+     PIN : PLACE_BINV_R_30545/Y
+                               32.00          33.46          -1.46  (VIOLATED) 
+
+   net_net_23615               16.00          17.43          -1.43  (VIOLATED) 
+     PIN : iso_buf_mcif2sdp_rd_rsp_pd_37_/Y
+                               16.00          17.43          -1.43  (VIOLATED) 
+
+   PLACE_HFSNET_11003          32.00          33.40          -1.40  (VIOLATED) 
+     PIN : PLACE_HFSINV_108_11032/Y
+                               32.00          33.40          -1.40  (VIOLATED) 
+
+   OPT_ZBUF_2635               32.00          33.39          -1.39  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101791/Y
+                               32.00          33.39          -1.39  (VIOLATED) 
+
+   OPT_ZBUF_2725               32.00          33.39          -1.39  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165158/Y
+                               32.00          33.39          -1.39  (VIOLATED) 
+
+   OPT_ZBUF_2688               32.00          33.32          -1.32  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165121/Y
+                               32.00          33.32          -1.32  (VIOLATED) 
+
+   PLACE_HFSNET_2304           32.00          33.23          -1.23  (VIOLATED) 
+     PIN : PLACE_HFSBUF_18305_2333/Y
+                               32.00          33.23          -1.23  (VIOLATED) 
+
+   BUF_net_16218               32.00          33.22          -1.22  (VIOLATED) 
+     PIN : PLACE_BUFT_P_40326/Y
+                               32.00          33.22          -1.22  (VIOLATED) 
+
+   BUF_net_19267               32.00          33.21          -1.21  (VIOLATED) 
+     PIN : PLACE_BUFT_P_43375/Y
+                               32.00          33.21          -1.21  (VIOLATED) 
+
+   PLACE_ZINV_37               32.00          33.19          -1.19  (VIOLATED) 
+     PIN : PLACE_ZINV_inst_53244/Y
+                               32.00          33.19          -1.19  (VIOLATED) 
+
+   PLACE_HFSNET_231            32.00          33.14          -1.14  (VIOLATED) 
+     PIN : PLACE_HFSINV_60_260/Y
+                               32.00          33.14          -1.14  (VIOLATED) 
+
+   PLACE_HFSNET_8393           32.00          33.11          -1.11  (VIOLATED) 
+     PIN : PLACE_HFSBUF_5955_8422/Y
+                               32.00          33.11          -1.11  (VIOLATED) 
+
+   OPT_ZBUF_1376               32.00          33.11          -1.11  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100495/Y
+                               32.00          33.11          -1.11  (VIOLATED) 
+
+   net_aps_28543               32.00          33.08          -1.08  (VIOLATED) 
+     PIN : PLACE_RLB_52651/Y
+                               32.00          33.08          -1.08  (VIOLATED) 
+
+   PLACE_HFSNET_208            32.00          33.05          -1.05  (VIOLATED) 
+     PIN : PLACE_BINV_RR_38825/Y
+                               32.00          33.05          -1.05  (VIOLATED) 
+
+   PLACE_HFSNET_6637            8.00           9.01          -1.01  (VIOLATED) 
+     PIN : PLACE_HFSINV_813_6666/Y
+                                8.00           9.01          -1.01  (VIOLATED) 
+
+   net_net_18009               32.00          32.97          -0.97  (VIOLATED) 
+     PIN : PLACE_BINV_RR_42118/Y
+                               32.00          32.97          -0.97  (VIOLATED) 
+
+   OPT_ZBUF_1126               32.00          32.96          -0.96  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100241/Y
+                               32.00          32.96          -0.96  (VIOLATED) 
+
+   BUF_net_6360                32.00          32.94          -0.94  (VIOLATED) 
+     PIN : PLACE_BINV_R_30468/Y
+                               32.00          32.94          -0.94  (VIOLATED) 
+
+   BUF_net_10761               32.00          32.93          -0.93  (VIOLATED) 
+     PIN : PLACE_BINV_R_34869/Y
+                               32.00          32.93          -0.93  (VIOLATED) 
+
+   net_net_4861                32.00          32.91          -0.91  (VIOLATED) 
+     PIN : PLACE_BINV_RR_28970/Y
+                               32.00          32.91          -0.91  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_pipe_pp4_n8
+                               32.00          32.91          -0.91  (VIOLATED) 
+     PIN : U885/Y              32.00          32.91          -0.91  (VIOLATED) 
+
+   net_net_17402               32.00          32.85          -0.85  (VIOLATED) 
+     PIN : PLACE_BINV_RR_41511/Y
+                               32.00          32.85          -0.85  (VIOLATED) 
+
+   BUF_net_4878                32.00          32.78          -0.78  (VIOLATED) 
+     PIN : PLACE_BINV_R_28986/Y
+                               32.00          32.78          -0.78  (VIOLATED) 
+
+   OPT_ZBUF_1368               32.00          32.77          -0.77  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100487/Y
+                               32.00          32.77          -0.77  (VIOLATED) 
+
+   ctsbuf_net_84333902         32.00          32.76          -0.76  (VIOLATED) 
+     PIN : CTS_cts_inv_714384190/Y
+                               32.00          32.76          -0.76  (VIOLATED) 
+
+   OPT_ZBUF_2676               32.00          32.72          -0.72  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101875/Y
+                               32.00          32.72          -0.72  (VIOLATED) 
+
+   BUF_net_6707                32.00          32.71          -0.71  (VIOLATED) 
+     PIN : PLACE_BINV_R_30815/Y
+                               32.00          32.71          -0.71  (VIOLATED) 
+
+   BUF_net_6783                32.00          32.70          -0.70  (VIOLATED) 
+     PIN : PLACE_BUFT_P_30891/Y
+                               32.00          32.70          -0.70  (VIOLATED) 
+
+   net_net_17399               32.00          32.69          -0.69  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_41508/Y
+                               32.00          32.69          -0.69  (VIOLATED) 
+
+   BUF_net_13380               32.00          32.68          -0.68  (VIOLATED) 
+     PIN : PLACE_BINV_R_37488/Y
+                               32.00          32.68          -0.68  (VIOLATED) 
+
+   BUF_net_19287               32.00          32.68          -0.68  (VIOLATED) 
+     PIN : PLACE_BINV_R_43395/Y
+                               32.00          32.68          -0.68  (VIOLATED) 
+
+   BUF_net_10493               32.00          32.68          -0.68  (VIOLATED) 
+     PIN : PLACE_BINV_R_34601/Y
+                               32.00          32.68          -0.68  (VIOLATED) 
+
+   mcif2noc_axi_ar_araddr[21]
+                               32.00          32.66          -0.66  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_47707/Y
+                               32.00          32.66          -0.66  (VIOLATED) 
+
+   ctsbuf_net_308136140        32.00          32.66          -0.66  (VIOLATED) 
+     PIN : CTS_cts_inv_1547392520/Y
+                               32.00          32.66          -0.66  (VIOLATED) 
+
+   BUF_net_9230                32.00          32.65          -0.65  (VIOLATED) 
+     PIN : PLACE_BINV_R_33338/Y
+                               32.00          32.65          -0.65  (VIOLATED) 
+
+   PLACE_HFSNET_8053            8.00           8.65          -0.65  (VIOLATED) 
+     PIN : PLACE_HFSINV_854_8082/Y
+                                8.00           8.65          -0.65  (VIOLATED) 
+
+   net_net_18005               32.00          32.64          -0.64  (VIOLATED) 
+     PIN : PLACE_BINV_RR_42114/Y
+                               32.00          32.64          -0.64  (VIOLATED) 
+
+   ctsbuf_net_310436163        32.00          32.62          -0.62  (VIOLATED) 
+     PIN : CTS_cts_inv_1549692543/Y
+                               32.00          32.62          -0.62  (VIOLATED) 
+
+   ctsbuf_net_92033979         32.00          32.62          -0.62  (VIOLATED) 
+     PIN : CTS_cts_inv_754284589/Y
+                               32.00          32.62          -0.62  (VIOLATED) 
+
+   OPT_ZBUF_268                32.00          32.59          -0.59  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_99371/Y
+                               32.00          32.59          -0.59  (VIOLATED) 
+
+   PLACE_HFSNET_241            32.00          32.58          -0.58  (VIOLATED) 
+     PIN : PLACE_HFSINV_438_270/Y
+                               32.00          32.58          -0.58  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n8180
+                               32.00          32.55          -0.55  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U6161/Y
+                               32.00          32.55          -0.55  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_31_
+                               16.00          16.51          -0.51  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_31_/Y
+                               16.00          16.51          -0.51  (VIOLATED) 
+
+   BUF_net_10664               32.00          32.51          -0.51  (VIOLATED) 
+     PIN : PLACE_BINV_R_34772/Y
+                               32.00          32.51          -0.51  (VIOLATED) 
+
+   BUF_net_14356                8.00           8.51          -0.51  (VIOLATED) 
+     PIN : PLACE_BINV_R_38464/Y
+                                8.00           8.51          -0.51  (VIOLATED) 
+
+   BUF_net_10456               32.00          32.50          -0.50  (VIOLATED) 
+     PIN : PLACE_BINV_R_34564/Y
+                               32.00          32.50          -0.50  (VIOLATED) 
+
+   BUF_net_16346               32.00          32.50          -0.50  (VIOLATED) 
+     PIN : PLACE_BUFT_P_40454/Y
+                               32.00          32.50          -0.50  (VIOLATED) 
+
+   BUF_net_6353                32.00          32.49          -0.49  (VIOLATED) 
+     PIN : PLACE_BUFT_P_30461/Y
+                               32.00          32.49          -0.49  (VIOLATED) 
+
+   ctsbuf_net_314036199        32.00          32.48          -0.48  (VIOLATED) 
+     PIN : CTS_cts_inv_1553292579/Y
+                               32.00          32.48          -0.48  (VIOLATED) 
+
+   BUF_net_8181                32.00          32.48          -0.48  (VIOLATED) 
+     PIN : PLACE_BINV_R_32289/Y
+                               32.00          32.48          -0.48  (VIOLATED) 
+
+   PLACE_HFSNET_9243           32.00          32.47          -0.47  (VIOLATED) 
+     PIN : PLACE_HFSBUF_487_9272/Y
+                               32.00          32.47          -0.47  (VIOLATED) 
+
+   BUF_net_21726               32.00          32.46          -0.46  (VIOLATED) 
+     PIN : PLACE_BINV_R_45834/Y
+                               32.00          32.46          -0.46  (VIOLATED) 
+
+   PLACE_HFSNET_1857           32.00          32.45          -0.45  (VIOLATED) 
+     PIN : PLACE_HFSINV_77787_1886/Y
+                               32.00          32.45          -0.45  (VIOLATED) 
+
+   BUF_net_2616                32.00          32.45          -0.45  (VIOLATED) 
+     PIN : PLACE_BINV_R_26724/Y
+                               32.00          32.45          -0.45  (VIOLATED) 
+
+   iso_net_sdp_n2mcif_rd_req_pd_41_
+                               16.00          16.43          -0.43  (VIOLATED) 
+     PIN : iso_buf_sdp_n2mcif_rd_req_pd_41_/Y
+                               16.00          16.43          -0.43  (VIOLATED) 
+
+   OPT_ZBUF_166                16.00          16.43          -0.43  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_76925/Y
+                               16.00          16.43          -0.43  (VIOLATED) 
+
+   PLACE_HFSNET_14829           8.00           8.43          -0.43  (VIOLATED) 
+     PIN : PLACE_HFSINV_362_14858/Y
+                                8.00           8.43          -0.43  (VIOLATED) 
+
+   PLACE_HFSNET_16876          32.00          32.41          -0.41  (VIOLATED) 
+     PIN : PLACE_HFSBUF_131_16905/Y
+                               32.00          32.41          -0.41  (VIOLATED) 
+
+   ctsbuf_net_168234741        32.00          32.41          -0.41  (VIOLATED) 
+     PIN : CTS_cts_inv_1169088737/Y
+                               32.00          32.41          -0.41  (VIOLATED) 
+
+   PLACE_HFSNET_13005          32.00          32.40          -0.40  (VIOLATED) 
+     PIN : PLACE_HFSBUF_615_13034/Y
+                               32.00          32.40          -0.40  (VIOLATED) 
+
+   BUF_net_2725                32.00          32.40          -0.40  (VIOLATED) 
+     PIN : PLACE_BINV_R_26833/Y
+                               32.00          32.40          -0.40  (VIOLATED) 
+
+   OPT_ZBUF_1634               32.00          32.39          -0.39  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100765/Y
+                               32.00          32.39          -0.39  (VIOLATED) 
+
+   net_net_8776                32.00          32.38          -0.38  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_32885/Y
+                               32.00          32.38          -0.38  (VIOLATED) 
+
+   OPT_ZBUF_2805               32.00          32.38          -0.38  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165242/Y
+                               32.00          32.38          -0.38  (VIOLATED) 
+
+   net_net_3583                 8.00           8.37          -0.37  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_pipe_pp1_p2_pipe_data_reg_24_/Q
+                                8.00           8.37          -0.37  (VIOLATED) 
+
+   net_net_17670               32.00          32.37          -0.37  (VIOLATED) 
+     PIN : PLACE_HFSBUF_38_1708/Y
+                               32.00          32.37          -0.37  (VIOLATED) 
+
+   net_net_8303                32.00          32.35          -0.35  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_32412/Y
+                               32.00          32.35          -0.35  (VIOLATED) 
+
+   PLACE_ZBUF_286              32.00          32.35          -0.35  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53386/Y
+                               32.00          32.35          -0.35  (VIOLATED) 
+
+   BUF_net_8126                32.00          32.33          -0.33  (VIOLATED) 
+     PIN : PLACE_BINV_R_32234/Y
+                               32.00          32.33          -0.33  (VIOLATED) 
+
+   PLACE_HFSNET_135            32.00          32.31          -0.31  (VIOLATED) 
+     PIN : PLACE_HFSINV_422_164/Y
+                               32.00          32.31          -0.31  (VIOLATED) 
+
+   ctsbuf_net_80933868         32.00          32.28          -0.28  (VIOLATED) 
+     PIN : CTS_cts_inv_692883975/Y
+                               32.00          32.28          -0.28  (VIOLATED) 
+
+   ctsbuf_net_38033439         32.00          32.28          -0.28  (VIOLATED) 
+     PIN : CTS_cts_inv_469581742/Y
+                               32.00          32.28          -0.28  (VIOLATED) 
+
+   ctsbuf_net_130734366        32.00          32.28          -0.28  (VIOLATED) 
+     PIN : CTS_cts_inv_961986666/Y
+                               32.00          32.28          -0.28  (VIOLATED) 
+
+   ctsbuf_net_40233461         32.00          32.26          -0.26  (VIOLATED) 
+     PIN : CTS_cts_inv_481381860/Y
+                               32.00          32.26          -0.26  (VIOLATED) 
+
+   BUF_net_26036               32.00          32.26          -0.26  (VIOLATED) 
+     PIN : PLACE_BINV_R_50144/Y
+                               32.00          32.26          -0.26  (VIOLATED) 
+
+   BUF_net_25997               32.00          32.26          -0.26  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_50105/Y
+                               32.00          32.26          -0.26  (VIOLATED) 
+
+   OPT_ZBUF_1068               32.00          32.26          -0.26  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100183/Y
+                               32.00          32.26          -0.26  (VIOLATED) 
+
+   BUF_net_21120               32.00          32.26          -0.26  (VIOLATED) 
+     PIN : PLACE_BINV_R_45228/Y
+                               32.00          32.26          -0.26  (VIOLATED) 
+
+   PLACE_ZBUF_276              32.00          32.24          -0.24  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53103/Y
+                               32.00          32.24          -0.24  (VIOLATED) 
+
+   BUF_net_25097               16.00          16.24          -0.24  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49205/Y
+                               16.00          16.24          -0.24  (VIOLATED) 
+
+   OPT_ZBUF_3027               16.00          16.24          -0.24  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165465/Y
+                               16.00          16.24          -0.24  (VIOLATED) 
+
+   BUF_net_915                 32.00          32.23          -0.23  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_25023/Y
+                               32.00          32.23          -0.23  (VIOLATED) 
+
+   OPT_ZBUF_1001               32.00          32.20          -0.20  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100113/Y
+                               32.00          32.20          -0.20  (VIOLATED) 
+
+   PLACE_HFSNET_8350           16.00          16.20          -0.20  (VIOLATED) 
+     PIN : PLACE_HFSINV_1727_8379/Y
+                               16.00          16.20          -0.20  (VIOLATED) 
+
+   BUF_net_13629               32.00          32.20          -0.20  (VIOLATED) 
+     PIN : PLACE_BINV_R_37737/Y
+                               32.00          32.20          -0.20  (VIOLATED) 
+
+   OPT_ZBUF_2775               16.00          16.20          -0.20  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165212/Y
+                               16.00          16.20          -0.20  (VIOLATED) 
+
+   ctsbuf_net_190534964        32.00          32.19          -0.19  (VIOLATED) 
+     PIN : CTS_cts_inv_1292689973/Y
+                               32.00          32.19          -0.19  (VIOLATED) 
+
+   net_net_17641               32.00          32.19          -0.19  (VIOLATED) 
+     PIN : PLACE_HFSBUF_49_1700/Y
+                               32.00          32.19          -0.19  (VIOLATED) 
+
+   net_net_17360               32.00          32.18          -0.18  (VIOLATED) 
+     PIN : PLACE_BINV_RR_41469/Y
+                               32.00          32.18          -0.18  (VIOLATED) 
+
+   ctsbuf_net_53533594         32.00          32.17          -0.17  (VIOLATED) 
+     PIN : CTS_cts_inv_547682523/Y
+                               32.00          32.17          -0.17  (VIOLATED) 
+
+   BUF_net_17843               32.00          32.17          -0.17  (VIOLATED) 
+     PIN : PLACE_BINV_R_41951/Y
+                               32.00          32.17          -0.17  (VIOLATED) 
+
+   OPT_ZBUF_2661               32.00          32.17          -0.17  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101857/Y
+                               32.00          32.17          -0.17  (VIOLATED) 
+
+   PLACE_HFSNET_17140           8.00           8.16          -0.16  (VIOLATED) 
+     PIN : PLACE_HFSINV_254_17169/Y
+                                8.00           8.16          -0.16  (VIOLATED) 
+
+   BUF_net_16803               32.00          32.16          -0.16  (VIOLATED) 
+     PIN : PLACE_BINV_R_40911/Y
+                               32.00          32.16          -0.16  (VIOLATED) 
+
+   OPT_ZBUF_990                32.00          32.16          -0.16  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100102/Y
+                               32.00          32.16          -0.16  (VIOLATED) 
+
+   ctsbuf_net_309536154        32.00          32.15          -0.15  (VIOLATED) 
+     PIN : CTS_cts_inv_1548792534/Y
+                               32.00          32.15          -0.15  (VIOLATED) 
+
+   BUF_net_17827               32.00          32.14          -0.14  (VIOLATED) 
+     PIN : PLACE_BINV_R_41935/Y
+                               32.00          32.14          -0.14  (VIOLATED) 
+
+   PLACE_HFSNET_8148            8.00           8.14          -0.14  (VIOLATED) 
+     PIN : PLACE_HFSINV_1365_8177/Y
+                                8.00           8.14          -0.14  (VIOLATED) 
+
+   ctsbuf_net_15333212         32.00          32.13          -0.13  (VIOLATED) 
+     PIN : CTS_cts_inv_350480551/Y
+                               32.00          32.13          -0.13  (VIOLATED) 
+
+   ctsbuf_net_308336142        32.00          32.13          -0.13  (VIOLATED) 
+     PIN : CTS_cts_inv_1547592522/Y
+                               32.00          32.13          -0.13  (VIOLATED) 
+
+   OPT_ZBUF_487                32.00          32.12          -0.12  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_99590/Y
+                               32.00          32.12          -0.12  (VIOLATED) 
+
+   sdp_n2mcif_rd_req_pd[24]    16.00          16.12          -0.12  (VIOLATED) 
+     PORT: sdp_n2mcif_rd_req_pd[24]
+                               16.00          16.12          -0.12  (VIOLATED) 
+
+   PLACE_HFSNET_632             8.00           8.12          -0.12  (VIOLATED) 
+     PIN : PLACE_HFSINV_289_661/Y
+                                8.00           8.12          -0.12  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal2d_int_mem_wdata_2[10]
+                                8.00           8.12          -0.12  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal2d_int_mem_wdata_2_reg_10_/Q
+                                8.00           8.12          -0.12  (VIOLATED) 
+
+   ctsbuf_net_303836097        32.00          32.11          -0.11  (VIOLATED) 
+     PIN : CTS_cts_inv_1543092477/Y
+                               32.00          32.11          -0.11  (VIOLATED) 
+
+   ctsbuf_net_183134890        32.00          32.11          -0.11  (VIOLATED) 
+     PIN : CTS_cts_inv_1254889595/Y
+                               32.00          32.11          -0.11  (VIOLATED) 
+
+   PLACE_HFSNET_6818           16.00          16.11          -0.11  (VIOLATED) 
+     PIN : PLACE_HFSINV_723_6847/Y
+                               16.00          16.11          -0.11  (VIOLATED) 
+
+   BUF_net_24356               16.00          16.11          -0.11  (VIOLATED) 
+     PIN : PLACE_BINV_R_48464/Y
+                               16.00          16.11          -0.11  (VIOLATED) 
+
+   PLACE_HFSNET_19193          16.00          16.11          -0.11  (VIOLATED) 
+     PIN : PLACE_HFSBUF_215_19222/Y
+                               16.00          16.11          -0.11  (VIOLATED) 
+
+   BUF_net_4830                32.00          32.11          -0.11  (VIOLATED) 
+     PIN : PLACE_BUFT_P_28938/Y
+                               32.00          32.11          -0.11  (VIOLATED) 
+
+   BUF_net_10651                8.00           8.10          -0.10  (VIOLATED) 
+     PIN : PLACE_BINV_R_34759/Y
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_int_sub[17]
+                                8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_int_sub_reg_17_/Q
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   BUF_net_21015               32.00          32.10          -0.10  (VIOLATED) 
+     PIN : PLACE_BINV_R_45123/Y
+                               32.00          32.10          -0.10  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_wdma_u_dat_count_b[1]
+                                8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_wdma_u_dat_count_b_reg_1_/Q
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_u_dual_reg_d0_n540
+                                8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d0_U490/Y
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   PLACE_HFSNET_13950          16.00          16.10          -0.10  (VIOLATED) 
+     PIN : PLACE_HFSBUF_1572_13979/Y
+                               16.00          16.10          -0.10  (VIOLATED) 
+
+   PLACE_HFSNET_11793          16.00          16.10          -0.10  (VIOLATED) 
+     PIN : PLACE_HFSBUF_686_11822/Y
+                               16.00          16.10          -0.10  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_n462
+                                8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_U408/Y
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   PLACE_HFSNET_20481          16.00          16.10          -0.10  (VIOLATED) 
+     PIN : PLACE_HFSINV_3307_20510/Y
+                               16.00          16.10          -0.10  (VIOLATED) 
+
+   PLACE_HFSNET_2333           16.00          16.10          -0.10  (VIOLATED) 
+     PIN : PLACE_HFSINV_23519_2362/Y
+                               16.00          16.10          -0.10  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal1d_unit1d_5_intadd_145_A_2_
+                                8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal1d_unit1d_5_U97/Y
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n7567
+                                8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U8081/Y
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   BUF_net_25364               16.00          16.10          -0.10  (VIOLATED) 
+     PIN : PLACE_BINV_R_49472/Y
+                               16.00          16.10          -0.10  (VIOLATED) 
+
+   BUF_net_25033               16.00          16.10          -0.10  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49141/Y
+                               16.00          16.10          -0.10  (VIOLATED) 
+
+   PLACE_HFSNET_8013           16.00          16.10          -0.10  (VIOLATED) 
+     PIN : PLACE_HFSINV_2339_8042/Y
+                               16.00          16.10          -0.10  (VIOLATED) 
+
+   PLACE_HFSNET_6514            8.00           8.10          -0.10  (VIOLATED) 
+     PIN : PLACE_HFSINV_923_6543/Y
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_ro3_fifo0_ram_n244
+                                8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_ro3_fifo0_ram_U180/Y
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   PLACE_HFSNET_6851           16.00          16.10          -0.10  (VIOLATED) 
+     PIN : PLACE_HFSINV_746_6880/Y
+                               16.00          16.10          -0.10  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_reg_u_dual_reg_d0_n433
+                                8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_reg_u_dual_reg_d0_U485/Y
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal2d_n4450
+                               16.00          16.09          -0.09  (VIOLATED) 
+     PIN : U2593/Y             16.00          16.09          -0.09  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n5538
+                                8.00           8.09          -0.09  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U5974/Y
+                                8.00           8.09          -0.09  (VIOLATED) 
+
+   BUF_net_9241                32.00          32.09          -0.09  (VIOLATED) 
+     PIN : PLACE_BINV_R_33349/Y
+                               32.00          32.09          -0.09  (VIOLATED) 
+
+   PLACE_HFSNET_20100          16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_HFSBUF_5491_20129/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   PLACE_HFSNET_6835           16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_HFSINV_766_6864/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   PLACE_HFSNET_15099          16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_HFSBUF_37_15128/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   PLACE_HFSNET_11580           8.00           8.09          -0.09  (VIOLATED) 
+     PIN : PLACE_HFSINV_917_11609/Y
+                                8.00           8.09          -0.09  (VIOLATED) 
+
+   BUF_net_4497                 8.00           8.09          -0.09  (VIOLATED) 
+     PIN : PLACE_BINV_R_28605/Y
+                                8.00           8.09          -0.09  (VIOLATED) 
+
+   PLACE_HFSNET_8836           16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_HFSINV_1321_8865/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   BUF_net_11848               32.00          32.09          -0.09  (VIOLATED) 
+     PIN : PLACE_BINV_R_35956/Y
+                               32.00          32.09          -0.09  (VIOLATED) 
+
+   BUF_net_5852                16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_29960/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   PLACE_HFSNET_9193           16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_HFSBUF_272_9222/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_n659
+                                8.00           8.09          -0.09  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_U616/Y
+                                8.00           8.09          -0.09  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_raw_reg44[14]
+                                8.00           8.09          -0.09  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_raw_reg44_reg_14_/Q
+                                8.00           8.09          -0.09  (VIOLATED) 
+
+   PLACE_HFSNET_18893          16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_HFSBUF_598_18922/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_rdma_u_eg_u_ro4_fifo_ro_wr_adr[1]
+                                8.00           8.09          -0.09  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_rdma_u_eg_u_ro4_fifo_ro_wr_adr_reg_1_/Q
+                                8.00           8.09          -0.09  (VIOLATED) 
+
+   BUF_net_22100               16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_BINV_R_46208/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_n425
+                               16.00          16.09          -0.09  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_U537/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   BUF_net_25189               16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_BINV_R_49297/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   OPT_ZBUF_2232               16.00          16.09          -0.09  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101378/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   BUF_net_25041               16.00          16.09          -0.09  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49149/Y
+                               16.00          16.09          -0.09  (VIOLATED) 
+
+   OPT_ZBUF_2974               32.00          32.08          -0.08  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_165412/Y
+                               32.00          32.08          -0.08  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_ro4_fifo0_ro_rd_pd_p[8]
+                                8.00           8.08          -0.08  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_ro4_fifo0_ram_U108/Y
+                                8.00           8.08          -0.08  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n5981
+                               16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_BINV_RR_32886/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_n570
+                               16.00          16.08          -0.08  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_U595/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_5827           16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_HFSINV_450_5856/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_4911            8.00           8.08          -0.08  (VIOLATED) 
+     PIN : PLACE_HFSINV_461_4940/Y
+                                8.00           8.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_11765          16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_HFSBUF_1941_11794/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   net_net_10035                8.00           8.08          -0.08  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_reg_u_dual_reg_d0_U203/Y
+                                8.00           8.08          -0.08  (VIOLATED) 
+
+   BUF_net_25260               16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49368/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   BUF_net_20561               16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_BINV_R_44669/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   BUF_net_1013                32.00          32.08          -0.08  (VIOLATED) 
+     PIN : PLACE_BUFT_P_25121/Y
+                               32.00          32.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_6745            8.00           8.08          -0.08  (VIOLATED) 
+     PIN : PLACE_HFSINV_238_6774/Y
+                                8.00           8.08          -0.08  (VIOLATED) 
+
+   BUF_net_14436               16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_38544/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_11259          16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_HFSINV_1103_11288/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   BUF_net_28006               16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_BINV_R_52114/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_8455           16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_HFSINV_4228_8484/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_density_reg88[12]
+                                8.00           8.08          -0.08  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_density_reg88_reg_12_/Q
+                                8.00           8.08          -0.08  (VIOLATED) 
+
+   BUF_net_25755               16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49863/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_17189          16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_HFSBUF_892_17218/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_11782          16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_HFSINV_1458_11811/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   BUF_net_3281                16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_BUFT_P_27389/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_3479           16.00          16.08          -0.08  (VIOLATED) 
+     PIN : PLACE_HFSINV_147084_3508/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   PLACE_HFSNET_6127           16.00          16.07          -0.07  (VIOLATED) 
+     PIN : PLACE_HFSINV_561_6156/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   n1711                        8.00           8.07          -0.07  (VIOLATED) 
+     PIN : U2368/Y              8.00           8.07          -0.07  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_sum_u_sum_block_0_intadd_75_B_7_
+                                8.00           8.07          -0.07  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_sum_u_sum_block_0_intadd_77_U10/S
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   BUF_net_9121                 8.00           8.07          -0.07  (VIOLATED) 
+     PIN : PLACE_BINV_R_33229/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal1d_unit1d_5_n219
+                                8.00           8.07          -0.07  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal1d_unit1d_5_U309/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_u_dual_reg_d0_n766
+                               16.00          16.07          -0.07  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d0_U106/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   PLACE_HFSNET_9416           16.00          16.07          -0.07  (VIOLATED) 
+     PIN : PLACE_HFSBUF_3784_9445/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_rq6_rd_pd[44]
+                                8.00           8.07          -0.07  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_lat_fifo6_ram_U148/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   OPT_ZBUF_87                 16.00          16.07          -0.07  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_76840/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   u_NV_NVDLA_csb_master_n65
+                                8.00           8.07          -0.07  (VIOLATED) 
+     PIN : u_NV_NVDLA_csb_master_U116/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   BUF_net_22422                8.00           8.07          -0.07  (VIOLATED) 
+     PIN : PLACE_BINV_R_46530/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   PLACE_HFSNET_7734           16.00          16.07          -0.07  (VIOLATED) 
+     PIN : PLACE_HFSBUF_2453_7763/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   PLACE_HFSNET_9322            8.00           8.07          -0.07  (VIOLATED) 
+     PIN : PLACE_HFSINV_2378_p_9351/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_rdma_u_cq_ram_n189
+                                8.00           8.07          -0.07  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_rdma_u_cq_ram_U288/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   BUF_net_22797                8.00           8.07          -0.07  (VIOLATED) 
+     PIN : PLACE_BINV_R_46905/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   iso_net_u_NV_NVDLA_pdp_u_core_u_cal2d_bank0_uram_0_r_nv_ram_rws_128x18_ram_Inst_128X18_O2_14_
+                                8.00           8.07          -0.07  (VIOLATED) 
+     PIN : PLACE_BINV_RR_41543/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   BUF_net_785                 16.00          16.07          -0.07  (VIOLATED) 
+     PIN : PLACE_BUFT_P_24893/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   PLACE_HFSNET_4728            8.00           8.07          -0.07  (VIOLATED) 
+     PIN : PLACE_HFSINV_611_4757/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal2d_n1193
+                                8.00           8.07          -0.07  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal2d_U205/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   BUF_net_17806               16.00          16.07          -0.07  (VIOLATED) 
+     PIN : PLACE_BINV_R_41914/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_cvtout_u_HLS_cdp_ocvt_0_shiftright_su_n331
+                               16.00          16.07          -0.07  (VIOLATED) 
+     PIN : U2838/Y             16.00          16.07          -0.07  (VIOLATED) 
+
+   BUF_net_17258               16.00          16.07          -0.07  (VIOLATED) 
+     PIN : PLACE_BINV_R_41366/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   PLACE_HFSNET_8473            8.00           8.07          -0.07  (VIOLATED) 
+     PIN : PLACE_HFSINV_1302_8502/Y
+                                8.00           8.07          -0.07  (VIOLATED) 
+
+   ctsbuf_net_311736176        32.00          32.06          -0.06  (VIOLATED) 
+     PIN : CTS_cts_inv_1550992556/Y
+                               32.00          32.06          -0.06  (VIOLATED) 
+
+   BUF_net_18566               16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BINV_R_42674/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   BUF_net_10287               16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BINV_R_34395/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   net_net_17196               16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BINV_RR_49799/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   PLACE_HFSNET_6044            8.00           8.06          -0.06  (VIOLATED) 
+     PIN : PLACE_HFSINV_322_6073/Y
+                                8.00           8.06          -0.06  (VIOLATED) 
+
+   BUF_net_1261                16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_25369/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   PLACE_HFSNET_9242           32.00          32.06          -0.06  (VIOLATED) 
+     PIN : PLACE_HFSBUF_498_9271/Y
+                               32.00          32.06          -0.06  (VIOLATED) 
+
+   BUF_net_3243                16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BUFT_P_27351/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   BUF_net_25417               16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49525/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   BUF_net_11618               16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_35726/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_bufferin_data_shift_26[0]
+                                8.00           8.06          -0.06  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_bufferin_data_shift_26_reg_0_/Q
+                                8.00           8.06          -0.06  (VIOLATED) 
+
+   PLACE_HFSNET_3207           16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_HFSINV_216236_3236/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   u_NV_NVDLA_cfgrom_u_NV_NVDLA_CFGROM_rom_n86
+                                8.00           8.06          -0.06  (VIOLATED) 
+     PIN : u_NV_NVDLA_cfgrom_u_NV_NVDLA_CFGROM_rom_U36/Y
+                                8.00           8.06          -0.06  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_wdma_u_dat_n2
+                                8.00           8.06          -0.06  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_wdma_u_dat_U11/Y
+                                8.00           8.06          -0.06  (VIOLATED) 
+
+   BUF_net_12733               16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BINV_R_36841/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal1d_unit1d_7_n311
+                               16.00          16.06          -0.06  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal1d_unit1d_7_U126/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   PLACE_HFSNET_15381          16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_HFSINV_1129_15410/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   ctsbuf_net_311236171        32.00          32.06          -0.06  (VIOLATED) 
+     PIN : CTS_cts_inv_1550492551/Y
+                               32.00          32.06          -0.06  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n8508
+                               16.00          16.06          -0.06  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U6154/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   net_net_17761               16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BINV_RR_41870/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   net_net_8317                16.00          16.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BINV_RR_32426/Y
+                               16.00          16.06          -0.06  (VIOLATED) 
+
+   BUF_net_13817                8.00           8.06          -0.06  (VIOLATED) 
+     PIN : PLACE_BINV_R_37925/Y
+                                8.00           8.06          -0.06  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_ro6_fifo1_ro_rd_pd_p[24]
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_ro6_fifo1_ram_U52/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_1820            8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_68389_1849/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   ctsbuf_net_343636495        32.00          32.05          -0.05  (VIOLATED) 
+     PIN : CTS_cts_inv_1873495781/Y
+                               32.00          32.05          -0.05  (VIOLATED) 
+
+   BUF_net_25254               16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49362/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_wdma_u_dat_u_dat0_fifo3_ram_n28
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_wdma_u_dat_u_dat0_fifo3_ram_U9/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   mcif2cdma_wt_rd_rsp_pd[6]
+                               16.00          16.05          -0.05  (VIOLATED) 
+     PIN : iso_buf_mcif2cdma_wt_rd_rsp_pd_6_/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_rdma_u_eg_ro7_rd_pd[6]
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_rdma_u_eg_u_ro7_fifo_ro_rd_pd_reg_6_/Q
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n2560
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BINV_RR_34106/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_7493           16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSBUF_249_7522/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   net_net_11104                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BINV_RR_35213/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_6863           16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_806_6892/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_4946            8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_833_4975/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   BUF_net_15518               16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_39626/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   BUF_net_18452                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BINV_R_42560/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_20044           8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_782_20073/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_6948           16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_636_6977/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_15322          16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSBUF_3564_15351/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n7861
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U8355/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_cq_N3397
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_cq_C24639/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_13051          16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_1843_13080/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   BUF_net_26215               16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_50323/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_ig_u_bpt5_in_pd_p[45]
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_ig_u_bpt5_pipe_p1_U54/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   BUF_net_21746               16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BINV_R_45854/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal2d_n2281
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal2d_U1369/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   OPT_ZBUF_446                16.00          16.05          -0.05  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_99549/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   net_net_23430                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BINV_RR_47539/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n6171
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U6684/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   BUF_net_2041                 8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BINV_R_26149/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_21802          16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_491_21831/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   BUF_net_18113                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BINV_R_42221/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_2228           16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSBUF_33112_2257/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_22461           8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_1050_22490/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   BUF_net_2103                16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BUFT_P_26211/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   BUF_net_25247               16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49355/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   n1181                       16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_BINV_RR_35896/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_1789           16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_68115_1818/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_13820           8.00           8.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_4196_13849/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   PLACE_HFSNET_19661          16.00          16.05          -0.05  (VIOLATED) 
+     PIN : PLACE_HFSINV_431_19690/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_ro4_fifo1_n36
+                               16.00          16.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_ro4_fifo1_U88/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_n27
+                                8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_U70/Y
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_n502
+                                8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_U453/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   net_net_8473                 8.00           8.04          -0.04  (VIOLATED) 
+     PIN : PLACE_BINV_RR_32582/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_9604            8.00           8.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_1719_9633/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n6348
+                                8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U6869/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   BUF_net_19502                8.00           8.04          -0.04  (VIOLATED) 
+     PIN : PLACE_BINV_R_43610/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_reg2dp_d1_pad_value_1x[0]
+                                8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_pad_value_1x_reg_0_/Q
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_4906            8.00           8.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_547_4935/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   BUF_net_23421               16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_BUFT_P_47529/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal2d_n2647
+                                8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal2d_U2216/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n5454
+                               16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_BINV_RR_32979/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   ctsbuf_net_190634965        32.00          32.04          -0.04  (VIOLATED) 
+     PIN : CTS_cts_inv_1292789974/Y
+                               32.00          32.04          -0.04  (VIOLATED) 
+
+   BUF_net_25324               16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49432/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   iso_net_u_NV_NVDLA_pdp_u_core_u_cal2d_bank1_uram_0_r_nv_ram_rws_128x18_ram_Inst_128X18_O2_7_
+                               16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_BINV_RR_50479/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_8547           16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSBUF_2779_8576/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_5978            8.00           8.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_288_6007/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_4680            8.00           8.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_176_4709/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_8421           16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSBUF_1132_8450/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_2095           16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSBUF_50126_2124/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_17334           8.00           8.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_892_17363/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_9436            8.00           8.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_2930_9465/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   net_net_21842               16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSBUF_15_570/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   BUF_net_12409               16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_BINV_R_36517/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_n663
+                               16.00          16.04          -0.04  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U111/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_10318           8.00           8.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_5455_10347/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_8262           16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_3476_8291/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal2d_n4675
+                                8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal2d_U3999/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_cq_N1449
+                                8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_cq_C21995/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   PLACE_HFSNET_5929           16.00          16.04          -0.04  (VIOLATED) 
+     PIN : PLACE_HFSINV_829_5958/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   OPT_ZBUF_2315               16.00          16.04          -0.04  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101463/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   OPT_ZBUF_1734               32.00          32.03          -0.03  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_100873/Y
+                               32.00          32.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal2d_n155
+                                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal2d_U321/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   BUF_net_2600                 8.00           8.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_26708/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_ig_u_bpt4_in_pd_p[19]
+                                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_ig_u_bpt4_pipe_p1_U28/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_n379
+                                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_U337/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_ig_u_bpt6_in_pd_p[14]
+                                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_ig_u_bpt6_pipe_p1_U23/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_LUT_ctrl_u_LUT_CTRL_unit0_n288
+                               16.00          16.03          -0.03  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_LUT_ctrl_u_LUT_CTRL_unit0_U166/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_cq_N1633
+                                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_cq_C22271/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_csb_master_n225
+                                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_NV_NVDLA_csb_master_U309/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   BUF_net_12046               16.00          16.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_36154/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   net_net_7917                16.00          16.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_RR_32026/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   PLACE_HFSNET_1098           16.00          16.03          -0.03  (VIOLATED) 
+     PIN : PLACE_HFSBUF_124_1127/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   BUF_net_20700               32.00          32.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_44808/Y
+                               32.00          32.03          -0.03  (VIOLATED) 
+
+   PLACE_HFSNET_15316          16.00          16.03          -0.03  (VIOLATED) 
+     PIN : PLACE_HFSBUF_3586_15345/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   BUF_net_13631               16.00          16.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_37739/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   BUF_net_5405                 8.00           8.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_29513/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   BUF_net_18834                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_42942/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_reg2dp_split_num[0]
+                                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_U298/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   PLACE_HFSNET_7362           16.00          16.03          -0.03  (VIOLATED) 
+     PIN : PLACE_HFSBUF_225_7391/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_pipe_pp4_n7
+                                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_pipe_pp4_U10/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   PLACE_HFSNET_9589            8.00           8.03          -0.03  (VIOLATED) 
+     PIN : PLACE_HFSINV_1215_9618/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   BUF_net_24468                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_48576/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   ctsbuf_net_41633475         32.00          32.03          -0.03  (VIOLATED) 
+     PIN : CTS_cts_inv_487581922/Y
+                               32.00          32.03          -0.03  (VIOLATED) 
+
+   PLACE_HFSNET_15594          32.00          32.03          -0.03  (VIOLATED) 
+     PIN : PLACE_HFSBUF_283_15623/Y
+                               32.00          32.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_N2152
+                                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_RR_47562/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   BUF_net_12771               16.00          16.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_36879/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   BUF_net_20518                8.00           8.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_44626/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   BUF_net_14854               16.00          16.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_R_38962/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_ig_u_arb_n118
+                               16.00          16.03          -0.03  (VIOLATED) 
+     PIN : PLACE_BINV_RR_35299/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n1535
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U2062/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n6261
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U6777/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   BUF_net_4334                16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_BUFT_P_28442/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_lut2intp_X_data_00[12]
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U176/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal1d_n1315
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal1d_U1360/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   BUF_net_2818                16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_BINV_R_26926/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   PLACE_HFSNET_11132          16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_HFSINV_1413_11161/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   PLACE_HFSNET_23002          16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_HFSBUF_301_23031/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_rdma_reg2dp_split_num[3]
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_rdma_u_reg_U177/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_rdma_u_eg_u_lat_fifo_lat_rd_count_p[1]
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_rdma_u_eg_u_lat_fifo_lat_rd_count_p_reg_1_/Q
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_ro3_fifo0_ram_n229
+                               16.00          16.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_ro3_fifo0_ram_U5/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_write_eg2ig_axi_len[1]
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_write_u_eg_U15/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal2d_n4062
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal2d_U3840/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_csb_master_n245
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_csb_master_U324/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   PLACE_HFSNET_13896          16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_HFSBUF_169_13925/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   net_net_9496                16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_BINV_RR_33605/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_n346
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_U298/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   PLACE_HFSNET_10543          16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_HFSINV_649_10572/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   PLACE_HFSNET_17344           8.00           8.02          -0.02  (VIOLATED) 
+     PIN : PLACE_HFSINV_722_17373/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_wdma_n67
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_wdma_U223/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n2131
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U2682/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   PLACE_HFSNET_13719          16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_HFSINV_346_13748/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   BUF_net_24767               16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_48875/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_n620
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_U573/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   PLACE_HFSNET_1269           16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_HFSBUF_286_1298/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   BUF_net_8400                16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_BINV_R_32508/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   PLACE_HFSNET_3279           16.00          16.02          -0.02  (VIOLATED) 
+     PIN : PLACE_HFSINV_172000_3308/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_csb_master_csc_resp_pd[4]
+                                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_csb_master_csc_resp_pd_reg_4_/Q
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   net_net_23564                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_reg_U245/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   net_net_11042                8.00           8.02          -0.02  (VIOLATED) 
+     PIN : PLACE_BINV_RR_35151/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   PLACE_HFSNET_4705            8.00           8.02          -0.02  (VIOLATED) 
+     PIN : PLACE_HFSINV_268_4734/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal1d_unit1d_2_n118
+                               16.00          16.02          -0.02  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal1d_unit1d_2_U51/Y
+                               16.00          16.02          -0.02  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_rdma_u_cq_ram_n174
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_rdma_u_cq_ram_U230/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   BUF_net_25256               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_49364/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_rdma_u_ig_U2_RSOP_225_C2_Z_1
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_rdma_u_ig_U192/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   PLACE_HFSNET_1808           32.00          32.01          -0.01  (VIOLATED) 
+     PIN : PLACE_HFSINV_67193_1837/Y
+                               32.00          32.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_reg_u_dual_reg_d1_n288
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_reg_u_dual_reg_d1_U304/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   OPT_ZBUF_2648               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101806/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_ig_bpt2arb_req6_pd[7]
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_ig_u_bpt6_U31/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n5572
+                               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U82/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   net_net_17147                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BINV_RR_41256/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n1610
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U2142/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   BUF_net_13182                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BINV_R_37290/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   BUF_net_12038               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BINV_R_36146/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   BUF_net_24735               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_48843/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_cq_N3576
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_cq_C24889/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   BUF_net_25191               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BINV_R_49299/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   mcif2cdma_wt_rd_rsp_pd[32]
+                               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : PLACE_ZBUF_inst_53383/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_n740
+                               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_reg_u_dual_reg_d1_U1027/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   PLACE_HFSNET_9174            8.00           8.01          -0.01  (VIOLATED) 
+     PIN : PLACE_HFSINV_1583_9203/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   BUF_net_11851               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BUFT_RR_35959/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   BUF_net_21372                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BINV_R_45480/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_pipe_pp1_n189
+                               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_pipe_pp1_U61/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   PLACE_HFSNET_22634           8.00           8.01          -0.01  (VIOLATED) 
+     PIN : PLACE_HFSINV_620_22663/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n6595
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BINV_RR_32800/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   BUF_net_12098                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BINV_R_36206/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_ro3_fifo0_ro_rd_pd_p[4]
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_ro3_fifo0_ram_U125/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   BUF_net_17885                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BINV_R_41993/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_ig_bpt2arb_req0_pd[19]
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_ig_u_bpt0_U105/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_raw_reg14[2]
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_raw_reg14_reg_2_/Q
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n14585
+                               32.00          32.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U14286/Y
+                               32.00          32.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_dp2lut_Xinfo_0[14]
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_LUT_ctrl_u_LUT_CTRL_unit0_U126/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_n253
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_U309/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   sdp_n2mcif_rd_req_pd[28]    16.00          16.01          -0.01  (VIOLATED) 
+     PORT: sdp_n2mcif_rd_req_pd[28]
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   BUF_net_23056               16.00          16.01          -0.01  (VIOLATED) 
+     PIN : PLACE_BINV_R_47164/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_csb_master_dummy_resp_type
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_csb_master_dummy_resp_type_reg/Q
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   PLACE_HFSNET_11722          16.00          16.01          -0.01  (VIOLATED) 
+     PIN : PLACE_HFSINV_346_11751/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_LUT_ctrl_u_LUT_CTRL_unit0_n504
+                                8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_LUT_ctrl_u_LUT_CTRL_unit0_U438/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_n1153
+                                8.00           8.00          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_intp_u_interp_X0_U1180/Y
+                                8.00           8.00          -0.00  (VIOLATED) 
+
+   BUF_net_6156                32.00          32.00          -0.00  (VIOLATED) 
+     PIN : PLACE_BINV_R_30264/Y
+                               32.00          32.00          -0.00  (VIOLATED) 
+
+   u_NV_NVDLA_pdp_u_core_u_cal2d_n2614
+                                8.00           8.00          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_pdp_u_core_u_cal2d_U475/Y
+                                8.00           8.00          -0.00  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_LUT_ctrl_u_LUT_CTRL_unit0_n1003
+                                8.00           8.00          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_LUT_ctrl_u_LUT_CTRL_unit0_U1247/Y
+                                8.00           8.00          -0.00  (VIOLATED) 
+
+   PLACE_HFSNET_16883          16.00          16.00          -0.00  (VIOLATED) 
+     PIN : PLACE_HFSBUF_156_16912/Y
+                               16.00          16.00          -0.00  (VIOLATED) 
+
+   PLACE_HFSNET_1416           16.00          16.00          -0.00  (VIOLATED) 
+     PIN : PLACE_HFSBUF_354_1445/Y
+                               16.00          16.00          -0.00  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n6021
+                                8.00           8.00          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_U6540/Y
+                                8.00           8.00          -0.00  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_lut_n7492
+                                8.00           8.00          -0.00  (VIOLATED) 
+     PIN : PLACE_BINV_RR_33935/Y
+                                8.00           8.00          -0.00  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_rdma_u_reg_n112
+                               16.00          16.00          -0.00  (VIOLATED) 
+     PIN : U1303/Y             16.00          16.00          -0.00  (VIOLATED) 
+
+   PLACE_HFSNET_15057          16.00          16.00          -0.00  (VIOLATED) 
+     PIN : PLACE_HFSBUF_111_15086/Y
+                               16.00          16.00          -0.00  (VIOLATED) 
+
+   BUF_net_25300               16.00          16.00          -0.00  (VIOLATED) 
+     PIN : PLACE_BINV_R_49408/Y
+                               16.00          16.00          -0.00  (VIOLATED) 
+
+   u_NV_NVDLA_cdp_u_dp_dp2lut_Xinfo_0[1]
+                                8.00           8.00          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_cdp_u_dp_u_NV_NVDLA_CDP_DP_LUT_ctrl_u_LUT_CTRL_unit0_U113/Y
+                                8.00           8.00          -0.00  (VIOLATED) 
+
+   u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo1_n24
+                                8.00           8.00          -0.00  (VIOLATED) 
+     PIN : u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo1_U18/Y
+                                8.00           8.00          -0.00  (VIOLATED) 
+
+   OPT_ZBUF_2374               16.00          16.00          -0.00  (VIOLATED) 
+     PIN : OPT_ZBUF_inst_101524/Y
+                               16.00          16.00          -0.00  (VIOLATED) 
+
+   PLACE_HFSNET_3989            8.00           8.00          -0.00  (VIOLATED) 
+     PIN : PLACE_HFSINV_661_4018/Y
+                                8.00           8.00          -0.00  (VIOLATED) 
+
+   PLACE_HFSNET_8014            8.00           8.00          -0.00  (VIOLATED) 
+     PIN : PLACE_HFSINV_415_8043/Y
+                                8.00           8.00          -0.00  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 672
+
+
+   Mode: func Corner: slow_cmax
+   Scenario: func_slow_cmax
+  ---------------------------------------------------------------------------
+   Number of min_capacitance violation(s): 0
+
+   Total number of violation(s): 676
+1

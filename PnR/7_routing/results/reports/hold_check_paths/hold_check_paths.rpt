@@ -1,0 +1,49 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -report_by design
+        -nosplit
+Design : NV_NVDLA_partition_o
+Version: O-2018.06-SP1
+Date   : Mon Aug 24 04:36:25 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo0_ram_ram_ff1_reg_8_ (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Endpoint: u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo0_ro_rd_pd_o_reg_8_ (rising edge-triggered flip-flop clocked by nvdla_core_clk)
+  Mode: func
+  Corner: fast_cmin
+  Scenario: func_fast_cmin
+  Path Group: nvdla_core_clk
+  Path Type: min
+
+  Point                                                                       Incr      Path  
+  ---------------------------------------------------------------------------------------------------
+  clock nvdla_core_clk (rise edge)                                            0.00      0.00
+  clock network delay (propagated)                                            0.41      0.41
+
+  u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo0_ram_ram_ff1_reg_8_/CLK (DFFX1_RVT)    0.00      0.41 r
+  u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo0_ram_ram_ff1_reg_8_/Q (DFFX1_RVT)      0.06      0.47 f
+  u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo0_ram_U107/Y (AOI22X1_RVT)              0.03      0.50 r
+  u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo0_ram_U110/Y (NAND3X1_RVT)              0.05      0.55 f
+  u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo0_U57/Y (AO22X1_RVT)                    0.03      0.58 f
+  u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo0_ro_rd_pd_o_reg_8_/D (DFFX1_RVT)      -0.00      0.58 f
+  data arrival time                                                                     0.58
+
+  clock nvdla_core_clk (rise edge)                                            0.00      0.00
+  clock network delay (propagated)                                            0.45      0.45
+  clock reconvergence pessimism                                              -0.03      0.42
+  u_NV_NVDLA_mcif_u_read_u_eg_ro2_fifo0_ro_rd_pd_o_reg_8_/CLK (DFFX1_RVT)     0.00      0.42 r
+  clock uncertainty                                                           0.16      0.58
+  library hold time                                                           0.00      0.58
+  data required time                                                                    0.58
+  ---------------------------------------------------------------------------------------------------
+  data required time                                                                    0.58
+  data arrival time                                                                    -0.58
+  ---------------------------------------------------------------------------------------------------
+  slack (MET)                                                                           0.00
+
+
+1

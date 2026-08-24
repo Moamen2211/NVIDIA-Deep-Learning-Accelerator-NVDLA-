@@ -1,0 +1,90 @@
+****************************************
+Report : port
+        -design_rule
+        -input_delay
+        -drive
+        -output_delay
+Module : NV_NVDLA_partition_o
+Mode   : func
+Corner : slow_cmax
+Scenario: func_slow_cmax
+Version: O-2018.06-SP1
+Date   : Sat Aug  1 22:18:08 2026
+****************************************
+                      Pin Cap                    Wire Cap
+                   Min          Max           Min          Max
+Port      Dir    rise/fall    rise/fall     rise/fall    rise/fall    Attributes
+--------------------------------------------------------------------------------
+global_clk_ovr_on
+          in     0.00/0.00    0.00/0.00     0.00/0.00    0.00/0.00
+nvdla_clk_ovr_on
+          out    0.00/0.00    0.00/0.00     0.00/0.00    0.00/0.00
+nvdla_core_clk
+          in     0.00/0.00    0.00/0.00     0.00/0.00    0.00/0.00
+nvdla_falcon_clk
+          in     0.00/0.00    0.00/0.00     0.00/0.00    0.00/0.00
+
+Port           MaxTrans MaxCap   MinCap
+-------------------------------------------
+global_clk_ovr_on
+               --       --       --
+nvdla_clk_ovr_on
+               --       --       --
+nvdla_core_clk --       --       --
+nvdla_falcon_clk
+               --       --       --
+
+                      Input Delay
+                    Min             Max       Related Related
+ Input Port     Rise    Fall    Rise    Fall   Clock   Pin
+-----------------------------------------------------------------
+global_clk_ovr_on
+                  --      --    0.10    0.10  nvdla_core_clk
+                                                        -- 
+nvdla_core_clk
+                --      --      --      --      --      --
+nvdla_falcon_clk
+                --      --      --      --      --      --
+
+            Resistance (min/max)
+Input Port  Rise             Fall
+--------------------------------------------------------------------------------
+global_clk_ovr_on
+            --               --
+nvdla_core_clk
+            --               --
+nvdla_falcon_clk
+            --               --
+
+                      Driving Cell
+Input Port     Type     Cell                Mult      Clock     Attrs
+--------------------------------------------------------------------------------
+global_clk_ovr_on
+               min_rise IBUFFX2_RVT/Y       
+global_clk_ovr_on
+               min_fall IBUFFX2_RVT/Y       
+global_clk_ovr_on
+               max_rise IBUFFX2_RVT/Y       
+global_clk_ovr_on
+               max_fall IBUFFX2_RVT/Y       
+nvdla_core_clk min_rise NBUFFX2_RVT/Y       
+nvdla_core_clk min_fall NBUFFX2_RVT/Y       
+nvdla_core_clk max_rise NBUFFX2_RVT/Y       
+nvdla_core_clk max_fall NBUFFX2_RVT/Y       
+nvdla_falcon_clk
+               min_rise NBUFFX2_RVT/Y       
+nvdla_falcon_clk
+               min_fall NBUFFX2_RVT/Y       
+nvdla_falcon_clk
+               max_rise NBUFFX2_RVT/Y       
+nvdla_falcon_clk
+               max_fall NBUFFX2_RVT/Y       
+
+                     Output Delay
+                    Min             Max       Related Related
+ Output Port    Rise    Fall    Rise    Fall   Clock   Pin
+-----------------------------------------------------------------
+nvdla_clk_ovr_on
+                  --      --    0.10    0.10  nvdla_falcon_clk
+                                                        -- 
+1

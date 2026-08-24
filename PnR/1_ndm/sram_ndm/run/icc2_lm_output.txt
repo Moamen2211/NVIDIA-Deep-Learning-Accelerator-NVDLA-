@@ -1,0 +1,340 @@
+
+icc2_lm_shell> set tech_file "/home/ICer/Downloads/SAED32/saed32nm_1p9m_mw.tf"
+/home/ICer/Downloads/SAED32/saed32nm_1p9m_mw.tf
+icc2_lm_shell> create_workspace -flow exploration -technology $tech_file saed32nm_sram_ndm
+Information: Loading technology file '/home/ICer/Downloads/SAED32/saed32nm_1p9m_mw.tf' (FILE-007)
+... created workspace saed32nm_sram_ndm in exploration flow
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> # It ensures that physical-only like decoupling capacitors, end-cap cells, cells
+icc2_lm_shell> # and filler cells \are not accidentally dropped during the NDM creation.
+icc2_lm_shell> set_app_options -list {lib.workspace.keep_all_physical_cells {true}   }
+lib.workspace.keep_all_physical_cells true
+icc2_lm_shell> 
+icc2_lm_shell> # Creates the view used for routing and placement.
+icc2_lm_shell> set_app_options -list {lib.workspace.save_design_views       {true}   }
+lib.workspace.save_design_views true
+icc2_lm_shell> 
+icc2_lm_shell> # Creates the view used for GDS export and DRC.
+icc2_lm_shell> set_app_options -list {lib.workspace.save_layout_views       {true}   }
+lib.workspace.save_layout_views true
+icc2_lm_shell> 
+icc2_lm_shell> # Allows the tool to write/modify data in the workspace.
+icc2_lm_shell> set_app_options -list {design.enable_lib_cell_editing        {mutable}}
+design.enable_lib_cell_editing mutable
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> read_db  "/home/ICer/Downloads/SAED32/SRAM/saed32sram_ss0p95vn40c.db"
+Information: Loading db file '/home/ICer/Downloads/SAED32/SRAM/saed32sram_ss0p95vn40c.db' (FILE-007)
+{saed32sram_ss0p95vn40c}
+icc2_lm_shell> read_db  "/home/ICer/Downloads/SAED32/SRAM/saed32sram_ff1p16v125c.db"
+Information: Loading db file '/home/ICer/Downloads/SAED32/SRAM/saed32sram_ff1p16v125c.db' (FILE-007)
+{saed32sram_ff1p16v125c}
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> read_lef  "/home/ICer/Downloads/SAED32/SRAM/saed32sram.lef"
+Information: The default value of lib.workspace.library_developer_mode will be 'true' in future release. (LMUI-054)
+Information: Loading LEF file '/home/ICer/Downloads/SAED32/SRAM/saed32sram.lef' (FILE-007)
+Information: Read LEF into a new library 'saed32sram'. (LEFR-022)
+{saed32sram}
+icc2_lm_shell> group_libs
+...Created 1 lib groups
+...Created sub-workspace saed32sram_c with type normal: 2 logical libs, 1 physical lib, 0 scaling groups.
+...Created 1 sub-workspace
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> # ########################################## #
+icc2_lm_shell> # ====== Reference Library Creation  ======= #
+icc2_lm_shell> # ########################################## #
+icc2_lm_shell> # --- Checks and Commits workspaces in one step.
+icc2_lm_shell> process_workspaces  -directory /home/ICer/EDA_projects/NVDLA/nv_small/PnR/1_ndm/sram_ndm/ndm
+
+Checking workspace saed32sram_c ...
+Checking libraries...
+Using saed32sram_ss0p95vn40c as the base library.
+Warning: Library saed32sram_ss0p95vn40c has 1447 duplicate arc(s) (LM-006)
+Warning: Library saed32sram_ff1p16v125c has 1447 duplicate arc(s) (LM-006)
+Warning: Application option 'lib.workspace.keep_all_physical_cells' will be ignored in the exploration flow. (LMUI-061)
+Information: Combined 35 physical designs:35 with a design view (35 had ports reordered); (LM-034)
+... creating frames for saed32sram_c
+Information: Block SRAM1RW1024x8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW1024x8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_27 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_40 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_51 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_64 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_75 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_88 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_99 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_113 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW1024x8.frame has a very large regular routing blockage RB_125 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW128x46.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW128x46.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW128x46.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x46.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x46.frame has a very large regular routing blockage RB_30 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x46.frame has a very large regular routing blockage RB_46 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x46.frame has a very large regular routing blockage RB_63 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x46.frame has a very large regular routing blockage RB_81 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW128x48.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW128x48.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW128x48.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x48.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x48.frame has a very large regular routing blockage RB_30 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x48.frame has a very large regular routing blockage RB_46 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x48.frame has a very large regular routing blockage RB_63 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x48.frame has a very large regular routing blockage RB_82 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW128x8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW128x8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW128x8.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x8.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x8.frame has a very large regular routing blockage RB_30 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x8.frame has a very large regular routing blockage RB_46 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x8.frame has a very large regular routing blockage RB_62 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW128x8.frame has a very large regular routing blockage RB_78 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW256x128.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW256x128.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW256x128.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x128.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x128.frame has a very large regular routing blockage RB_31 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x128.frame has a very large regular routing blockage RB_49 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x128.frame has a very large regular routing blockage RB_67 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x128.frame has a very large regular routing blockage RB_90 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x128.frame has a very large regular routing blockage RB_101 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW256x32.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW256x32.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW256x32.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x32.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x32.frame has a very large regular routing blockage RB_34 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x32.frame has a very large regular routing blockage RB_55 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x32.frame has a very large regular routing blockage RB_76 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x32.frame has a very large regular routing blockage RB_97 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x32.frame has a very large regular routing blockage RB_109 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW256x46.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW256x46.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW256x46.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x46.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x46.frame has a very large regular routing blockage RB_31 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x46.frame has a very large regular routing blockage RB_49 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x46.frame has a very large regular routing blockage RB_67 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x46.frame has a very large regular routing blockage RB_88 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW256x48.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW256x48.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW256x48.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x48.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x48.frame has a very large regular routing blockage RB_31 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x48.frame has a very large regular routing blockage RB_49 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x48.frame has a very large regular routing blockage RB_67 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x48.frame has a very large regular routing blockage RB_86 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW256x8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW256x8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW256x8.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x8.frame has a very large regular routing blockage RB_19 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x8.frame has a very large regular routing blockage RB_27 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x8.frame has a very large regular routing blockage RB_43 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x8.frame has a very large regular routing blockage RB_66 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x8.frame has a very large regular routing blockage RB_89 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW256x8.frame has a very large regular routing blockage RB_112 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW32x50.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW32x50.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW32x50.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW32x50.frame has a very large regular routing blockage RB_11 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW32x50.frame has a very large regular routing blockage RB_25 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW32x50.frame has a very large regular routing blockage RB_39 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW32x50.frame has a very large regular routing blockage RB_54 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW32x50.frame has a very large regular routing blockage RB_70 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: In block SRAM1RW512x128.frame, the port 'VDD' has many terminals on metal layer (Number of terminals: 810), which may increase the runtime of frame creation. Please check whether all the terminals are expected. (FRAM-063)
+Warning: In block SRAM1RW512x128.frame, the port 'VSS' has many terminals on metal layer (Number of terminals: 810), which may increase the runtime of frame creation. Please check whether all the terminals are expected. (FRAM-063)
+Information: Block SRAM1RW512x128.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW512x128.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW512x128.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW512x32.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW512x32.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW512x32.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x32.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x32.frame has a very large regular routing blockage RB_34 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x32.frame has a very large regular routing blockage RB_55 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x32.frame has a very large regular routing blockage RB_76 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x32.frame has a very large regular routing blockage RB_98 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW512x8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW512x8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW512x8.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x8.frame has a very large regular routing blockage RB_12 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x8.frame has a very large regular routing blockage RB_21 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x8.frame has a very large regular routing blockage RB_31 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x8.frame has a very large regular routing blockage RB_49 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x8.frame has a very large regular routing blockage RB_67 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW512x8.frame has a very large regular routing blockage RB_86 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW64x128.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW64x128.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW64x128.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x128.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x128.frame has a very large regular routing blockage RB_29 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x128.frame has a very large regular routing blockage RB_45 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x128.frame has a very large regular routing blockage RB_62 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x128.frame has a very large regular routing blockage RB_82 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x128.frame has a very large regular routing blockage RB_89 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW64x32.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW64x32.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW64x32.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x32.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x32.frame has a very large regular routing blockage RB_30 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x32.frame has a very large regular routing blockage RB_47 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x32.frame has a very large regular routing blockage RB_64 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x32.frame has a very large regular routing blockage RB_82 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW64x34.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW64x34.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW64x34.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x34.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x34.frame has a very large regular routing blockage RB_34 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x34.frame has a very large regular routing blockage RB_55 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x34.frame has a very large regular routing blockage RB_76 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x34.frame has a very large regular routing blockage RB_98 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM1RW64x8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM1RW64x8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM1RW64x8.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x8.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x8.frame has a very large regular routing blockage RB_29 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x8.frame has a very large regular routing blockage RB_45 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x8.frame has a very large regular routing blockage RB_61 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM1RW64x8.frame has a very large regular routing blockage RB_77 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW128x16.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW128x16.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW128x16.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x16.frame has a very large regular routing blockage RB_20 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x16.frame has a very large regular routing blockage RB_46 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x16.frame has a very large regular routing blockage RB_72 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x16.frame has a very large regular routing blockage RB_100 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x16.frame has a very large regular routing blockage RB_128 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW128x32.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW128x32.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW128x32.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x32.frame has a very large regular routing blockage RB_19 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x32.frame has a very large regular routing blockage RB_49 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x32.frame has a very large regular routing blockage RB_79 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x32.frame has a very large regular routing blockage RB_109 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x32.frame has a very large regular routing blockage RB_137 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW128x4.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW128x4.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW128x4.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x4.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x4.frame has a very large regular routing blockage RB_37 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x4.frame has a very large regular routing blockage RB_58 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x4.frame has a very large regular routing blockage RB_79 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x4.frame has a very large regular routing blockage RB_95 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW128x8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW128x8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW128x8.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x8.frame has a very large regular routing blockage RB_19 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x8.frame has a very large regular routing blockage RB_47 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x8.frame has a very large regular routing blockage RB_75 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x8.frame has a very large regular routing blockage RB_103 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW128x8.frame has a very large regular routing blockage RB_129 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW16x16.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW16x16.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW16x16.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x16.frame has a very large regular routing blockage RB_28 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x16.frame has a very large regular routing blockage RB_56 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x16.frame has a very large regular routing blockage RB_84 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x16.frame has a very large regular routing blockage RB_114 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW16x32.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW16x32.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW16x32.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x32.frame has a very large regular routing blockage RB_31 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x32.frame has a very large regular routing blockage RB_62 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x32.frame has a very large regular routing blockage RB_93 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x32.frame has a very large regular routing blockage RB_124 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW16x4.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW16x4.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW16x4.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x4.frame has a very large regular routing blockage RB_31 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x4.frame has a very large regular routing blockage RB_62 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x4.frame has a very large regular routing blockage RB_93 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x4.frame has a very large regular routing blockage RB_124 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW16x8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW16x8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW16x8.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x8.frame has a very large regular routing blockage RB_20 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x8.frame has a very large regular routing blockage RB_40 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x8.frame has a very large regular routing blockage RB_60 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW16x8.frame has a very large regular routing blockage RB_80 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW32x16.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW32x16.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW32x16.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x16.frame has a very large regular routing blockage RB_58 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x16.frame has a very large regular routing blockage RB_91 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x16.frame has a very large regular routing blockage RB_126 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW32x22.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW32x22.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW32x22.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x22.frame has a very large regular routing blockage RB_61 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x22.frame has a very large regular routing blockage RB_97 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x22.frame has a very large regular routing blockage RB_133 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW32x32.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW32x32.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW32x32.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x32.frame has a very large regular routing blockage RB_32 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x32.frame has a very large regular routing blockage RB_62 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x32.frame has a very large regular routing blockage RB_92 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x32.frame has a very large regular routing blockage RB_122 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW32x39.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW32x39.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW32x39.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x39.frame has a very large regular routing blockage RB_30 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x39.frame has a very large regular routing blockage RB_58 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x39.frame has a very large regular routing blockage RB_86 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x39.frame has a very large regular routing blockage RB_114 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x39.frame has a very large regular routing blockage RB_143 on the M5 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW32x4.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW32x4.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW32x4.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x4.frame has a very large regular routing blockage RB_27 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x4.frame has a very large regular routing blockage RB_52 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x4.frame has a very large regular routing blockage RB_77 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x4.frame has a very large regular routing blockage RB_102 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW32x8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW32x8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW32x8.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x8.frame has a very large regular routing blockage RB_28 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x8.frame has a very large regular routing blockage RB_56 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x8.frame has a very large regular routing blockage RB_84 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW32x8.frame has a very large regular routing blockage RB_112 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW64x16.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW64x16.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW64x16.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW64x16.frame has a very large regular routing blockage RB_63 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW64x16.frame has a very large regular routing blockage RB_99 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW64x32.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW64x32.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW64x32.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW64x4.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW64x4.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW64x4.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Information: Block SRAM2RW64x8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: PO M1 M2 M3 M4 M5 NWELL. (FRAM-045)
+Information: Block SRAM2RW64x8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: PO M1 M2 M3 M4 M5 M6 M7 M8 M9 MRDL NWELL. (FRAM-046)
+Warning: Block SRAM2RW64x8.frame has a very large regular routing blockage RB_0 on the PO metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW64x8.frame has a very large regular routing blockage RB_63 on the M2 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW64x8.frame has a very large regular routing blockage RB_99 on the M3 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block SRAM2RW64x8.frame has a very large regular routing blockage RB_135 on the M4 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+... created 35 frames
+
+Workspace check succeeded!
+... deleting unused rail VDDG
+... deleting unused rail VSSG
+... wrote /home/ICer/EDA_projects/NVDLA/nv_small/PnR/1_ndm/sram_ndm/ndm/saed32sram_c.ndm
+... removing library 'saed32sram_ss0p95vn40c'
+... removing library 'saed32sram_ff1p16v125c'
+... removing library 'saed32sram'
+... lib workspace removed!
+icc2_lm_shell> 
+icc2_lm_shell> 
+icc2_lm_shell> 
